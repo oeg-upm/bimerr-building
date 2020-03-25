@@ -1,0 +1,431 @@
+<https://bimerr.iot.linkeddata.es/def/building#> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/description> "The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model."@en .
+<https://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/license> "http://purl.org/NET/rdflicense/cc-by4.0"@en .
+<https://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en .
+<https://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/title> "Building ontology"@en .
+<https://bimerr.iot.linkeddata.es/def/building#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.1"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/elements/1.1/created
+<http://purl.org/dc/elements/1.1/created> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/license
+<http://purl.org/dc/elements/1.1/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# https://bimerr.iot.linkeddata.es/def/building#hasComponent
+<https://bimerr.iot.linkeddata.es/def/building#hasComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#hasLayer
+<https://bimerr.iot.linkeddata.es/def/building#hasLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction
+<https://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination
+<https://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#includesMaterial
+<https://bimerr.iot.linkeddata.es/def/building#includesMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4building#contains
+<https://w3id.org/def/saref4building#contains> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# https://w3id.org/def/saref4building#hasSpace
+<https://w3id.org/def/saref4building#hasSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://bimerr.iot.linkeddata.es/def/building#buildingAddress
+<https://bimerr.iot.linkeddata.es/def/building#buildingAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#category
+<https://bimerr.iot.linkeddata.es/def/building#category> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#costUnit
+<https://bimerr.iot.linkeddata.es/def/building#costUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#description
+<https://bimerr.iot.linkeddata.es/def/building#description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#identifier
+<https://bimerr.iot.linkeddata.es/def/building#identifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#lifetime
+<https://bimerr.iot.linkeddata.es/def/building#lifetime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants
+<https://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#minNumberOccupants
+<https://bimerr.iot.linkeddata.es/def/building#minNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#name
+<https://bimerr.iot.linkeddata.es/def/building#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#percentage
+<https://bimerr.iot.linkeddata.es/def/building#percentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#position
+<https://bimerr.iot.linkeddata.es/def/building#position> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#thickness
+<https://bimerr.iot.linkeddata.es/def/building#thickness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# https://bimerr.iot.linkeddata.es/def/occupancy-profile#name
+<https://bimerr.iot.linkeddata.es/def/occupancy-profile#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# https://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility
+<https://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Building
+<https://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4building#Building> .
+<https://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid1 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#buildingAddress> .
+_:genid1 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#description> .
+_:genid2 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid3 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#identifier> .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#BuildingSpace
+<https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4building#BuildingSpace> .
+<https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid4 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#description> .
+_:genid4 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#identifier> .
+_:genid5 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants> .
+_:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants> .
+_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Component
+<https://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction> .
+_:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://bimerr.iot.linkeddata.es/def/building#LayerConstruction> .
+<https://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#category> .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#identifier> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/occupancy-profile#name> .
+_:genid11 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component"@en .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#ConventionCenter
+<https://bimerr.iot.linkeddata.es/def/building#ConventionCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#ConventionCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Corridor
+<https://bimerr.iot.linkeddata.es/def/building#Corridor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Corridor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Courthouse
+<https://bimerr.iot.linkeddata.es/def/building#Courthouse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Courthouse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#DataCenter
+<https://bimerr.iot.linkeddata.es/def/building#DataCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#DataCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure
+<https://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood
+<https://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Dormitory
+<https://bimerr.iot.linkeddata.es/def/building#Dormitory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Dormitory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#ExerciseCenter
+<https://bimerr.iot.linkeddata.es/def/building#ExerciseCenter> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#ExerciseCenter> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Firestation
+<https://bimerr.iot.linkeddata.es/def/building#Firestation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Firestation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Gymnasium
+<https://bimerr.iot.linkeddata.es/def/building#Gymnasium> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Gymnasium> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare
+<https://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Hotel
+<https://bimerr.iot.linkeddata.es/def/building#Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Layer
+<https://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination> .
+_:genid12 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://bimerr.iot.linkeddata.es/def/building#MaterialCombination> .
+<https://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#identifier> .
+_:genid13 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
+_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#position> .
+_:genid14 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
+_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#thickness> .
+_:genid15 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<https://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#label> "Layer"@en .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#LayerConstruction
+<https://bimerr.iot.linkeddata.es/def/building#LayerConstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#LayerConstruction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
+_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#hasLayer> .
+_:genid16 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://bimerr.iot.linkeddata.es/def/building#Layer> .
+<https://bimerr.iot.linkeddata.es/def/building#LayerConstruction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
+_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#identifier> .
+_:genid17 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#LayerConstruction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
+_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/occupancy-profile#name> .
+_:genid18 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#LayerConstruction> <http://www.w3.org/2000/01/rdf-schema#label> "Layer Construction"@en .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Library
+<https://bimerr.iot.linkeddata.es/def/building#Library> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Library> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Manufacturing
+<https://bimerr.iot.linkeddata.es/def/building#Manufacturing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Manufacturing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Material
+<https://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
+_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#costUnit> .
+_:genid19 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
+_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#lifetime> .
+_:genid20 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#integer> .
+<https://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
+_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#percentage> .
+_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#float> .
+<https://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
+_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/occupancy-profile#name> .
+_:genid22 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material"@en .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#MaterialCombination
+<https://bimerr.iot.linkeddata.es/def/building#MaterialCombination> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#MaterialCombination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
+_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#includesMaterial> .
+_:genid23 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://bimerr.iot.linkeddata.es/def/building#Material> .
+<https://bimerr.iot.linkeddata.es/def/building#MaterialCombination> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
+_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#identifier> .
+_:genid24 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+<https://bimerr.iot.linkeddata.es/def/building#MaterialCombination> <http://www.w3.org/2000/01/rdf-schema#label> "Material combination"@en .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#MeetingRoom
+<https://bimerr.iot.linkeddata.es/def/building#MeetingRoom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#MeetingRoom> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Motel
+<https://bimerr.iot.linkeddata.es/def/building#Motel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Motel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre
+<https://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#MultiFamily
+<https://bimerr.iot.linkeddata.es/def/building#MultiFamily> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#MultiFamily> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Office
+<https://bimerr.iot.linkeddata.es/def/building#Office> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Office> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+<https://bimerr.iot.linkeddata.es/def/building#Office> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#OfficePrivate
+<https://bimerr.iot.linkeddata.es/def/building#OfficePrivate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#OfficePrivate> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#OfficeShared
+<https://bimerr.iot.linkeddata.es/def/building#OfficeShared> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#OfficeShared> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Outdoor
+<https://bimerr.iot.linkeddata.es/def/building#Outdoor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Outdoor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#ParkingGarage
+<https://bimerr.iot.linkeddata.es/def/building#ParkingGarage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#ParkingGarage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Penitentiary
+<https://bimerr.iot.linkeddata.es/def/building#Penitentiary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Penitentiary> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater
+<https://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#PoliceStation
+<https://bimerr.iot.linkeddata.es/def/building#PoliceStation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#PoliceStation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#PostOffice
+<https://bimerr.iot.linkeddata.es/def/building#PostOffice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#PostOffice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding
+<https://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#ResidentialOwn
+<https://bimerr.iot.linkeddata.es/def/building#ResidentialOwn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#ResidentialOwn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+<https://bimerr.iot.linkeddata.es/def/building#ResidentialOwn> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#ResidentialRent
+<https://bimerr.iot.linkeddata.es/def/building#ResidentialRent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#ResidentialRent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+<https://bimerr.iot.linkeddata.es/def/building#ResidentialRent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#BuildingSpace> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Retail
+<https://bimerr.iot.linkeddata.es/def/building#Retail> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Retail> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity
+<https://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome
+<https://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#SportsArea
+<https://bimerr.iot.linkeddata.es/def/building#SportsArea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#SportsArea> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#TownHall
+<https://bimerr.iot.linkeddata.es/def/building#TownHall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#TownHall> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Transportation
+<https://bimerr.iot.linkeddata.es/def/building#Transportation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Transportation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Warehouse
+<https://bimerr.iot.linkeddata.es/def/building#Warehouse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Warehouse> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://bimerr.iot.linkeddata.es/def/building#Workshop
+<https://bimerr.iot.linkeddata.es/def/building#Workshop> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://bimerr.iot.linkeddata.es/def/building#Workshop> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://bimerr.iot.linkeddata.es/def/building#Building> .
+# 
+# https://w3id.org/def/saref4building#Building
+<https://w3id.org/def/saref4building#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4building#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid25 .
+_:genid25 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid25 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4building#hasSpace> .
+_:genid25 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4building#BuildingSpace> .
+<https://w3id.org/def/saref4building#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building"@en .
+# 
+# https://w3id.org/def/saref4building#BuildingSpace
+<https://w3id.org/def/saref4building#BuildingSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid26 .
+_:genid26 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid26 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/def/saref4building#contains> .
+_:genid26 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://w3id.org/def/saref4building#PhysicalObject> .
+<https://w3id.org/def/saref4building#BuildingSpace> <http://www.w3.org/2000/01/rdf-schema#label> "Building space"@en .
+# 
+# https://w3id.org/def/saref4building#PhysicalObject
+<https://w3id.org/def/saref4building#PhysicalObject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4building#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid27 .
+_:genid27 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid27 <http://www.w3.org/2002/07/owl#onProperty> <https://bimerr.iot.linkeddata.es/def/building#hasComponent> .
+_:genid27 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://bimerr.iot.linkeddata.es/def/building#Component> .
+<https://w3id.org/def/saref4building#PhysicalObject> <http://www.w3.org/2000/01/rdf-schema#label> "Physical Object"@en .
+# 
+# Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
