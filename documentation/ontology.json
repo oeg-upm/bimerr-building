@@ -2,7 +2,7 @@
   "@id" : "_:genid1",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#buildingAddress"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#buildingAddress"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -11,7 +11,7 @@
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifier"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -29,16 +29,16 @@
   "@id" : "_:genid12",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#MaterialCombination"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialCombination"
   } ]
 }, {
   "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifier"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -47,7 +47,7 @@
   "@id" : "_:genid14",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#position"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#position"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
@@ -56,7 +56,7 @@
   "@id" : "_:genid15",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#thickness"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#thickness"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -65,16 +65,16 @@
   "@id" : "_:genid16",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#hasLayer"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasLayer"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Layer"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Layer"
   } ]
 }, {
   "@id" : "_:genid17",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifier"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -92,7 +92,7 @@
   "@id" : "_:genid19",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#costUnit"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#costUnit"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -101,7 +101,7 @@
   "@id" : "_:genid2",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#description"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#description"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -110,7 +110,7 @@
   "@id" : "_:genid20",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#lifetime"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#lifetime"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
@@ -119,7 +119,7 @@
   "@id" : "_:genid21",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#percentage"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#percentage"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#float"
@@ -137,16 +137,16 @@
   "@id" : "_:genid23",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#includesMaterial"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#includesMaterial"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Material"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material"
   } ]
 }, {
   "@id" : "_:genid24",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifier"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -173,16 +173,16 @@
   "@id" : "_:genid27",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#hasComponent"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasComponent"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Component"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component"
   } ]
 }, {
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifier"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -191,7 +191,7 @@
   "@id" : "_:genid4",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#description"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#description"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -200,7 +200,7 @@
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#identifier"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifier"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
@@ -209,7 +209,7 @@
   "@id" : "_:genid6",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
@@ -227,40 +227,22 @@
   "@id" : "_:genid8",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#LayerConstruction"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#LayerConstruction"
   } ]
 }, {
   "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#category"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#category"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
-  "@id" : "http://purl.org/dc/elements/1.1/created",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/elements/1.1/creator",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/elements/1.1/description",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/elements/1.1/license",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/elements/1.1/publisher",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://purl.org/dc/elements/1.1/title",
-  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/elements/1.1/description" : [ {
     "@language" : "en",
@@ -283,13 +265,13 @@
     "@value" : "0.0.1"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/saref4building#Building"
@@ -301,7 +283,7 @@
     "@id" : "_:genid3"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#BuildingSpace",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/def/saref4building#BuildingSpace"
@@ -315,7 +297,7 @@
     "@id" : "_:genid7"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Component",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Component",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -331,79 +313,79 @@
     "@id" : "_:genid11"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#ConventionCenter",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#ConventionCenter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Corridor",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Corridor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Courthouse",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Courthouse",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#DataCenter",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#DataCenter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Dormitory",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Dormitory",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#ExerciseCenter",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#ExerciseCenter",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Firestation",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Firestation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Gymnasium",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Gymnasium",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Hotel",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Hotel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Layer",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Layer",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -419,7 +401,7 @@
     "@id" : "_:genid15"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#LayerConstruction",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#LayerConstruction",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -433,19 +415,19 @@
     "@id" : "_:genid18"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Library",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Library",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Manufacturing",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Manufacturing",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Material",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Material",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -461,7 +443,7 @@
     "@id" : "_:genid22"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#MaterialCombination",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialCombination",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -473,206 +455,224 @@
     "@id" : "_:genid24"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#MeetingRoom",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#MeetingRoom",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Motel",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Motel",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#MultiFamily",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#MultiFamily",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Office",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Office",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   }, {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#OfficePrivate",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#OfficePrivate",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#OfficeShared",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#OfficeShared",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Outdoor",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Outdoor",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#ParkingGarage",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#ParkingGarage",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Penitentiary",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Penitentiary",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#PoliceStation",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#PoliceStation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#PostOffice",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#PostOffice",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#ResidentialOwn",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#ResidentialOwn",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   }, {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#ResidentialRent",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#ResidentialRent",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   }, {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Retail",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Retail",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#SportsArea",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#SportsArea",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#TownHall",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#TownHall",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Transportation",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Transportation",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Warehouse",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Warehouse",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#Workshop",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Workshop",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://bimerr.iot.linkeddata.es/def/building#Building"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building"
   } ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#buildingAddress",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#buildingAddress",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#category",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#category",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#costUnit",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#costUnit",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#description",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#description",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#hasComponent",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasComponent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#hasLayer",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasLayer",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#identifier",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#includesMaterial",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#includesMaterial",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#lifetime",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#lifetime",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#minNumberOccupants",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#minNumberOccupants",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#name",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#name",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#percentage",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#percentage",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#position",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#position",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
 }, {
-  "@id" : "https://bimerr.iot.linkeddata.es/def/building#thickness",
+  "@id" : "http://bimerr.iot.linkeddata.es/def/building#thickness",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/elements/1.1/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://bimerr.iot.linkeddata.es/def/occupancy-profile#minNumberOccupants",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]

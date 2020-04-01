@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="https://bimerr.iot.linkeddata.es/def/building#"
-     xml:base="https://bimerr.iot.linkeddata.es/def/building"
+<rdf:RDF xmlns="http://bimerr.iot.linkeddata.es/def/building#"
+     xml:base="http://bimerr.iot.linkeddata.es/def/building"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="https://bimerr.iot.linkeddata.es/def/building#">
+    <owl:Ontology rdf:about="http://bimerr.iot.linkeddata.es/def/building#">
         <dc:description xml:lang="en">The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model.</dc:description>
         <dc:license xml:lang="en">http://purl.org/NET/rdflicense/cc-by4.0</dc:license>
         <dc:publisher xml:lang="en">http://www.oeg-upm.net/</dc:publisher>
@@ -83,38 +83,38 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#hasComponent -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#hasComponent -->
 
 
-    <owl:ObjectProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#hasComponent"/>
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasComponent"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#hasLayer -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#hasLayer -->
 
 
-    <owl:ObjectProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#hasLayer"/>
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasLayer"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction -->
 
 
-    <owl:ObjectProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction"/>
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination -->
 
 
-    <owl:ObjectProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination"/>
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#includesMaterial -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#includesMaterial -->
 
 
-    <owl:ObjectProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#includesMaterial"/>
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#includesMaterial"/>
     
 
 
@@ -144,87 +144,87 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#buildingAddress -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#buildingAddress -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#buildingAddress"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#buildingAddress"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#category -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#category -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#category"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#category"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#costUnit -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#costUnit -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#costUnit"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#costUnit"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#description -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#description -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#description"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#description"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#identifier -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#identifier -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#identifier"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#identifier"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#lifetime -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#lifetime -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#lifetime"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#lifetime"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#minNumberOccupants -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#minNumberOccupants -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#minNumberOccupants"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#minNumberOccupants"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#name -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#name -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#name"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#name"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#percentage -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#percentage -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#percentage"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#percentage"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#position -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#position -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#position"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#position"/>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#thickness -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#thickness -->
 
 
-    <owl:DatatypeProperty rdf:about="https://bimerr.iot.linkeddata.es/def/building#thickness"/>
+    <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#thickness"/>
     
 
 
@@ -254,35 +254,35 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Building -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Building -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Building">
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Building">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4building#Building"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#buildingAddress"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#buildingAddress"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#description"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#description"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#identifier"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#identifier"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -290,26 +290,26 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#BuildingSpace -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#BuildingSpace -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#BuildingSpace">
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace">
         <rdfs:subClassOf rdf:resource="https://w3id.org/def/saref4building#BuildingSpace"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#description"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#description"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#identifier"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#identifier"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -323,25 +323,25 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Component -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Component -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Component">
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Component">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction"/>
-                <owl:someValuesFrom rdf:resource="https://bimerr.iot.linkeddata.es/def/building#LayerConstruction"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#LayerConstruction"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#category"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#category"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#identifier"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#identifier"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -356,139 +356,139 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#ConventionCenter -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ConventionCenter -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#ConventionCenter">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ConventionCenter">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Corridor -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Corridor -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Corridor">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Corridor">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Courthouse -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Courthouse -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Courthouse">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Courthouse">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#DataCenter -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#DataCenter -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#DataCenter">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#DataCenter">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Dormitory -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Dormitory -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Dormitory">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Dormitory">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#ExerciseCenter -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ExerciseCenter -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#ExerciseCenter">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ExerciseCenter">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Firestation -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Firestation -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Firestation">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Firestation">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Gymnasium -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Gymnasium -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Gymnasium">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Gymnasium">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Hotel -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Hotel -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Hotel">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Hotel">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Layer -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Layer -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Layer">
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Layer">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination"/>
-                <owl:someValuesFrom rdf:resource="https://bimerr.iot.linkeddata.es/def/building#MaterialCombination"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#MaterialCombination"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#identifier"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#identifier"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#position"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#position"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#thickness"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#thickness"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -497,19 +497,19 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#LayerConstruction -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#LayerConstruction -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#LayerConstruction">
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#LayerConstruction">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#hasLayer"/>
-                <owl:someValuesFrom rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Layer"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#hasLayer"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Layer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#identifier"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#identifier"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -524,43 +524,43 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Library -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Library -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Library">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Library">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Manufacturing -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Manufacturing -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Manufacturing">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Manufacturing">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Material -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Material -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Material">
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Material">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#costUnit"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#costUnit"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#lifetime"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#lifetime"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#percentage"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#percentage"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -575,19 +575,19 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#MaterialCombination -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#MaterialCombination -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#MaterialCombination">
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#MaterialCombination">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#includesMaterial"/>
-                <owl:someValuesFrom rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Material"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#includesMaterial"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Material"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#identifier"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#identifier"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -596,221 +596,221 @@
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#MeetingRoom -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#MeetingRoom -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#MeetingRoom">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#MeetingRoom">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Motel -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Motel -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Motel">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Motel">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#MultiFamily -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#MultiFamily -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#MultiFamily">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#MultiFamily">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Office -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Office -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Office">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Office">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#OfficePrivate -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#OfficePrivate -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#OfficePrivate">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#OfficePrivate">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#OfficeShared -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#OfficeShared -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#OfficeShared">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#OfficeShared">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Outdoor -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Outdoor -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Outdoor">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Outdoor">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#ParkingGarage -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ParkingGarage -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#ParkingGarage">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ParkingGarage">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Penitentiary -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Penitentiary -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Penitentiary">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Penitentiary">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#PoliceStation -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#PoliceStation -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#PoliceStation">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PoliceStation">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#PostOffice -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#PostOffice -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#PostOffice">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#PostOffice">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#ResidentialOwn -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ResidentialOwn -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#ResidentialOwn">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ResidentialOwn">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#ResidentialRent -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#ResidentialRent -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#ResidentialRent">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#ResidentialRent">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#BuildingSpace"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Retail -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Retail -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Retail">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Retail">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#SportsArea -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#SportsArea -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#SportsArea">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#SportsArea">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#TownHall -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#TownHall -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#TownHall">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#TownHall">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Transportation -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Transportation -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Transportation">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Transportation">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Warehouse -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Warehouse -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Warehouse">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Warehouse">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
 
-    <!-- https://bimerr.iot.linkeddata.es/def/building#Workshop -->
+    <!-- http://bimerr.iot.linkeddata.es/def/building#Workshop -->
 
 
-    <owl:Class rdf:about="https://bimerr.iot.linkeddata.es/def/building#Workshop">
-        <rdfs:subClassOf rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Building"/>
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Workshop">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Building"/>
     </owl:Class>
     
 
@@ -851,8 +851,8 @@
     <owl:Class rdf:about="https://w3id.org/def/saref4building#PhysicalObject">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="https://bimerr.iot.linkeddata.es/def/building#hasComponent"/>
-                <owl:someValuesFrom rdf:resource="https://bimerr.iot.linkeddata.es/def/building#Component"/>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#hasComponent"/>
+                <owl:someValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:label xml:lang="en">Physical Object</rdfs:label>

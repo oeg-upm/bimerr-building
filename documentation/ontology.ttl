@@ -1,17 +1,17 @@
-@prefix : <https://bimerr.iot.linkeddata.es/def/building#> .
+@prefix : <http://bimerr.iot.linkeddata.es/def/building#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://bimerr.iot.linkeddata.es/def/building#> .
+@base <http://bimerr.iot.linkeddata.es/def/building#> .
 
-<https://bimerr.iot.linkeddata.es/def/building#> rdf:type owl:Ontology ;
-                                                  <http://purl.org/dc/elements/1.1/description> "The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model."@en ;
-                                                  <http://purl.org/dc/elements/1.1/license> "http://purl.org/NET/rdflicense/cc-by4.0"@en ;
-                                                  <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en ;
-                                                  <http://purl.org/dc/elements/1.1/title> "Building ontology"@en ;
-                                                  owl:versionInfo "0.0.1"@en .
+<http://bimerr.iot.linkeddata.es/def/building#> rdf:type owl:Ontology ;
+                                                 <http://purl.org/dc/elements/1.1/description> "The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model."@en ;
+                                                 <http://purl.org/dc/elements/1.1/license> "http://purl.org/NET/rdflicense/cc-by4.0"@en ;
+                                                 <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en ;
+                                                 <http://purl.org/dc/elements/1.1/title> "Building ontology"@en ;
+                                                 owl:versionInfo "0.0.1"@en .
 
 #################################################################
 #    Annotation properties
@@ -45,23 +45,23 @@
 #    Object Properties
 #################################################################
 
-###  https://bimerr.iot.linkeddata.es/def/building#hasComponent
+###  http://bimerr.iot.linkeddata.es/def/building#hasComponent
 :hasComponent rdf:type owl:ObjectProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#hasLayer
+###  http://bimerr.iot.linkeddata.es/def/building#hasLayer
 :hasLayer rdf:type owl:ObjectProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction
+###  http://bimerr.iot.linkeddata.es/def/building#hasLayerConstruction
 :hasLayerConstruction rdf:type owl:ObjectProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination
+###  http://bimerr.iot.linkeddata.es/def/building#hasMaterialCombination
 :hasMaterialCombination rdf:type owl:ObjectProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#includesMaterial
+###  http://bimerr.iot.linkeddata.es/def/building#includesMaterial
 :includesMaterial rdf:type owl:ObjectProperty .
 
 
@@ -77,51 +77,51 @@
 #    Data properties
 #################################################################
 
-###  https://bimerr.iot.linkeddata.es/def/building#buildingAddress
+###  http://bimerr.iot.linkeddata.es/def/building#buildingAddress
 :buildingAddress rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#category
+###  http://bimerr.iot.linkeddata.es/def/building#category
 :category rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#costUnit
+###  http://bimerr.iot.linkeddata.es/def/building#costUnit
 :costUnit rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#description
+###  http://bimerr.iot.linkeddata.es/def/building#description
 :description rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#identifier
+###  http://bimerr.iot.linkeddata.es/def/building#identifier
 :identifier rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#lifetime
+###  http://bimerr.iot.linkeddata.es/def/building#lifetime
 :lifetime rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants
+###  http://bimerr.iot.linkeddata.es/def/building#maxNumberOccupants
 :maxNumberOccupants rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#minNumberOccupants
+###  http://bimerr.iot.linkeddata.es/def/building#minNumberOccupants
 :minNumberOccupants rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#name
+###  http://bimerr.iot.linkeddata.es/def/building#name
 :name rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#percentage
+###  http://bimerr.iot.linkeddata.es/def/building#percentage
 :percentage rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#position
+###  http://bimerr.iot.linkeddata.es/def/building#position
 :position rdf:type owl:DatatypeProperty .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#thickness
+###  http://bimerr.iot.linkeddata.es/def/building#thickness
 :thickness rdf:type owl:DatatypeProperty .
 
 
@@ -137,12 +137,12 @@
 #    Classes
 #################################################################
 
-###  https://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility
+###  http://bimerr.iot.linkeddata.es/def/building#AutomotiveFacility
 :AutomotiveFacility rdf:type owl:Class ;
                     rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Building
+###  http://bimerr.iot.linkeddata.es/def/building#Building
 :Building rdf:type owl:Class ;
           rdfs:subClassOf <https://w3id.org/def/saref4building#Building> ,
                           [ rdf:type owl:Restriction ;
@@ -159,7 +159,7 @@
                           ] .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#BuildingSpace
+###  http://bimerr.iot.linkeddata.es/def/building#BuildingSpace
 :BuildingSpace rdf:type owl:Class ;
                rdfs:subClassOf <https://w3id.org/def/saref4building#BuildingSpace> ,
                                [ rdf:type owl:Restriction ;
@@ -180,7 +180,7 @@
                                ] .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Component
+###  http://bimerr.iot.linkeddata.es/def/building#Component
 :Component rdf:type owl:Class ;
            rdfs:subClassOf [ rdf:type owl:Restriction ;
                              owl:onProperty :hasLayerConstruction ;
@@ -201,67 +201,67 @@
            rdfs:label "Component"@en .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#ConventionCenter
+###  http://bimerr.iot.linkeddata.es/def/building#ConventionCenter
 :ConventionCenter rdf:type owl:Class ;
                   rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Corridor
+###  http://bimerr.iot.linkeddata.es/def/building#Corridor
 :Corridor rdf:type owl:Class ;
           rdfs:subClassOf :BuildingSpace .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Courthouse
+###  http://bimerr.iot.linkeddata.es/def/building#Courthouse
 :Courthouse rdf:type owl:Class ;
             rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#DataCenter
+###  http://bimerr.iot.linkeddata.es/def/building#DataCenter
 :DataCenter rdf:type owl:Class ;
             rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure
+###  http://bimerr.iot.linkeddata.es/def/building#DiningBarLoungeOrLeisure
 :DiningBarLoungeOrLeisure rdf:type owl:Class ;
                           rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood
+###  http://bimerr.iot.linkeddata.es/def/building#DiningCafeteriaFastFood
 :DiningCafeteriaFastFood rdf:type owl:Class ;
                          rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Dormitory
+###  http://bimerr.iot.linkeddata.es/def/building#Dormitory
 :Dormitory rdf:type owl:Class ;
            rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#ExerciseCenter
+###  http://bimerr.iot.linkeddata.es/def/building#ExerciseCenter
 :ExerciseCenter rdf:type owl:Class ;
                 rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Firestation
+###  http://bimerr.iot.linkeddata.es/def/building#Firestation
 :Firestation rdf:type owl:Class ;
              rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Gymnasium
+###  http://bimerr.iot.linkeddata.es/def/building#Gymnasium
 :Gymnasium rdf:type owl:Class ;
            rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare
+###  http://bimerr.iot.linkeddata.es/def/building#HospitalOrHealthcare
 :HospitalOrHealthcare rdf:type owl:Class ;
                       rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Hotel
+###  http://bimerr.iot.linkeddata.es/def/building#Hotel
 :Hotel rdf:type owl:Class ;
        rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Layer
+###  http://bimerr.iot.linkeddata.es/def/building#Layer
 :Layer rdf:type owl:Class ;
        rdfs:subClassOf [ rdf:type owl:Restriction ;
                          owl:onProperty :hasMaterialCombination ;
@@ -282,7 +282,7 @@
        rdfs:label "Layer"@en .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#LayerConstruction
+###  http://bimerr.iot.linkeddata.es/def/building#LayerConstruction
 :LayerConstruction rdf:type owl:Class ;
                    rdfs:subClassOf [ rdf:type owl:Restriction ;
                                      owl:onProperty :hasLayer ;
@@ -299,17 +299,17 @@
                    rdfs:label "Layer Construction"@en .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Library
+###  http://bimerr.iot.linkeddata.es/def/building#Library
 :Library rdf:type owl:Class ;
          rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Manufacturing
+###  http://bimerr.iot.linkeddata.es/def/building#Manufacturing
 :Manufacturing rdf:type owl:Class ;
                rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Material
+###  http://bimerr.iot.linkeddata.es/def/building#Material
 :Material rdf:type owl:Class ;
           rdfs:subClassOf [ rdf:type owl:Restriction ;
                             owl:onProperty :costUnit ;
@@ -330,7 +330,7 @@
           rdfs:label "Material"@en .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#MaterialCombination
+###  http://bimerr.iot.linkeddata.es/def/building#MaterialCombination
 :MaterialCombination rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
                                        owl:onProperty :includesMaterial ;
@@ -343,125 +343,125 @@
                      rdfs:label "Material combination"@en .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#MeetingRoom
+###  http://bimerr.iot.linkeddata.es/def/building#MeetingRoom
 :MeetingRoom rdf:type owl:Class ;
              rdfs:subClassOf :BuildingSpace .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Motel
+###  http://bimerr.iot.linkeddata.es/def/building#Motel
 :Motel rdf:type owl:Class ;
        rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre
+###  http://bimerr.iot.linkeddata.es/def/building#MotionPictureTheatre
 :MotionPictureTheatre rdf:type owl:Class ;
                       rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#MultiFamily
+###  http://bimerr.iot.linkeddata.es/def/building#MultiFamily
 :MultiFamily rdf:type owl:Class ;
              rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Office
+###  http://bimerr.iot.linkeddata.es/def/building#Office
 :Office rdf:type owl:Class ;
         rdfs:subClassOf :Building ,
                         :BuildingSpace .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#OfficePrivate
+###  http://bimerr.iot.linkeddata.es/def/building#OfficePrivate
 :OfficePrivate rdf:type owl:Class ;
                rdfs:subClassOf :BuildingSpace .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#OfficeShared
+###  http://bimerr.iot.linkeddata.es/def/building#OfficeShared
 :OfficeShared rdf:type owl:Class ;
               rdfs:subClassOf :BuildingSpace .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Outdoor
+###  http://bimerr.iot.linkeddata.es/def/building#Outdoor
 :Outdoor rdf:type owl:Class ;
          rdfs:subClassOf :BuildingSpace .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#ParkingGarage
+###  http://bimerr.iot.linkeddata.es/def/building#ParkingGarage
 :ParkingGarage rdf:type owl:Class ;
                rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Penitentiary
+###  http://bimerr.iot.linkeddata.es/def/building#Penitentiary
 :Penitentiary rdf:type owl:Class ;
               rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater
+###  http://bimerr.iot.linkeddata.es/def/building#PerformingArtsTheater
 :PerformingArtsTheater rdf:type owl:Class ;
                        rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#PoliceStation
+###  http://bimerr.iot.linkeddata.es/def/building#PoliceStation
 :PoliceStation rdf:type owl:Class ;
                rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#PostOffice
+###  http://bimerr.iot.linkeddata.es/def/building#PostOffice
 :PostOffice rdf:type owl:Class ;
             rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding
+###  http://bimerr.iot.linkeddata.es/def/building#ReligiousBuilding
 :ReligiousBuilding rdf:type owl:Class ;
                    rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#ResidentialOwn
+###  http://bimerr.iot.linkeddata.es/def/building#ResidentialOwn
 :ResidentialOwn rdf:type owl:Class ;
                 rdfs:subClassOf :Building ,
                                 :BuildingSpace .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#ResidentialRent
+###  http://bimerr.iot.linkeddata.es/def/building#ResidentialRent
 :ResidentialRent rdf:type owl:Class ;
                  rdfs:subClassOf :Building ,
                                  :BuildingSpace .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Retail
+###  http://bimerr.iot.linkeddata.es/def/building#Retail
 :Retail rdf:type owl:Class ;
         rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity
+###  http://bimerr.iot.linkeddata.es/def/building#SchoolOrUniversity
 :SchoolOrUniversity rdf:type owl:Class ;
                     rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome
+###  http://bimerr.iot.linkeddata.es/def/building#SingleFamilyHome
 :SingleFamilyHome rdf:type owl:Class ;
                   rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#SportsArea
+###  http://bimerr.iot.linkeddata.es/def/building#SportsArea
 :SportsArea rdf:type owl:Class ;
             rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#TownHall
+###  http://bimerr.iot.linkeddata.es/def/building#TownHall
 :TownHall rdf:type owl:Class ;
           rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Transportation
+###  http://bimerr.iot.linkeddata.es/def/building#Transportation
 :Transportation rdf:type owl:Class ;
                 rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Warehouse
+###  http://bimerr.iot.linkeddata.es/def/building#Warehouse
 :Warehouse rdf:type owl:Class ;
            rdfs:subClassOf :Building .
 
 
-###  https://bimerr.iot.linkeddata.es/def/building#Workshop
+###  http://bimerr.iot.linkeddata.es/def/building#Workshop
 :Workshop rdf:type owl:Class ;
           rdfs:subClassOf :Building .
 
