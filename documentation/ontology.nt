@@ -203,6 +203,7 @@ _:genid5 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Component
 <http://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#comment> "Represents assemblies or undividible building products."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Component> <http://www.w3.org/2000/01/rdf-schema#label> "Component"@en .
 # 
@@ -213,6 +214,7 @@ _:genid5 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Construction
 <http://bimerr.iot.linkeddata.es/def/building#Construction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Construction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Construction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
 _:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
@@ -227,7 +229,6 @@ _:genid6 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Element
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/seas/FeatureOfInterest> .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
 _:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
@@ -268,6 +269,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/200
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Layer
 <http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#comment> "A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)"@en .
 <http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#label> "Layer"@en .
 # 
@@ -283,7 +285,6 @@ _:genid7 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/200
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Material
 <http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://w3id.org/seas/FeatureOfInterest> .
 <http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)"@en .
 <http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material"@en .
 # 
@@ -375,10 +376,6 @@ _:genid10 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/20
 <http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Window and component"@en .
-# 
-# http://w3id.org/seas/FeatureOfInterest
-<http://w3id.org/seas/FeatureOfInterest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://w3id.org/seas/FeatureOfInterest> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/seas/> .
 # 
 # https://w3id.org/bot#Building
 <https://w3id.org/bot#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

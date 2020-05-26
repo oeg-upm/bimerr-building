@@ -232,6 +232,7 @@ building:CoatingsAndImpregnation rdf:type owl:Class ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Component
 building:Component rdf:type owl:Class ;
+                   rdfs:subClassOf building:Element ;
                    rdfs:comment "Represents assemblies or undividible building products."@en ;
                    rdfs:label "Component"@en .
 
@@ -244,7 +245,8 @@ building:Concrete rdf:type owl:Class ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Construction
 building:Construction rdf:type owl:Class ;
-                      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                      rdfs:subClassOf building:Element ,
+                                      [ rdf:type owl:Restriction ;
                                         owl:onProperty building:ifcIdentifier ;
                                         owl:someValuesFrom xsd:string
                                       ] ;
@@ -260,8 +262,7 @@ building:Door rdf:type owl:Class ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Element
 building:Element rdf:type owl:Class ;
-                 rdfs:subClassOf seas:FeatureOfInterest ,
-                                 bot:Element ,
+                 rdfs:subClassOf bot:Element ,
                                  [ rdf:type owl:Restriction ;
                                    owl:onProperty building:ifcIdentifier ;
                                    owl:cardinality "1"^^xsd:nonNegativeInteger
@@ -308,6 +309,7 @@ building:InsulationMaterial rdf:type owl:Class ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Layer
 building:Layer rdf:type owl:Class ;
+               rdfs:subClassOf building:Element ;
                rdfs:comment "A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)"@en ;
                rdfs:label "Layer"@en .
 
@@ -326,7 +328,6 @@ building:MasonryAndPlasterMortar rdf:type owl:Class ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Material
 building:Material rdf:type owl:Class ;
-                  rdfs:subClassOf seas:FeatureOfInterest ;
                   rdfs:comment "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)"@en ;
                   rdfs:label "Material"@en .
 
@@ -433,11 +434,6 @@ building:WallPaintAndCovering rdf:type owl:Class ;
 building:WindowAndComponent rdf:type owl:Class ;
                             rdfs:subClassOf building:Component ;
                             rdfs:label "Window and component"@en .
-
-
-###  http://w3id.org/seas/FeatureOfInterest
-seas:FeatureOfInterest rdf:type owl:Class ;
-                       rdfs:isDefinedBy seas: .
 
 
 ###  https://w3id.org/bot#Building

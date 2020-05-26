@@ -389,6 +389,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Component">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
         <rdfs:comment xml:lang="en">Represents assemblies or undividible building products.</rdfs:comment>
         <rdfs:label xml:lang="en">Component</rdfs:label>
     </owl:Class>
@@ -409,6 +410,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Construction">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
@@ -435,7 +437,6 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Element">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/seas/FeatureOfInterest"/>
         <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Element"/>
         <rdfs:subClassOf>
             <owl:Restriction>
@@ -513,6 +514,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Layer">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
         <rdfs:comment xml:lang="en">A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)</rdfs:comment>
         <rdfs:label xml:lang="en">Layer</rdfs:label>
     </owl:Class>
@@ -543,7 +545,6 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Material">
-        <rdfs:subClassOf rdf:resource="http://w3id.org/seas/FeatureOfInterest"/>
         <rdfs:comment xml:lang="en">A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)</rdfs:comment>
         <rdfs:label xml:lang="en">Material</rdfs:label>
     </owl:Class>
@@ -716,15 +717,6 @@
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
         <rdfs:label xml:lang="en">Window and component</rdfs:label>
-    </owl:Class>
-    
-
-
-    <!-- http://w3id.org/seas/FeatureOfInterest -->
-
-
-    <owl:Class rdf:about="http://w3id.org/seas/FeatureOfInterest">
-        <rdfs:isDefinedBy rdf:resource="http://w3id.org/seas/"/>
     </owl:Class>
     
 

@@ -223,6 +223,7 @@
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Component
 :Component rdf:type owl:Class ;
+           rdfs:subClassOf :Element ;
            rdfs:comment "Represents assemblies or undividible building products."@en ;
            rdfs:label "Component"@en .
 
@@ -235,7 +236,8 @@
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Construction
 :Construction rdf:type owl:Class ;
-              rdfs:subClassOf [ rdf:type owl:Restriction ;
+              rdfs:subClassOf :Element ,
+                              [ rdf:type owl:Restriction ;
                                 owl:onProperty :ifcIdentifier ;
                                 owl:someValuesFrom xsd:string
                               ] ;
@@ -251,8 +253,7 @@
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Element
 :Element rdf:type owl:Class ;
-         rdfs:subClassOf <http://w3id.org/seas/FeatureOfInterest> ,
-                         <https://w3id.org/bot#Element> ,
+         rdfs:subClassOf <https://w3id.org/bot#Element> ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :ifcIdentifier ;
                            owl:cardinality "1"^^xsd:nonNegativeInteger
@@ -299,6 +300,7 @@
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Layer
 :Layer rdf:type owl:Class ;
+       rdfs:subClassOf :Element ;
        rdfs:comment "A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)"@en ;
        rdfs:label "Layer"@en .
 
@@ -317,7 +319,6 @@
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Material
 :Material rdf:type owl:Class ;
-          rdfs:subClassOf <http://w3id.org/seas/FeatureOfInterest> ;
           rdfs:comment "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)"@en ;
           rdfs:label "Material"@en .
 
@@ -424,11 +425,6 @@
 :WindowAndComponent rdf:type owl:Class ;
                     rdfs:subClassOf :Component ;
                     rdfs:label "Window and component"@en .
-
-
-###  http://w3id.org/seas/FeatureOfInterest
-<http://w3id.org/seas/FeatureOfInterest> rdf:type owl:Class ;
-                                         rdfs:isDefinedBy <http://w3id.org/seas/> .
 
 
 ###  https://w3id.org/bot#Building

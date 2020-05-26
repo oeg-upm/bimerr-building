@@ -224,6 +224,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Component"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Concrete",
@@ -247,6 +250,8 @@
     "@value" : "Construction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
+  }, {
     "@id" : "_:genid6"
   } ]
 }, {
@@ -271,8 +276,6 @@
     "@value" : "Element"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/seas/FeatureOfInterest"
-  }, {
     "@id" : "https://w3id.org/bot#Element"
   }, {
     "@id" : "_:genid7"
@@ -347,6 +350,9 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Layer"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Masonry",
@@ -378,9 +384,6 @@
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
     "@value" : "Material"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://w3id.org/seas/FeatureOfInterest"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#NaturalStone",
@@ -669,12 +672,6 @@
 }, {
   "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://w3id.org/seas/FeatureOfInterest",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
-    "@id" : "http://w3id.org/seas/"
-  } ]
 }, {
   "@id" : "http://www.w3.org/2003/01/geo/wgs84_pos#alt",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],

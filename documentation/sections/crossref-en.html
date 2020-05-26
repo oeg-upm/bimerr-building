@@ -65,11 +65,6 @@ This section provides details for each class and property defined by Building on
             title="http://bimerr.iot.linkeddata.es/def/building#FacadeCladding">Facade cladding</a>
       </li>
       <li>
-         <a href="#http://w3id.org/seas/FeatureOfInterest" title="http://w3id.org/seas/FeatureOfInterest">
-            <span>feature of interest</span>
-         </a>
-      </li>
-      <li>
          <a href="#FloorCovering"
             title="http://bimerr.iot.linkeddata.es/def/building#FloorCovering">Floor covering</a>
       </li>
@@ -335,6 +330,12 @@ This section provides details for each class and property defined by Building on
          <span class="markdown">Represents assemblies or undividible building products.</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Element"
+               title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#Door"
@@ -397,7 +398,11 @@ This section provides details for each class and property defined by Building on
       </div>
       <dl class="description">
          <dt>has super-classes</dt>
-         <dd/>
+         <dd>
+            <a href="#Element"
+               title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in domain of</dt>
          <dd>
             <a href="#hasLayer"
@@ -436,7 +441,16 @@ This section provides details for each class and property defined by Building on
          <dt>has super-classes</dt>
          <dd>
             <a href="#https://w3id.org/bot#Element" title="https://w3id.org/bot#Element">element</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#http://w3id.org/seas/FeatureOfInterest" title="http://w3id.org/seas/FeatureOfInterest">feature of interest</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>has sub-classes</dt>
+         <dd>
+            <a href="#Component"
+               title="http://bimerr.iot.linkeddata.es/def/building#Component">Component</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Construction"
+               title="http://bimerr.iot.linkeddata.es/def/building#Construction">Construction</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#Layer"
+               title="http://bimerr.iot.linkeddata.es/def/building#Layer">Layer</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
       </dl>
@@ -474,30 +488,6 @@ This section provides details for each class and property defined by Building on
          <dt>has super-classes</dt>
          <dd>
             <a href="#Material"
-               title="http://bimerr.iot.linkeddata.es/def/building#Material">Material</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
-      </dl>
-   </div>
-   <div class="entity" id="http://w3id.org/seas/FeatureOfInterest">
-      <h3>feature of interest<sup class="type-c" title="class">c</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://w3id.org/seas/FeatureOfInterest</p>
-      <dl class="definedBy">
-         <dt>Is defined by</dt>
-         <dd>
-            <a href="http://w3id.org/seas/">http://w3id.org/seas/</a>
-         </dd>
-      </dl>
-      <dl class="description">
-         <dt>has sub-classes</dt>
-         <dd>
-            <a href="#Element"
-               title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
-            <sup class="type-c" title="class">c</sup>, <a href="#Material"
                title="http://bimerr.iot.linkeddata.es/def/building#Material">Material</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
@@ -594,6 +584,12 @@ This section provides details for each class and property defined by Building on
          <span class="markdown">A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)</span>
       </div>
       <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#Element"
+               title="http://bimerr.iot.linkeddata.es/def/building#Element">Element</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
          <dt>is in range of</dt>
          <dd>
             <a href="#hasLayer"
@@ -645,11 +641,6 @@ This section provides details for each class and property defined by Building on
          <span class="markdown">A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)</span>
       </div>
       <dl class="description">
-         <dt>has super-classes</dt>
-         <dd>
-            <a href="#http://w3id.org/seas/FeatureOfInterest" title="http://w3id.org/seas/FeatureOfInterest">feature of interest</a>
-            <sup class="type-c" title="class">c</sup>
-         </dd>
          <dt>has sub-classes</dt>
          <dd>
             <a href="#AdhesiveAndFiller"
