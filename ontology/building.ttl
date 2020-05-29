@@ -22,7 +22,7 @@
                                                  <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en ;
                                                  <http://purl.org/dc/elements/1.1/title> "Building ontology"@en ;
                                                  vann:preferredNamespacePrefix "building" ;
-                                                 owl:versionInfo "0.0.2"@en .
+                                                 owl:versionInfo "0.0.3"@en .
 
 #################################################################
 #    Annotation properties
@@ -62,7 +62,8 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  http://bimerr.iot.linkeddata.es/def/building#hasApartment
 building:hasApartment rdf:type owl:ObjectProperty ;
-                      rdfs:subPropertyOf bot:hasZone ;
+                      rdfs:subPropertyOf bot:containsZone ;
+                      rdfs:comment "Relation to indicate that a storey has apartments."@en ;
                       rdfs:label "has apartment"@en .
 
 
@@ -71,6 +72,7 @@ building:hasLayer rdf:type owl:ObjectProperty ;
                   rdfs:subPropertyOf bot:hasSubElement ;
                   rdfs:domain building:Construction ;
                   rdfs:range building:Layer ;
+                  rdfs:comment "Relation to link construction components (walls, floors, etc) with their internal layers."@en ;
                   rdfs:label "has layer"@en .
 
 
@@ -79,6 +81,7 @@ building:hasSubComponent rdf:type owl:ObjectProperty ;
                          rdfs:subPropertyOf bot:hasSubElement ;
                          rdfs:domain building:Component ;
                          rdfs:range building:Component ;
+                         rdfs:comment "Relation to link building components (HVAC, doors, etc) with the sub-components they are conformed with."@en ;
                          rdfs:label "has subcomponent"@en .
 
 
@@ -88,29 +91,49 @@ building:includesMaterial rdf:type owl:ObjectProperty ;
                           rdfs:label "includes material"@en .
 
 
+###  https://w3id.org/bot#containsZone
+bot:containsZone rdf:type owl:ObjectProperty ;
+                 rdfs:domain bot:Zone ;
+                 rdfs:range bot:Zone ;
+                 rdfs:comment "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."@en ;
+                 rdfs:isDefinedBy <http://w3id.org/bot#> ;
+                 rdfs:label "contains zone"@en .
+
+
 ###  https://w3id.org/bot#hasElement
 bot:hasElement rdf:type owl:ObjectProperty ;
-               rdfs:isDefinedBy <http://w3id.org/bot#> .
+               rdfs:domain bot:Zone ;
+               rdfs:range bot:Element ;
+               rdfs:comment "Links a Zone to an Element that is contained in, or adjacent to, the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building."@en ;
+               rdfs:isDefinedBy <http://w3id.org/bot#> ;
+               rdfs:label "has element"@en .
 
 
 ###  https://w3id.org/bot#hasSpace
 bot:hasSpace rdf:type owl:ObjectProperty ;
-             rdfs:isDefinedBy <http://w3id.org/bot#> .
+             rdfs:domain bot:Zone ;
+             rdfs:range bot:Space ;
+             rdfs:comment "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en ;
+             rdfs:isDefinedBy <http://w3id.org/bot#> ;
+             rdfs:label "has space"@en .
 
 
 ###  https://w3id.org/bot#hasStorey
 bot:hasStorey rdf:type owl:ObjectProperty ;
-              rdfs:isDefinedBy <http://w3id.org/bot#> .
+              rdfs:domain bot:Zone ;
+              rdfs:range bot:Storey ;
+              rdfs:comment "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en ;
+              rdfs:isDefinedBy <http://w3id.org/bot#> ;
+              rdfs:label "has storey"@en .
 
 
 ###  https://w3id.org/bot#hasSubElement
 bot:hasSubElement rdf:type owl:ObjectProperty ;
-                  rdfs:isDefinedBy <http://w3id.org/bot#> .
-
-
-###  https://w3id.org/bot#hasZone
-bot:hasZone rdf:type owl:ObjectProperty ;
-            rdfs:isDefinedBy <http://w3id.org/bot#> .
+                  rdfs:domain bot:Element ;
+                  rdfs:range bot:Element ;
+                  rdfs:comment "Relation between an element a) and another element b) hosted by element a)."@en ;
+                  rdfs:isDefinedBy <http://w3id.org/bot#> ;
+                  rdfs:label "has sub-element"@en .
 
 
 #################################################################
@@ -121,41 +144,48 @@ bot:hasZone rdf:type owl:ObjectProperty ;
 building:buildingAddress rdf:type owl:DatatypeProperty ;
                          rdfs:domain building:Building ;
                          rdfs:range xsd:string ;
+                         rdfs:comment "Address of the building"@en ;
                          rdfs:label "building address"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier
 building:ifcIdentifier rdf:type owl:DatatypeProperty ;
                        rdfs:range xsd:string ;
+                       rdfs:comment "Identifier within the IFC file."@en ;
                        rdfs:label "ifc identifier"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#maxOccupants
 building:maxOccupants rdf:type owl:DatatypeProperty ;
                       rdfs:range xsd:integer ;
+                      rdfs:comment "Maximum limit range to describe the number of occupants inside a zone."@en ;
                       rdfs:label "max number occupants"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#minOccupants
 building:minOccupants rdf:type owl:DatatypeProperty ;
                       rdfs:range xsd:integer ;
+                      rdfs:comment "Minimum limit range to describe the number of occupants inside a zone."@en ;
                       rdfs:label "min number occupants"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
 geo:alt rdf:type owl:DatatypeProperty ;
+        rdfs:comment "Attribute to indicate the altitud geolocalization coordinate of a building."@en ;
         rdfs:isDefinedBy geo: ;
         rdfs:label "altitud"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
 geo:lat rdf:type owl:DatatypeProperty ;
+        rdfs:comment "Attribute to indicate the latitud geolocalization coordinate of a building."@en ;
         rdfs:isDefinedBy geo: ;
         rdfs:label "latitud"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
 geo:long rdf:type owl:DatatypeProperty ;
+         rdfs:comment "Attribute to indicate the longitud geolocalization coordinate of a building."@en ;
          rdfs:isDefinedBy geo: ;
          rdfs:label "longitud"@en .
 
@@ -891,27 +921,40 @@ building:XPSInsulationBoard rdf:type owl:Class ;
 
 ###  https://w3id.org/bot#Building
 bot:Building rdf:type owl:Class ;
-             rdfs:isDefinedBy <http://w3id.org/bot#> .
+             rdfs:subClassOf bot:Zone ;
+             rdfs:comment "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO-12006]."@en ;
+             rdfs:isDefinedBy <http://w3id.org/bot#> ;
+             rdfs:label "bot:Building"@en .
 
 
 ###  https://w3id.org/bot#Element
 bot:Element rdf:type owl:Class ;
-            rdfs:isDefinedBy <http://w3id.org/bot#> .
+            rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position [[ISO-12006], 3.4.7]."@en ;
+            rdfs:isDefinedBy <http://w3id.org/bot#> ;
+            rdfs:label "bot:Element"@en .
 
 
 ###  https://w3id.org/bot#Space
 bot:Space rdf:type owl:Class ;
-          rdfs:isDefinedBy <http://w3id.org/bot#> .
+          rdfs:subClassOf bot:Zone ;
+          rdfs:comment "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and provides for certain functions within the zone it is contained in."@en ;
+          rdfs:isDefinedBy <http://w3id.org/bot#> ;
+          rdfs:label "bot:Space"@en .
 
 
 ###  https://w3id.org/bot#Storey
 bot:Storey rdf:type owl:Class ;
-           rdfs:isDefinedBy <http://w3id.org/bot#> .
+           rdfs:subClassOf bot:Zone ;
+           rdfs:comment "A level part of a building."@en ;
+           rdfs:isDefinedBy <http://w3id.org/bot#> ;
+           rdfs:label "bot:Storey"@en .
 
 
 ###  https://w3id.org/bot#Zone
 bot:Zone rdf:type owl:Class ;
-         rdfs:isDefinedBy <http://w3id.org/bot#> .
+         rdfs:comment "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent."@en ;
+         rdfs:isDefinedBy <http://w3id.org/bot#> ;
+         rdfs:label "bot:Zone"@en .
 
 
 ###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi

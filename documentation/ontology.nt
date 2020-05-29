@@ -5,7 +5,7 @@
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/"@en .
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/title> "Building ontology"@en .
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/vocab/vann/preferredNamespacePrefix> "building" .
-<http://bimerr.iot.linkeddata.es/def/building#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2"@en .
+<http://bimerr.iot.linkeddata.es/def/building#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.3"@en .
 # 
 # 
 # #################################################################
@@ -47,7 +47,8 @@
 # 
 # http://bimerr.iot.linkeddata.es/def/building#hasApartment
 <http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasZone> .
+<http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#containsZone> .
+<http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to indicate that a storey has apartments."@en .
 <http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#label> "has apartment"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#hasLayer
@@ -55,6 +56,7 @@
 <http://bimerr.iot.linkeddata.es/def/building#hasLayer> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasSubElement> .
 <http://bimerr.iot.linkeddata.es/def/building#hasLayer> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
 <http://bimerr.iot.linkeddata.es/def/building#hasLayer> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Layer> .
+<http://bimerr.iot.linkeddata.es/def/building#hasLayer> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to link construction components (walls, floors, etc) with their internal layers."@en .
 <http://bimerr.iot.linkeddata.es/def/building#hasLayer> <http://www.w3.org/2000/01/rdf-schema#label> "has layer"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#hasSubComponent
@@ -62,6 +64,7 @@
 <http://bimerr.iot.linkeddata.es/def/building#hasSubComponent> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasSubElement> .
 <http://bimerr.iot.linkeddata.es/def/building#hasSubComponent> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#hasSubComponent> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Component> .
+<http://bimerr.iot.linkeddata.es/def/building#hasSubComponent> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to link building components (HVAC, doors, etc) with the sub-components they are conformed with."@en .
 <http://bimerr.iot.linkeddata.es/def/building#hasSubComponent> <http://www.w3.org/2000/01/rdf-schema#label> "has subcomponent"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#includesMaterial
@@ -69,25 +72,45 @@
 <http://bimerr.iot.linkeddata.es/def/building#includesMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Material> .
 <http://bimerr.iot.linkeddata.es/def/building#includesMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "includes material"@en .
 # 
+# https://w3id.org/bot#containsZone
+<https://w3id.org/bot#containsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to buildings contained in a zone. The typical domains of bot:hasBuilding are instances of bot:Site."@en .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
+<https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#label> "contains zone"@en .
+# 
 # https://w3id.org/bot#hasElement
 <https://w3id.org/bot#hasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a Zone to an Element that is contained in, or adjacent to, the Zone. The intended use of this relationship is not to be stated explicitly, but to be inferred from its sub-properties. It will, for example, allow one to query for all the doors of a building given that they have an adjacency to spaces of the building."@en .
 <https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
+<https://w3id.org/bot#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "has element"@en .
 # 
 # https://w3id.org/bot#hasSpace
 <https://w3id.org/bot#hasSpace> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Space> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to spaces contained in a zone. The typical domains of bot:hasSpace are instances of bot:Storey and bot:Building."@en .
 <https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
+<https://w3id.org/bot#hasSpace> <http://www.w3.org/2000/01/rdf-schema#label> "has space"@en .
 # 
 # https://w3id.org/bot#hasStorey
 <https://w3id.org/bot#hasStorey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Storey> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation to storeys contained in a zone. The typical domains of bot:hasStorey are instances of bot:Building."@en .
 <https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
+<https://w3id.org/bot#hasStorey> <http://www.w3.org/2000/01/rdf-schema#label> "has storey"@en .
 # 
 # https://w3id.org/bot#hasSubElement
 <https://w3id.org/bot#hasSubElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/bot#Element> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between an element a) and another element b) hosted by element a)."@en .
 <https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
-# 
-# https://w3id.org/bot#hasZone
-<https://w3id.org/bot#hasZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/bot#hasZone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
+<https://w3id.org/bot#hasSubElement> <http://www.w3.org/2000/01/rdf-schema#label> "has sub-element"@en .
 # 
 # 
 # 
@@ -102,35 +125,42 @@
 <http://bimerr.iot.linkeddata.es/def/building#buildingAddress> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://bimerr.iot.linkeddata.es/def/building#buildingAddress> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Building> .
 <http://bimerr.iot.linkeddata.es/def/building#buildingAddress> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#buildingAddress> <http://www.w3.org/2000/01/rdf-schema#comment> "Address of the building"@en .
 <http://bimerr.iot.linkeddata.es/def/building#buildingAddress> <http://www.w3.org/2000/01/rdf-schema#label> "building address"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier
 <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/2000/01/rdf-schema#comment> "Identifier within the IFC file."@en .
 <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> <http://www.w3.org/2000/01/rdf-schema#label> "ifc identifier"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#maxOccupants
 <http://bimerr.iot.linkeddata.es/def/building#maxOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://bimerr.iot.linkeddata.es/def/building#maxOccupants> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/building#maxOccupants> <http://www.w3.org/2000/01/rdf-schema#comment> "Maximum limit range to describe the number of occupants inside a zone."@en .
 <http://bimerr.iot.linkeddata.es/def/building#maxOccupants> <http://www.w3.org/2000/01/rdf-schema#label> "max number occupants"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#minOccupants
 <http://bimerr.iot.linkeddata.es/def/building#minOccupants> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://bimerr.iot.linkeddata.es/def/building#minOccupants> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
+<http://bimerr.iot.linkeddata.es/def/building#minOccupants> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum limit range to describe the number of occupants inside a zone."@en .
 <http://bimerr.iot.linkeddata.es/def/building#minOccupants> <http://www.w3.org/2000/01/rdf-schema#label> "min number occupants"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#alt
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribute to indicate the altitud geolocalization coordinate of a building."@en .
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#label> "altitud"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#lat
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribute to indicate the latitud geolocalization coordinate of a building."@en .
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> <http://www.w3.org/2000/01/rdf-schema#label> "latitud"@en .
 # 
 # http://www.w3.org/2003/01/geo/wgs84_pos#long
 <http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#comment> "Attribute to indicate the longitud geolocalization coordinate of a building."@en .
 <http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#long> <http://www.w3.org/2000/01/rdf-schema#label> "longitud"@en .
 # 
@@ -757,22 +787,35 @@ _:genid10 <http://www.w3.org/2002/07/owl#cardinality> "1"^^<http://www.w3.org/20
 # 
 # https://w3id.org/bot#Building
 <https://w3id.org/bot#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "An independent unit of the built environment with a characteristic spatial structure, intended to serve at least one function or user activity [ISO-12006]."@en .
 <https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
+<https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "bot:Building"@en .
 # 
 # https://w3id.org/bot#Element
 <https://w3id.org/bot#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Constituent of a construction entity with a characteristic technical function, form or position [[ISO-12006], 3.4.7]."@en .
 <https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
+<https://w3id.org/bot#Element> <http://www.w3.org/2000/01/rdf-schema#label> "bot:Element"@en .
 # 
 # https://w3id.org/bot#Space
 <https://w3id.org/bot#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "A part of the physical world or a virtual world whose 3D spatial extent is bounded actually or theoretically, and provides for certain functions within the zone it is contained in."@en .
 <https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
+<https://w3id.org/bot#Space> <http://www.w3.org/2000/01/rdf-schema#label> "bot:Space"@en .
 # 
 # https://w3id.org/bot#Storey
 <https://w3id.org/bot#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Zone> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "A level part of a building."@en .
 <https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
+<https://w3id.org/bot#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "bot:Storey"@en .
 # 
 # https://w3id.org/bot#Zone
 <https://w3id.org/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent."@en .
 <https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://w3id.org/bot#> .
+<https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "bot:Zone"@en .
 # 
 # Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
