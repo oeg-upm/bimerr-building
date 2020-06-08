@@ -139,6 +139,11 @@
                  rdfs:label "building address"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#hasSimple3DModel
+:hasSimple3DModel rdf:type owl:DatatypeProperty ;
+                  rdfs:label "has simple 3D model"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier
 :ifcIdentifier rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:string ;
@@ -223,7 +228,12 @@
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Apartment
 :Apartment rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/bot#Zone> ;
+           rdfs:subClassOf <https://w3id.org/bot#Zone> ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :hasSimple3DModel ;
+                             owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ;
            rdfs:comment "A delimited zone within a storey which brings shelter to its residents."@en ;
            rdfs:label "Apartment"@en .
 
@@ -250,6 +260,11 @@
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :buildingAddress ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasSimple3DModel ;
+                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                            owl:onDataRange xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#alt> ;
@@ -417,6 +432,11 @@
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :ifcIdentifier ;
                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasSimple3DModel ;
+                           owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onDataRange xsd:string
                          ] ;
          rdfs:comment "Building component or construction element which can be described by a set of properties."@en ;
          rdfs:label "Element"@en .
@@ -774,6 +794,11 @@
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :ifcIdentifier ;
                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :hasSimple3DModel ;
+                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                         owl:onDataRange xsd:string
                        ] ;
        rdfs:comment "A space is (if specified) associated to a building storey (or in case of exterior spaces to a site). A space may span over several connected spaces. Therefore a space group provides for a collection of spaces included in a storey. A space can also be decomposed in parts, where each part defines a partial space. (Definition taken from IFC standard)"@en ;
        rdfs:label "Space"@en .
@@ -785,6 +810,11 @@
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :ifcIdentifier ;
                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :hasSimple3DModel ;
+                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:string
                         ] ;
         rdfs:comment "A storey is (if specified) associated to a building. A storey may span over several connected storeys. Therefore storey complex provides for a collection of storeys included in a building. A storey can also be decomposed in (horizontical) parts, where each part defines a partial storey. (Definition taken from IFC standard)"@en ;
         rdfs:label "Storey"@en .
