@@ -69,6 +69,8 @@
 # 
 # http://bimerr.iot.linkeddata.es/def/building#includesMaterial
 <http://bimerr.iot.linkeddata.es/def/building#includesMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/building#includesMaterial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/bot#hasSubElement> .
+<http://bimerr.iot.linkeddata.es/def/building#includesMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
 <http://bimerr.iot.linkeddata.es/def/building#includesMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/building#Material> .
 <http://bimerr.iot.linkeddata.es/def/building#includesMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "includes material"@en .
 # 
@@ -177,15 +179,10 @@
 # #################################################################
 # 
 # 
-# http://bimerr.iot.linkeddata.es/def/building#Accessory
-<http://bimerr.iot.linkeddata.es/def/building#Accessory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Accessory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#VentilationSystem> .
-<http://bimerr.iot.linkeddata.es/def/building#Accessory> <http://www.w3.org/2000/01/rdf-schema#label> "Accessory"@en .
-# 
 # http://bimerr.iot.linkeddata.es/def/building#AdhesiveAndFiller
 <http://bimerr.iot.linkeddata.es/def/building#AdhesiveAndFiller> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#AdhesiveAndFiller> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
-<http://bimerr.iot.linkeddata.es/def/building#AdhesiveAndFiller> <http://www.w3.org/2000/01/rdf-schema#label> "Adhesive and filler"@en .
+<http://bimerr.iot.linkeddata.es/def/building#AdhesiveAndFiller> <http://www.w3.org/2000/01/rdf-schema#label> "Adhesive"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#AdhesiveBridgesAndPreSplash
 <http://bimerr.iot.linkeddata.es/def/building#AdhesiveBridgesAndPreSplash> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -220,7 +217,7 @@ _:genid1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 # 
 # http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler
 <http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> .
+<http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Biomass boiler"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#BrickMasonry
@@ -264,10 +261,10 @@ _:genid7 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/
 <http://bimerr.iot.linkeddata.es/def/building#BuildingBoard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
 <http://bimerr.iot.linkeddata.es/def/building#BuildingBoard> <http://www.w3.org/2000/01/rdf-schema#label> "Building board"@en .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#CeilingAndRoofElement
-<http://bimerr.iot.linkeddata.es/def/building#CeilingAndRoofElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#CeilingAndRoofElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
-<http://bimerr.iot.linkeddata.es/def/building#CeilingAndRoofElement> <http://www.w3.org/2000/01/rdf-schema#label> "Ceiling and roof element"@en .
+# http://bimerr.iot.linkeddata.es/def/building#CeilingElement
+<http://bimerr.iot.linkeddata.es/def/building#CeilingElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#CeilingElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
+<http://bimerr.iot.linkeddata.es/def/building#CeilingElement> <http://www.w3.org/2000/01/rdf-schema#label> "Ceiling element"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#CelluloseFibreInsulationMaterial
 <http://bimerr.iot.linkeddata.es/def/building#CelluloseFibreInsulationMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -289,10 +286,10 @@ _:genid7 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/
 <http://bimerr.iot.linkeddata.es/def/building#ClayBuildingBoard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#BuildingBoard> .
 <http://bimerr.iot.linkeddata.es/def/building#ClayBuildingBoard> <http://www.w3.org/2000/01/rdf-schema#label> "Clay building board"@en .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#CoatingsAndImpregnation
-<http://bimerr.iot.linkeddata.es/def/building#CoatingsAndImpregnation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#CoatingsAndImpregnation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
-<http://bimerr.iot.linkeddata.es/def/building#CoatingsAndImpregnation> <http://www.w3.org/2000/01/rdf-schema#label> "Coatings and impregnation"@en .
+# http://bimerr.iot.linkeddata.es/def/building#CoatingImpregnation
+<http://bimerr.iot.linkeddata.es/def/building#CoatingImpregnation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#CoatingImpregnation> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
+<http://bimerr.iot.linkeddata.es/def/building#CoatingImpregnation> <http://www.w3.org/2000/01/rdf-schema#label> "Coating impregnation"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#CoconutFibreInsulatingMaterial
 <http://bimerr.iot.linkeddata.es/def/building#CoconutFibreInsulatingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -400,6 +397,10 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#ExternalPlaster> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#MasonryAndPlasterMortar> .
 <http://bimerr.iot.linkeddata.es/def/building#ExternalPlaster> <http://www.w3.org/2000/01/rdf-schema#label> "External plaster"@en .
 # 
+# http://bimerr.iot.linkeddata.es/def/building#Facade
+<http://bimerr.iot.linkeddata.es/def/building#Facade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Facade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
+# 
 # http://bimerr.iot.linkeddata.es/def/building#FacadeCladding
 <http://bimerr.iot.linkeddata.es/def/building#FacadeCladding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#FacadeCladding> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
@@ -409,6 +410,11 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#FibreCementBoard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#FibreCementBoard> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#BuildingBoard> .
 <http://bimerr.iot.linkeddata.es/def/building#FibreCementBoard> <http://www.w3.org/2000/01/rdf-schema#label> "Fibre cement board"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#Filler
+<http://bimerr.iot.linkeddata.es/def/building#Filler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Filler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
+<http://bimerr.iot.linkeddata.es/def/building#Filler> <http://www.w3.org/2000/01/rdf-schema#label> "Filler"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#FillingBrick
 <http://bimerr.iot.linkeddata.es/def/building#FillingBrick> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -425,6 +431,10 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#FlaxInsulatingMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#InsulatingMaterialsFromRenewableRawMaterial> .
 <http://bimerr.iot.linkeddata.es/def/building#FlaxInsulatingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Flax insulating material"@en .
 # 
+# http://bimerr.iot.linkeddata.es/def/building#Floor
+<http://bimerr.iot.linkeddata.es/def/building#Floor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Floor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
+# 
 # http://bimerr.iot.linkeddata.es/def/building#FloorCovering
 <http://bimerr.iot.linkeddata.es/def/building#FloorCovering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#FloorCovering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
@@ -437,7 +447,7 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # http://bimerr.iot.linkeddata.es/def/building#FossilBoiler
 <http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> .
+<http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Fossil boiler"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Gas
@@ -449,11 +459,6 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#GlassWoolInsulatingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#GlassWoolInsulatingMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial> .
 <http://bimerr.iot.linkeddata.es/def/building#GlassWoolInsulatingMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Glass wool insulating material"@en .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#Glazing
-<http://bimerr.iot.linkeddata.es/def/building#Glazing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Glazing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent> .
-<http://bimerr.iot.linkeddata.es/def/building#Glazing> <http://www.w3.org/2000/01/rdf-schema#label> "Glazing"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#GrassFibreInsulationBoard
 <http://bimerr.iot.linkeddata.es/def/building#GrassFibreInsulationBoard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -477,12 +482,12 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # http://bimerr.iot.linkeddata.es/def/building#HeatPump
 <http://bimerr.iot.linkeddata.es/def/building#HeatPump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#HeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> .
+<http://bimerr.iot.linkeddata.es/def/building#HeatPump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#HeatPump> <http://www.w3.org/2000/01/rdf-schema#label> "Heat pump"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#HeatingPipe
 <http://bimerr.iot.linkeddata.es/def/building#HeatingPipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#HeatingPipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> .
+<http://bimerr.iot.linkeddata.es/def/building#HeatingPipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#HeatingPipe> <http://www.w3.org/2000/01/rdf-schema#label> "Heating pipe"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#HeatingSystem
@@ -522,7 +527,6 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Layer
 <http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#comment> "A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)"@en .
 <http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#label> "Layer"@en .
 # 
@@ -538,6 +542,7 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Material
 <http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)"@en .
 <http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material"@en .
 # 
@@ -613,7 +618,7 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Radiator
 <http://bimerr.iot.linkeddata.es/def/building#Radiator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Radiator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> .
+<http://bimerr.iot.linkeddata.es/def/building#Radiator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#ReedInsulationPanel
 <http://bimerr.iot.linkeddata.es/def/building#ReedInsulationPanel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -630,10 +635,19 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#RockWoolInsulationMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#MineralInsulationMaterial> .
 <http://bimerr.iot.linkeddata.es/def/building#RockWoolInsulationMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Rock wool insulation material"@en .
 # 
+# http://bimerr.iot.linkeddata.es/def/building#Roof
+<http://bimerr.iot.linkeddata.es/def/building#Roof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Roof> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
+# 
 # http://bimerr.iot.linkeddata.es/def/building#RoofCovery
 <http://bimerr.iot.linkeddata.es/def/building#RoofCovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#RoofCovery> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
 <http://bimerr.iot.linkeddata.es/def/building#RoofCovery> <http://www.w3.org/2000/01/rdf-schema#label> "Roof covery"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#RoofElement
+<http://bimerr.iot.linkeddata.es/def/building#RoofElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#RoofElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
+<http://bimerr.iot.linkeddata.es/def/building#RoofElement> <http://www.w3.org/2000/01/rdf-schema#label> "Roof element"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#SandLimeBrickwork
 <http://bimerr.iot.linkeddata.es/def/building#SandLimeBrickwork> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -744,9 +758,14 @@ _:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#VapourBarrierAndBrake> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#SealingSheetVapourBarrierFoil> .
 <http://bimerr.iot.linkeddata.es/def/building#VapourBarrierAndBrake> <http://www.w3.org/2000/01/rdf-schema#label> "Vapour barrier and brake"@en .
 # 
+# http://bimerr.iot.linkeddata.es/def/building#VentilationAccessory
+<http://bimerr.iot.linkeddata.es/def/building#VentilationAccessory> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#VentilationAccessory> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
+<http://bimerr.iot.linkeddata.es/def/building#VentilationAccessory> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation accessory"@en .
+# 
 # http://bimerr.iot.linkeddata.es/def/building#VentilationPipe
 <http://bimerr.iot.linkeddata.es/def/building#VentilationPipe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#VentilationPipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#VentilationSystem> .
+<http://bimerr.iot.linkeddata.es/def/building#VentilationPipe> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#VentilationPipe> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation pipe"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#VentilationSystem
@@ -756,7 +775,7 @@ _:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # 
 # http://bimerr.iot.linkeddata.es/def/building#VentilationUnit
 <http://bimerr.iot.linkeddata.es/def/building#VentilationUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#VentilationUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#VentilationSystem> .
+<http://bimerr.iot.linkeddata.es/def/building#VentilationUnit> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#VentilationUnit> <http://www.w3.org/2000/01/rdf-schema#label> "Ventilation unit"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#WallElement
@@ -769,15 +788,20 @@ _:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#WallPaintAndCovering> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Material> .
 <http://bimerr.iot.linkeddata.es/def/building#WallPaintAndCovering> <http://www.w3.org/2000/01/rdf-schema#label> "Wall paint and covering"@en .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent
-<http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
-<http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent> <http://www.w3.org/2000/01/rdf-schema#label> "Window and components"@en .
+# http://bimerr.iot.linkeddata.es/def/building#Window
+<http://bimerr.iot.linkeddata.es/def/building#Window> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#Window> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
+<http://bimerr.iot.linkeddata.es/def/building#Window> <http://www.w3.org/2000/01/rdf-schema#label> "Window"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#WindowFrame
 <http://bimerr.iot.linkeddata.es/def/building#WindowFrame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#WindowFrame> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent> .
+<http://bimerr.iot.linkeddata.es/def/building#WindowFrame> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#WindowFrame> <http://www.w3.org/2000/01/rdf-schema#label> "Window frame"@en .
+# 
+# http://bimerr.iot.linkeddata.es/def/building#WindowGlazing
+<http://bimerr.iot.linkeddata.es/def/building#WindowGlazing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://bimerr.iot.linkeddata.es/def/building#WindowGlazing> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
+<http://bimerr.iot.linkeddata.es/def/building#WindowGlazing> <http://www.w3.org/2000/01/rdf-schema#label> "Window glazing"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#WoodAndWoodBasedPanel
 <http://bimerr.iot.linkeddata.es/def/building#WoodAndWoodBasedPanel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

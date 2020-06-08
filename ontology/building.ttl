@@ -86,6 +86,8 @@ vann:preferredNamespacePrefix rdf:type owl:AnnotationProperty .
 
 ###  http://bimerr.iot.linkeddata.es/def/building#includesMaterial
 :includesMaterial rdf:type owl:ObjectProperty ;
+                  rdfs:subPropertyOf bot:hasSubElement ;
+                  rdfs:domain :Construction ;
                   rdfs:range :Material ;
                   rdfs:label "includes material"@en .
 
@@ -198,16 +200,10 @@ geo:long rdf:type owl:DatatypeProperty ;
 #    Classes
 #################################################################
 
-###  http://bimerr.iot.linkeddata.es/def/building#Accessory
-:Accessory rdf:type owl:Class ;
-           rdfs:subClassOf :VentilationSystem ;
-           rdfs:label "Accessory"@en .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#AdhesiveAndFiller
 :AdhesiveAndFiller rdf:type owl:Class ;
                    rdfs:subClassOf :Material ;
-                   rdfs:label "Adhesive and filler"@en .
+                   rdfs:label "Adhesive"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#AdhesiveBridgesAndPreSplash
@@ -248,7 +244,7 @@ geo:long rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler
 :BiomassBoiler rdf:type owl:Class ;
-               rdfs:subClassOf :HeatingSystem ;
+               rdfs:subClassOf :Component ;
                rdfs:label "Biomass boiler"@en .
 
 
@@ -296,10 +292,10 @@ geo:long rdf:type owl:DatatypeProperty ;
                rdfs:label "Building board"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#CeilingAndRoofElement
-:CeilingAndRoofElement rdf:type owl:Class ;
-                       rdfs:subClassOf :Material ;
-                       rdfs:label "Ceiling and roof element"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#CeilingElement
+:CeilingElement rdf:type owl:Class ;
+                rdfs:subClassOf :Material ;
+                rdfs:label "Ceiling element"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#CelluloseFibreInsulationMaterial
@@ -326,10 +322,10 @@ geo:long rdf:type owl:DatatypeProperty ;
                    rdfs:label "Clay building board"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#CoatingsAndImpregnation
-:CoatingsAndImpregnation rdf:type owl:Class ;
-                         rdfs:subClassOf :Material ;
-                         rdfs:label "Coatings and impregnation"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#CoatingImpregnation
+:CoatingImpregnation rdf:type owl:Class ;
+                     rdfs:subClassOf :Material ;
+                     rdfs:label "Coating impregnation"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#CoconutFibreInsulatingMaterial
@@ -456,6 +452,11 @@ geo:long rdf:type owl:DatatypeProperty ;
                  rdfs:label "External plaster"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#Facade
+:Facade rdf:type owl:Class ;
+        rdfs:subClassOf :Construction .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/building#FacadeCladding
 :FacadeCladding rdf:type owl:Class ;
                 rdfs:subClassOf :Material ;
@@ -466,6 +467,12 @@ geo:long rdf:type owl:DatatypeProperty ;
 :FibreCementBoard rdf:type owl:Class ;
                   rdfs:subClassOf :BuildingBoard ;
                   rdfs:label "Fibre cement board"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#Filler
+:Filler rdf:type owl:Class ;
+        rdfs:subClassOf :Material ;
+        rdfs:label "Filler"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#FillingBrick
@@ -486,6 +493,11 @@ geo:long rdf:type owl:DatatypeProperty ;
                         rdfs:label "Flax insulating material"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#Floor
+:Floor rdf:type owl:Class ;
+       rdfs:subClassOf :Construction .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/building#FloorCovering
 :FloorCovering rdf:type owl:Class ;
                rdfs:subClassOf :Material ;
@@ -500,7 +512,7 @@ geo:long rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#FossilBoiler
 :FossilBoiler rdf:type owl:Class ;
-              rdfs:subClassOf :HeatingSystem ;
+              rdfs:subClassOf :Component ;
               rdfs:label "Fossil boiler"@en .
 
 
@@ -514,12 +526,6 @@ geo:long rdf:type owl:DatatypeProperty ;
 :GlassWoolInsulatingMaterial rdf:type owl:Class ;
                              rdfs:subClassOf :MineralInsulationMaterial ;
                              rdfs:label "Glass wool insulating material"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Glazing
-:Glazing rdf:type owl:Class ;
-         rdfs:subClassOf :WindowAndComponent ;
-         rdfs:label "Glazing"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#GrassFibreInsulationBoard
@@ -548,13 +554,13 @@ geo:long rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#HeatPump
 :HeatPump rdf:type owl:Class ;
-          rdfs:subClassOf :HeatingSystem ;
+          rdfs:subClassOf :Component ;
           rdfs:label "Heat pump"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#HeatingPipe
 :HeatingPipe rdf:type owl:Class ;
-             rdfs:subClassOf :HeatingSystem ;
+             rdfs:subClassOf :Component ;
              rdfs:label "Heating pipe"@en .
 
 
@@ -602,7 +608,6 @@ geo:long rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Layer
 :Layer rdf:type owl:Class ;
-       rdfs:subClassOf :Element ;
        rdfs:comment "A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)"@en ;
        rdfs:label "Layer"@en .
 
@@ -621,6 +626,7 @@ geo:long rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Material
 :Material rdf:type owl:Class ;
+          rdfs:subClassOf :Element ;
           rdfs:comment "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)"@en ;
           rdfs:label "Material"@en .
 
@@ -711,7 +717,7 @@ geo:long rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Radiator
 :Radiator rdf:type owl:Class ;
-          rdfs:subClassOf :HeatingSystem .
+          rdfs:subClassOf :Component .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#ReedInsulationPanel
@@ -732,10 +738,21 @@ geo:long rdf:type owl:DatatypeProperty ;
                             rdfs:label "Rock wool insulation material"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#Roof
+:Roof rdf:type owl:Class ;
+      rdfs:subClassOf :Construction .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/building#RoofCovery
 :RoofCovery rdf:type owl:Class ;
             rdfs:subClassOf :Material ;
             rdfs:label "Roof covery"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#RoofElement
+:RoofElement rdf:type owl:Class ;
+             rdfs:subClassOf :Material ;
+             rdfs:label "Roof element"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#SandLimeBrickwork
@@ -864,9 +881,15 @@ geo:long rdf:type owl:DatatypeProperty ;
                        rdfs:label "Vapour barrier and brake"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#VentilationAccessory
+:VentilationAccessory rdf:type owl:Class ;
+                      rdfs:subClassOf :Component ;
+                      rdfs:label "Ventilation accessory"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/building#VentilationPipe
 :VentilationPipe rdf:type owl:Class ;
-                 rdfs:subClassOf :VentilationSystem ;
+                 rdfs:subClassOf :Component ;
                  rdfs:label "Ventilation pipe"@en .
 
 
@@ -878,7 +901,7 @@ geo:long rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#VentilationUnit
 :VentilationUnit rdf:type owl:Class ;
-                 rdfs:subClassOf :VentilationSystem ;
+                 rdfs:subClassOf :Component ;
                  rdfs:label "Ventilation unit"@en .
 
 
@@ -894,16 +917,22 @@ geo:long rdf:type owl:DatatypeProperty ;
                       rdfs:label "Wall paint and covering"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#WindowAndComponent
-:WindowAndComponent rdf:type owl:Class ;
-                    rdfs:subClassOf :Component ;
-                    rdfs:label "Window and components"@en .
+###  http://bimerr.iot.linkeddata.es/def/building#Window
+:Window rdf:type owl:Class ;
+        rdfs:subClassOf :Component ;
+        rdfs:label "Window"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#WindowFrame
 :WindowFrame rdf:type owl:Class ;
-             rdfs:subClassOf :WindowAndComponent ;
+             rdfs:subClassOf :Component ;
              rdfs:label "Window frame"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#WindowGlazing
+:WindowGlazing rdf:type owl:Class ;
+               rdfs:subClassOf :Component ;
+               rdfs:label "Window glazing"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#WoodAndWoodBasedPanel
