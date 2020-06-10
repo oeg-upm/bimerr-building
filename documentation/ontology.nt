@@ -214,6 +214,7 @@ _:genid1 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://ww
 _:genid1 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#comment> "A delimited zone within a storey which brings shelter to its residents."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#label> "Apartment"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Apartment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcZone" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler
 <http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -255,6 +256,7 @@ _:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://www.w3.org/2003/01/g
 _:genid7 <http://www.w3.org/2002/07/owl#maxCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
 <http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#comment> "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space). (Definition taken from IFC4x1 standard)"@en .
 <http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuilding" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#BuildingBoard
 <http://bimerr.iot.linkeddata.es/def/building#BuildingBoard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -356,6 +358,7 @@ _:genid8 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddat
 _:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Construction> <http://www.w3.org/2000/01/rdf-schema#comment> "Building component that is conformed by layers, such as a wall, roof, or floor."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Construction> <http://www.w3.org/2000/01/rdf-schema#label> "Construction"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Construction> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#description_IfcMaterialLayerSet" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#CorkInsulatingMaterial
 <http://bimerr.iot.linkeddata.es/def/building#CorkInsulatingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -371,6 +374,7 @@ _:genid8 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://www.w3.org/2001/
 <http://bimerr.iot.linkeddata.es/def/building#Door> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#Door> <http://www.w3.org/2000/01/rdf-schema#label> "Door"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Door> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDoor" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#EPSInsulatingMaterial
 <http://bimerr.iot.linkeddata.es/def/building#EPSInsulatingMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -391,6 +395,7 @@ _:genid10 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://w
 _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Building component or construction element which can be described by a set of properties."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#ExternalPlaster
 <http://bimerr.iot.linkeddata.es/def/building#ExternalPlaster> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -400,6 +405,7 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # http://bimerr.iot.linkeddata.es/def/building#Facade
 <http://bimerr.iot.linkeddata.es/def/building#Facade> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Facade> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
+<http://bimerr.iot.linkeddata.es/def/building#Facade> <http://www.w3.org/2000/01/rdf-schema#label> "Facade"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#FacadeCladding
 <http://bimerr.iot.linkeddata.es/def/building#FacadeCladding> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -434,6 +440,8 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # http://bimerr.iot.linkeddata.es/def/building#Floor
 <http://bimerr.iot.linkeddata.es/def/building#Floor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Floor> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
+<http://bimerr.iot.linkeddata.es/def/building#Floor> <http://www.w3.org/2000/01/rdf-schema#label> "Floor"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Floor> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#FloorCovering
 <http://bimerr.iot.linkeddata.es/def/building#FloorCovering> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -530,6 +538,7 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#comment> "A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)"@en .
 <http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#label> "Layer"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Layer> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#category_IfcMaterialLayer" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Masonry
 <http://bimerr.iot.linkeddata.es/def/building#Masonry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -546,6 +555,7 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)"@en .
 <http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Material> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterial" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#MineralFoamInsulationBoard
 <http://bimerr.iot.linkeddata.es/def/building#MineralFoamInsulationBoard> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -639,6 +649,8 @@ _:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 # http://bimerr.iot.linkeddata.es/def/building#Roof
 <http://bimerr.iot.linkeddata.es/def/building#Roof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Roof> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Construction> .
+<http://bimerr.iot.linkeddata.es/def/building#Roof> <http://www.w3.org/2000/01/rdf-schema#label> "Roof"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Roof> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcRoof" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#RoofCovery
 <http://bimerr.iot.linkeddata.es/def/building#RoofCovery> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -713,6 +725,7 @@ _:genid13 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://w
 _:genid13 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "A space is (if specified) associated to a building storey (or in case of exterior spaces to a site). A space may span over several connected spaces. Therefore a space group provides for a collection of spaces included in a storey. A space can also be decomposed in parts, where each part defines a partial space. (Definition taken from IFC standard)"@en .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpace" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Storey
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -728,6 +741,7 @@ _:genid15 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://w
 _:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "A storey is (if specified) associated to a building. A storey may span over several connected storeys. Therefore storey complex provides for a collection of storeys included in a building. A storey can also be decomposed in (horizontical) parts, where each part defines a partial storey. (Definition taken from IFC standard)"@en .
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Storey"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingStorey" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#StrawInsulationMaterial
 <http://bimerr.iot.linkeddata.es/def/building#StrawInsulationMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -793,6 +807,7 @@ _:genid15 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#Window> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Window> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Component> .
 <http://bimerr.iot.linkeddata.es/def/building#Window> <http://www.w3.org/2000/01/rdf-schema#label> "Window"@en .
+<http://bimerr.iot.linkeddata.es/def/building#Window> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#WindowFrame
 <http://bimerr.iot.linkeddata.es/def/building#WindowFrame> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

@@ -382,6 +382,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A delimited zone within a storey which brings shelter to its residents.</rdfs:comment>
         <rdfs:label xml:lang="en">Apartment</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcZone</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -450,6 +451,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space). (Definition taken from IFC4x1 standard)</rdfs:comment>
         <rdfs:label xml:lang="en">Building</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuilding</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -648,6 +650,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Building component that is conformed by layers, such as a wall, roof, or floor.</rdfs:comment>
         <rdfs:label xml:lang="en">Construction</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#description_IfcMaterialLayerSet</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -678,6 +681,7 @@
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Door">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
         <rdfs:label xml:lang="en">Door</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDoor</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -712,6 +716,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Building component or construction element which can be described by a set of properties.</rdfs:comment>
         <rdfs:label xml:lang="en">Element</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -731,6 +736,7 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Facade">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Construction"/>
+        <rdfs:label xml:lang="en">Facade</rdfs:label>
     </owl:Class>
     
 
@@ -800,6 +806,8 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Floor">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Construction"/>
+        <rdfs:label xml:lang="en">Floor</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -991,6 +999,7 @@
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
         <rdfs:comment xml:lang="en">A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)</rdfs:comment>
         <rdfs:label xml:lang="en">Layer</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#category_IfcMaterialLayer</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1022,6 +1031,7 @@
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
         <rdfs:comment xml:lang="en">A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components). (Definition taken from IFC)</rdfs:comment>
         <rdfs:label xml:lang="en">Material</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterial</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1210,6 +1220,8 @@
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Roof">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Construction"/>
+        <rdfs:label xml:lang="en">Roof</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcRoof</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1350,6 +1362,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A space is (if specified) associated to a building storey (or in case of exterior spaces to a site). A space may span over several connected spaces. Therefore a space group provides for a collection of spaces included in a storey. A space can also be decomposed in parts, where each part defines a partial space. (Definition taken from IFC standard)</rdfs:comment>
         <rdfs:label xml:lang="en">Space</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpace</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1374,6 +1387,7 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A storey is (if specified) associated to a building. A storey may span over several connected storeys. Therefore storey complex provides for a collection of storeys included in a building. A storey can also be decomposed in (horizontical) parts, where each part defines a partial storey. (Definition taken from IFC standard)</rdfs:comment>
         <rdfs:label xml:lang="en">Storey</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingStorey</rdfs:seeAlso>
     </owl:Class>
     
 
@@ -1504,6 +1518,7 @@
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Window">
         <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Component"/>
         <rdfs:label xml:lang="en">Window</rdfs:label>
+        <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow</rdfs:seeAlso>
     </owl:Class>
     
 
