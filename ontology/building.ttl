@@ -608,6 +608,7 @@ geo:long rdf:type owl:DatatypeProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Layer
 :Layer rdf:type owl:Class ;
+       rdfs:subClassOf :Element ;
        rdfs:comment "A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)"@en ;
        rdfs:label "Layer"@en .
 

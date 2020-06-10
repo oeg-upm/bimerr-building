@@ -988,6 +988,7 @@
 
 
     <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/building#Layer">
+        <rdfs:subClassOf rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Element"/>
         <rdfs:comment xml:lang="en">A single and identifiable part of an element which is constructed of a number of layers (one or more). Each Layer has a constant thickness and is located relative to the referencing Construction element. (Definition adapted from IFC)</rdfs:comment>
         <rdfs:label xml:lang="en">Layer</rdfs:label>
     </owl:Class>
