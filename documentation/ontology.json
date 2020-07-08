@@ -10,24 +10,20 @@
 }, {
   "@id" : "_:genid10",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
-  } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/bot#hasSubElement"
+    "@id" : "https://w3id.org/bot#containsZone"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
   } ]
 }, {
   "@id" : "_:genid11",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasApartment"
   } ]
 }, {
   "@id" : "_:genid12",
@@ -45,77 +41,15 @@
 }, {
   "@id" : "_:genid13",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterial"
-  } ]
-}, {
-  "@id" : "_:genid14",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
     "@value" : "1"
   } ],
   "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialConstituent"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterialConstituent"
-  } ]
-}, {
-  "@id" : "_:genid15",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterial"
-  } ]
-}, {
-  "@id" : "_:genid16",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialLayer"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterialLayer"
-  } ]
-}, {
-  "@id" : "_:genid17",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterial"
-  } ]
-}, {
-  "@id" : "_:genid18",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialProfile"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterialProfile"
-  } ]
-}, {
-  "@id" : "_:genid19",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/bot#hasElement"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#includesElement"
   } ]
 }, {
   "@id" : "_:genid2",
@@ -129,63 +63,6 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
-  } ]
-}, {
-  "@id" : "_:genid20",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
-  } ]
-}, {
-  "@id" : "_:genid21",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/bot#containsZone"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
-  } ]
-}, {
-  "@id" : "_:genid22",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasApartment"
-  } ]
-}, {
-  "@id" : "_:genid23",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
-  } ]
-}, {
-  "@id" : "_:genid24",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
-  } ],
-  "http://www.w3.org/2002/07/owl#onClass" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#includesElement"
   } ]
 }, {
   "@id" : "_:genid3",
@@ -213,22 +90,58 @@
   "@id" : "_:genid5",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "_:genid6"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasConstruction"
+    "@id" : "https://w3id.org/bot#hasSubElement"
   } ]
 }, {
   "@id" : "_:genid6",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#unionOf" : [ {
-    "@list" : [ {
-      "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialConstituentSet"
-    }, {
-      "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialLayerSet"
-    }, {
-      "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialProfileSet"
-    } ]
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#maxQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onClass" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
+  } ]
+}, {
+  "@id" : "_:genid8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/bot#hasElement"
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#",
@@ -253,7 +166,7 @@
     "@value" : "Building Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.3"
+    "@value" : "0.0.5"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment",
@@ -282,24 +195,7 @@
     "@value" : "Biomass Boiler"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Boiler"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Boiler",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Boiler"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@language" : "en",
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBoiler"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice"
+    "@id" : "https://w3id.org/def/saref4bldg#Boiler"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Building",
@@ -351,39 +247,6 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#DistributionElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A generalization of all elements that participate in a distribution system."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Distribution Element"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@language" : "en",
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionElement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Distribution Flow Element"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionFlowElement"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#DistributionElement"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Door",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -433,43 +296,9 @@
   }, {
     "@id" : "_:genid5"
   }, {
-    "@id" : "_:genid10"
+    "@id" : "_:genid6"
   }, {
-    "@id" : "_:genid11"
-  }, {
-    "@id" : "_:genid12"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Energy Conversion Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcEnergyConversionDevice"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Fan",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Fan"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFan"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice"
+    "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem",
@@ -485,38 +314,6 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowController",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Flow Controller"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowController"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Flow Moving Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowMovingDevice"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowSegment",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -530,39 +327,7 @@
     "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowSegment"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowStorageDevice",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Flow Storage Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowStorageDevice"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowTerminal",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Flow Terminal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowTerminal"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement"
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#FossilBoiler",
@@ -571,24 +336,7 @@
     "@value" : "Fossil Boiler"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Boiler"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#HeatExchanger",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Heat Exchanger"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@language" : "en",
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcHeatExchanger"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice"
+    "@id" : "https://w3id.org/def/saref4bldg#Boiler"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#HeatingSystem",
@@ -602,115 +350,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#System"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialConstituent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialConstituent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Material Constituent"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid13"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialConstituentSet",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A single and identifiable part of an element which is constructed of a number of layers (one or more)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Material Constituent Set"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialConstituentSet"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid14"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialLayer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A single and identifiable part of an element which is constructed of a number of layers (one or more)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Material Layer"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayer"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid15"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialLayerSet",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A designation by which materials of an element constructed of a number of material layers is known and through which the relative positioning of individual layers can be expressed."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Material Layer Set"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayerSet"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid16"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialProfile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A single and identifiable cross section of an element which is constructed of a number of profiles (one or more)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Material Profile"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialProfile"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid17"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#MaterialProfileSet",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A designation by which individual material(s) of a prismatic element (for example, beam or column) constructed of a single or multiple material profiles is known."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Material Profile Set"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialProfileSet"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid18"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Outlet",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Outlet"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcOutlet"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowTerminal"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem",
@@ -740,22 +379,6 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowSegment"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Pump",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Pump"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPump"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Roof",
@@ -790,23 +413,6 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#BuildingElement"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#SolarDevice",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A solar device converts solar radiation into other energy such as electric current or thermal energy."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Solar Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@language" : "en",
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSolarDevice"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#SolarSystem",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -835,25 +441,9 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Space"
   }, {
-    "@id" : "_:genid19"
+    "@id" : "_:genid8"
   }, {
-    "@id" : "_:genid20"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#SpaceHeater",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Space Heater"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpaceHeater"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowTerminal"
+    "@id" : "_:genid9"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Storey",
@@ -871,28 +461,11 @@
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
     "@id" : "https://w3id.org/bot#Storey"
   }, {
-    "@id" : "_:genid21"
+    "@id" : "_:genid10"
   }, {
-    "@id" : "_:genid22"
+    "@id" : "_:genid11"
   }, {
-    "@id" : "_:genid23"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#SwitchingDevice",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Switching Device"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@language" : "en",
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSwitchingDevice"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowController"
+    "@id" : "_:genid12"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#System",
@@ -901,40 +474,7 @@
     "@value" : "System"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "_:genid24"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#Tank",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A tank is a vessel or container in which a fluid or gas is stored for later use."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Tank"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTank"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#FlowStorageDevice"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#TubeBundle",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Tube Bundle"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@language" : "en",
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTubeBundle"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice"
+    "@id" : "_:genid13"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#VentilationSystem",
@@ -1008,56 +548,6 @@
     "@value" : "has apartment"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasConstruction",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relation between a building element and its construction. For example a window has two construction individuals: The Lining and the glazing."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has construction"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterial",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relation between a construction component (Layer, profile, constituent) and the materials that define them."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has material"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterialConstituent",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A relation between a constituent set and the specific material constituents."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has material constituent"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterialLayer",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A relation between a layer set and the specific material layers."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has material layer"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasMaterialProfile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A relation between a profile set and the specific material profiles."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "has material profile"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1117,47 +607,8 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#integer"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#position",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Position of a layer with respect to its construction (MaterialLayerSet). The first layer is the one facing the outdoors."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "position"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#integer"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#preferredNamespacePrefix",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#thickness",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Thickness of a layer."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "thickness"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#float"
-  } ]
-}, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/material-properties#Material",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components)."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "Material"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
-    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterial"
-  } ]
 }, {
   "@id" : "http://purl.org/dc/elements/1.1/creator",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
@@ -1298,5 +749,284 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@value" : "has sub element"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#Boiler",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Boiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBoiler"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#EnergyConversionDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#DistributionDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A generalization of all elements that participate in a distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Distribution Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Distribution Flow Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionFlowElement"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#EnergyConversionDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Energy Conversion Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcEnergyConversionDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#Fan",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Fan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFan"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowMovingDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#FlowController",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flow Controller"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowController"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#FlowMovingDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flow Moving Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowMovingDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#FlowStorageDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flow Storage Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowStorageDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#FlowTerminal",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Flow Terminal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowTerminal"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#DistributionFlowDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#HeatExchanger",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Heat Exchanger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcHeatExchanger"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#EnergyConversionDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#Outlet",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Outlet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcOutlet"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowTerminal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#Pump",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Pump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPump"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowMovingDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#SolarDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A solar device converts solar radiation into other energy such as electric current or thermal energy."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Solar Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSolarDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#EnergyConversionDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#SpaceHeater",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Space Heater"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpaceHeater"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowTerminal"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#SwitchingDevice",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Switching Device"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSwitchingDevice"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowController"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#Tank",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A tank is a vessel or container in which a fluid or gas is stored for later use."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tank"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTank"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#FlowStorageDevice"
+  } ]
+}, {
+  "@id" : "https://w3id.org/def/saref4bldg#TubeBundle",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Tube Bundle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@language" : "en",
+    "@value" : "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTubeBundle"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/def/saref4bldg#EnergyConversionDevice"
   } ]
 } ]

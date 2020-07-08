@@ -14,7 +14,7 @@
                                                  <http://purl.org/dc/elements/1.1/publisher> "http://purl.org/NET/rdflicense/cc-by4.0" ,
                                                                                              "http://www.oeg-upm.net/" ;
                                                  <http://purl.org/dc/elements/1.1/title> "Building Ontology" ;
-                                                 owl:versionInfo "0.0.3" .
+                                                 owl:versionInfo "0.0.5" .
 
 #################################################################
 #    Annotation properties
@@ -52,36 +52,6 @@
 :hasApartment rdf:type owl:ObjectProperty ;
               rdfs:comment "Relation between a storey and the apartments it is composed of."@en ;
               rdfs:label "has apartment" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#hasConstruction
-:hasConstruction rdf:type owl:ObjectProperty ;
-                 rdfs:comment "Relation between a building element and its construction. For example a window has two construction individuals: The Lining and the glazing."@en ;
-                 rdfs:label "has construction" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#hasMaterial
-:hasMaterial rdf:type owl:ObjectProperty ;
-             rdfs:comment "Relation between a construction component (Layer, profile, constituent) and the materials that define them."@en ;
-             rdfs:label "has material" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#hasMaterialConstituent
-:hasMaterialConstituent rdf:type owl:ObjectProperty ;
-                        rdfs:comment "A relation between a constituent set and the specific material constituents."@en ;
-                        rdfs:label "has material constituent" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#hasMaterialLayer
-:hasMaterialLayer rdf:type owl:ObjectProperty ;
-                  rdfs:comment "A relation between a layer set and the specific material layers."@en ;
-                  rdfs:label "has material layer" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#hasMaterialProfile
-:hasMaterialProfile rdf:type owl:ObjectProperty ;
-                    rdfs:comment "A relation between a profile set and the specific material profiles."@en ;
-                    rdfs:label "has material profile" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#includesElement
@@ -159,20 +129,6 @@
               rdfs:label "min occupants" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#position
-:position rdf:type owl:DatatypeProperty ;
-          rdfs:range xsd:integer ;
-          rdfs:comment "Position of a layer with respect to its construction (MaterialLayerSet). The first layer is the one facing the outdoors."@en ;
-          rdfs:label "position" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#thickness
-:thickness rdf:type owl:DatatypeProperty ;
-           rdfs:range xsd:float ;
-           rdfs:comment "Thickness of a layer."@en ;
-           rdfs:label "thickness" .
-
-
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:DatatypeProperty ;
                                               rdfs:comment "Altitude geo location coordinate."@en ;
@@ -221,16 +177,8 @@
 
 ###  http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler
 :BiomassBoiler rdf:type owl:Class ;
-               rdfs:subClassOf :Boiler ;
+               rdfs:subClassOf <https://w3id.org/def/saref4bldg#Boiler> ;
                rdfs:label "Biomass Boiler" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Boiler
-:Boiler rdf:type owl:Class ;
-        rdfs:subClassOf :EnergyConversionDevice ;
-        rdfs:comment "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications."@en ;
-        rdfs:label "Boiler" ;
-        rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBoiler"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#Building
@@ -265,22 +213,6 @@
                rdfs:label "Cooling System" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#DistributionElement
-:DistributionElement rdf:type owl:Class ;
-                     rdfs:subClassOf :Element ;
-                     rdfs:comment "A generalization of all elements that participate in a distribution system."@en ;
-                     rdfs:label "Distribution Element" ;
-                     rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionElement"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement
-:DistributionFlowElement rdf:type owl:Class ;
-                         rdfs:subClassOf :DistributionElement ;
-                         rdfs:comment "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power."@en ;
-                         rdfs:label "Distribution Flow Element" ;
-                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionFlowElement" .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#Door
 :Door rdf:type owl:Class ;
       rdfs:subClassOf :BuildingElement ;
@@ -301,15 +233,6 @@
 :Element rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/bot#Element> ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty :hasConstruction ;
-                           owl:allValuesFrom [ rdf:type owl:Class ;
-                                               owl:unionOf ( :MaterialConstituentSet
-                                                             :MaterialLayerSet
-                                                             :MaterialProfileSet
-                                                           )
-                                             ]
-                         ] ,
-                         [ rdf:type owl:Restriction ;
                            owl:onProperty <https://w3id.org/bot#hasSubElement> ;
                            owl:allValuesFrom :Element
                          ] ,
@@ -328,22 +251,6 @@
          rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcElement" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice
-:EnergyConversionDevice rdf:type owl:Class ;
-                        rdfs:subClassOf :DistributionFlowElement ;
-                        rdfs:comment "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system."@en ;
-                        rdfs:label "Energy Conversion Device" ;
-                        rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcEnergyConversionDevice" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Fan
-:Fan rdf:type owl:Class ;
-     rdfs:subClassOf :FlowMovingDevice ;
-     rdfs:comment "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system."@en ;
-     rdfs:label "Fan" ;
-     rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFan" .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem
 :FenestrationSystem rdf:type owl:Class ;
                     rdfs:subClassOf :System ;
@@ -351,58 +258,18 @@
                     rdfs:label "Fenestration System" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#FlowController
-:FlowController rdf:type owl:Class ;
-                rdfs:subClassOf :DistributionFlowElement ;
-                rdfs:comment "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays."@en ;
-                rdfs:label "Flow Controller" ;
-                rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowController" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice
-:FlowMovingDevice rdf:type owl:Class ;
-                  rdfs:subClassOf :DistributionFlowElement ;
-                  rdfs:comment "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system."@en ;
-                  rdfs:label "Flow Moving Device" ;
-                  rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowMovingDevice" .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#FlowSegment
 :FlowSegment rdf:type owl:Class ;
-             rdfs:subClassOf :DistributionFlowElement ;
+             rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
              rdfs:comment "Defines the occurrence of a segment of a flow distribution system."@en ;
              rdfs:label "Flow Segment" ;
              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowSegment" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#FlowStorageDevice
-:FlowStorageDevice rdf:type owl:Class ;
-                   rdfs:subClassOf :DistributionFlowElement ;
-                   rdfs:comment "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank)."@en ;
-                   rdfs:label "Flow Storage Device" ;
-                   rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowStorageDevice" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#FlowTerminal
-:FlowTerminal rdf:type owl:Class ;
-              rdfs:subClassOf :DistributionFlowElement ;
-              rdfs:comment "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment."@en ;
-              rdfs:label "Flow Terminal" ;
-              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowTerminal" .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#FossilBoiler
 :FossilBoiler rdf:type owl:Class ;
-              rdfs:subClassOf :Boiler ;
+              rdfs:subClassOf <https://w3id.org/def/saref4bldg#Boiler> ;
               rdfs:label "Fossil Boiler" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#HeatExchanger
-:HeatExchanger rdf:type owl:Class ;
-               rdfs:subClassOf :EnergyConversionDevice ;
-               rdfs:comment "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers."@en ;
-               rdfs:label "Heat Exchanger" ;
-               rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcHeatExchanger"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#HeatingSystem
@@ -410,82 +277,6 @@
                rdfs:subClassOf :System ;
                rdfs:comment "System that aggregates heating devices."@en ;
                rdfs:label "Heating System" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#MaterialConstituent
-:MaterialConstituent rdf:type owl:Class ;
-                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                       owl:onProperty :hasMaterial ;
-                                       owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/material-properties#Material>
-                                     ] ;
-                     rdfs:comment "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialConstituent"@en ;
-                     rdfs:label "Material Constituent" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#MaterialConstituentSet
-:MaterialConstituentSet rdf:type owl:Class ;
-                        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                          owl:onProperty :hasMaterialConstituent ;
-                                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                          owl:onClass :MaterialConstituent
-                                        ] ;
-                        rdfs:comment "A single and identifiable part of an element which is constructed of a number of layers (one or more)."@en ;
-                        rdfs:label "Material Constituent Set" ;
-                        rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialConstituentSet" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#MaterialLayer
-:MaterialLayer rdf:type owl:Class ;
-               rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                 owl:onProperty :hasMaterial ;
-                                 owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/material-properties#Material>
-                               ] ;
-               rdfs:comment "A single and identifiable part of an element which is constructed of a number of layers (one or more)."@en ;
-               rdfs:label "Material Layer" ;
-               rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayer" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#MaterialLayerSet
-:MaterialLayerSet rdf:type owl:Class ;
-                  rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                    owl:onProperty :hasMaterialLayer ;
-                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                    owl:onClass :MaterialLayer
-                                  ] ;
-                  rdfs:comment "A designation by which materials of an element constructed of a number of material layers is known and through which the relative positioning of individual layers can be expressed."@en ;
-                  rdfs:label "Material Layer Set" ;
-                  rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayerSet" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#MaterialProfile
-:MaterialProfile rdf:type owl:Class ;
-                 rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                   owl:onProperty :hasMaterial ;
-                                   owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/material-properties#Material>
-                                 ] ;
-                 rdfs:comment "A single and identifiable cross section of an element which is constructed of a number of profiles (one or more)."@en ;
-                 rdfs:label "Material Profile" ;
-                 rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialProfile" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#MaterialProfileSet
-:MaterialProfileSet rdf:type owl:Class ;
-                    rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                      owl:onProperty :hasMaterialProfile ;
-                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                      owl:onClass :MaterialProfile
-                                    ] ;
-                    rdfs:comment "A designation by which individual material(s) of a prismatic element (for example, beam or column) constructed of a single or multiple material profiles is known."@en ;
-                    rdfs:label "Material Profile Set" ;
-                    rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialProfileSet" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Outlet
-:Outlet rdf:type owl:Class ;
-        rdfs:subClassOf :FlowTerminal ;
-        rdfs:comment "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications."@en ;
-        rdfs:label "Outlet" ;
-        rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcOutlet" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem
@@ -503,14 +294,6 @@
              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPipeSegment" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#Pump
-:Pump rdf:type owl:Class ;
-      rdfs:subClassOf :FlowMovingDevice ;
-      rdfs:comment "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."@en ;
-      rdfs:label "Pump" ;
-      rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPump" .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#Roof
 :Roof rdf:type owl:Class ;
       rdfs:subClassOf :BuildingElement ;
@@ -525,14 +308,6 @@
       rdfs:comment "A slab is a component of the construction that normally encloses a space vertically. The slab may provide the lower support (floor) or upper construction (roof slab) in any space in a building."@en ;
       rdfs:label "Slab" ;
       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#SolarDevice
-:SolarDevice rdf:type owl:Class ;
-             rdfs:subClassOf :EnergyConversionDevice ;
-             rdfs:comment "A solar device converts solar radiation into other energy such as electric current or thermal energy."@en ;
-             rdfs:label "Solar Device" ;
-             rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSolarDevice"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#SolarSystem
@@ -559,14 +334,6 @@
        rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpace" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#SpaceHeater
-:SpaceHeater rdf:type owl:Class ;
-             rdfs:subClassOf :FlowTerminal ;
-             rdfs:comment "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters."@en ;
-             rdfs:label "Space Heater" ;
-             rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpaceHeater" .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#Storey
 :Storey rdf:type owl:Class ;
         rdfs:subClassOf <https://w3id.org/bot#Storey> ,
@@ -588,14 +355,6 @@
         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingStorey" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#SwitchingDevice
-:SwitchingDevice rdf:type owl:Class ;
-                 rdfs:subClassOf :FlowController ;
-                 rdfs:comment "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity."@en ;
-                 rdfs:label "Switching Device" ;
-                 rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSwitchingDevice"@en .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#System
 :System rdf:type owl:Class ;
         rdfs:subClassOf [ rdf:type owl:Restriction ;
@@ -604,22 +363,6 @@
                           owl:onClass :Element
                         ] ;
         rdfs:label "System" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#Tank
-:Tank rdf:type owl:Class ;
-      rdfs:subClassOf :FlowStorageDevice ;
-      rdfs:comment "A tank is a vessel or container in which a fluid or gas is stored for later use."@en ;
-      rdfs:label "Tank" ;
-      rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTank" .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#TubeBundle
-:TubeBundle rdf:type owl:Class ;
-            rdfs:subClassOf :EnergyConversionDevice ;
-            rdfs:comment "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil."@en ;
-            rdfs:label "Tube Bundle" ;
-            rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTubeBundle"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#VentilationSystem
@@ -645,13 +388,6 @@
         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow" .
 
 
-###  http://bimerr.iot.linkeddata.es/def/material-properties#Material
-<http://bimerr.iot.linkeddata.es/def/material-properties#Material> rdf:type owl:Class ;
-                                                                   rdfs:comment "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components)."@en ;
-                                                                   rdfs:label "Material" ;
-                                                                   rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterial" .
-
-
 ###  https://w3id.org/bot#Building
 <https://w3id.org/bot#Building> rdf:type owl:Class ;
                                 rdfs:label "Building" .
@@ -675,6 +411,142 @@
 ###  https://w3id.org/bot#Zone
 <https://w3id.org/bot#Zone> rdf:type owl:Class ;
                             rdfs:label "Zone" .
+
+
+###  https://w3id.org/def/saref4bldg#Boiler
+<https://w3id.org/def/saref4bldg#Boiler> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
+                                         rdfs:comment "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications."@en ;
+                                         rdfs:label "Boiler" ;
+                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBoiler"@en .
+
+
+###  https://w3id.org/def/saref4bldg#DistributionDevice
+<https://w3id.org/def/saref4bldg#DistributionDevice> rdf:type owl:Class ;
+                                                     rdfs:subClassOf :Element ;
+                                                     rdfs:comment "A generalization of all elements that participate in a distribution system."@en ;
+                                                     rdfs:label "Distribution Device"@en ;
+                                                     rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionElement"@en .
+
+
+###  https://w3id.org/def/saref4bldg#DistributionFlowDevice
+<https://w3id.org/def/saref4bldg#DistributionFlowDevice> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionDevice> ;
+                                                         rdfs:comment "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power."@en ;
+                                                         rdfs:label "Distribution Flow Device" ;
+                                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionFlowElement" .
+
+
+###  https://w3id.org/def/saref4bldg#EnergyConversionDevice
+<https://w3id.org/def/saref4bldg#EnergyConversionDevice> rdf:type owl:Class ;
+                                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+                                                         rdfs:comment "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system."@en ;
+                                                         rdfs:label "Energy Conversion Device" ;
+                                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcEnergyConversionDevice" .
+
+
+###  https://w3id.org/def/saref4bldg#Fan
+<https://w3id.org/def/saref4bldg#Fan> rdf:type owl:Class ;
+                                      rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowMovingDevice> ;
+                                      rdfs:comment "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system."@en ;
+                                      rdfs:label "Fan" ;
+                                      rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFan" .
+
+
+###  https://w3id.org/def/saref4bldg#FlowController
+<https://w3id.org/def/saref4bldg#FlowController> rdf:type owl:Class ;
+                                                 rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+                                                 rdfs:comment "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays."@en ;
+                                                 rdfs:label "Flow Controller" ;
+                                                 rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowController" .
+
+
+###  https://w3id.org/def/saref4bldg#FlowMovingDevice
+<https://w3id.org/def/saref4bldg#FlowMovingDevice> rdf:type owl:Class ;
+                                                   rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+                                                   rdfs:comment "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system."@en ;
+                                                   rdfs:label "Flow Moving Device" ;
+                                                   rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowMovingDevice" .
+
+
+###  https://w3id.org/def/saref4bldg#FlowStorageDevice
+<https://w3id.org/def/saref4bldg#FlowStorageDevice> rdf:type owl:Class ;
+                                                    rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+                                                    rdfs:comment "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank)."@en ;
+                                                    rdfs:label "Flow Storage Device" ;
+                                                    rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowStorageDevice" .
+
+
+###  https://w3id.org/def/saref4bldg#FlowTerminal
+<https://w3id.org/def/saref4bldg#FlowTerminal> rdf:type owl:Class ;
+                                               rdfs:subClassOf <https://w3id.org/def/saref4bldg#DistributionFlowDevice> ;
+                                               rdfs:comment "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment."@en ;
+                                               rdfs:label "Flow Terminal" ;
+                                               rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowTerminal" .
+
+
+###  https://w3id.org/def/saref4bldg#HeatExchanger
+<https://w3id.org/def/saref4bldg#HeatExchanger> rdf:type owl:Class ;
+                                                rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
+                                                rdfs:comment "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers."@en ;
+                                                rdfs:label "Heat Exchanger" ;
+                                                rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcHeatExchanger"@en .
+
+
+###  https://w3id.org/def/saref4bldg#Outlet
+<https://w3id.org/def/saref4bldg#Outlet> rdf:type owl:Class ;
+                                         rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowTerminal> ;
+                                         rdfs:comment "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications."@en ;
+                                         rdfs:label "Outlet" ;
+                                         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcOutlet" .
+
+
+###  https://w3id.org/def/saref4bldg#Pump
+<https://w3id.org/def/saref4bldg#Pump> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowMovingDevice> ;
+                                       rdfs:comment "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."@en ;
+                                       rdfs:label "Pump" ;
+                                       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPump" .
+
+
+###  https://w3id.org/def/saref4bldg#SolarDevice
+<https://w3id.org/def/saref4bldg#SolarDevice> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
+                                              rdfs:comment "A solar device converts solar radiation into other energy such as electric current or thermal energy."@en ;
+                                              rdfs:label "Solar Device" ;
+                                              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSolarDevice"@en .
+
+
+###  https://w3id.org/def/saref4bldg#SpaceHeater
+<https://w3id.org/def/saref4bldg#SpaceHeater> rdf:type owl:Class ;
+                                              rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowTerminal> ;
+                                              rdfs:comment "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters."@en ;
+                                              rdfs:label "Space Heater" ;
+                                              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpaceHeater" .
+
+
+###  https://w3id.org/def/saref4bldg#SwitchingDevice
+<https://w3id.org/def/saref4bldg#SwitchingDevice> rdf:type owl:Class ;
+                                                  rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowController> ;
+                                                  rdfs:comment "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity."@en ;
+                                                  rdfs:label "Switching Device" ;
+                                                  rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSwitchingDevice"@en .
+
+
+###  https://w3id.org/def/saref4bldg#Tank
+<https://w3id.org/def/saref4bldg#Tank> rdf:type owl:Class ;
+                                       rdfs:subClassOf <https://w3id.org/def/saref4bldg#FlowStorageDevice> ;
+                                       rdfs:comment "A tank is a vessel or container in which a fluid or gas is stored for later use."@en ;
+                                       rdfs:label "Tank" ;
+                                       rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTank" .
+
+
+###  https://w3id.org/def/saref4bldg#TubeBundle
+<https://w3id.org/def/saref4bldg#TubeBundle> rdf:type owl:Class ;
+                                             rdfs:subClassOf <https://w3id.org/def/saref4bldg#EnergyConversionDevice> ;
+                                             rdfs:comment "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil."@en ;
+                                             rdfs:label "Tube Bundle" ;
+                                             rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTubeBundle"@en .
 
 
 ###  Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/

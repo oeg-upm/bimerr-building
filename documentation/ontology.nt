@@ -6,7 +6,7 @@
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/publisher> "http://purl.org/NET/rdflicense/cc-by4.0" .
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/publisher> "http://www.oeg-upm.net/" .
 <http://bimerr.iot.linkeddata.es/def/building#> <http://purl.org/dc/elements/1.1/title> "Building Ontology" .
-<http://bimerr.iot.linkeddata.es/def/building#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.3" .
+<http://bimerr.iot.linkeddata.es/def/building#> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.5" .
 # 
 # 
 # #################################################################
@@ -47,31 +47,6 @@
 <http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a storey and the apartments it is composed of."@en .
 <http://bimerr.iot.linkeddata.es/def/building#hasApartment> <http://www.w3.org/2000/01/rdf-schema#label> "has apartment" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#hasConstruction
-<http://bimerr.iot.linkeddata.es/def/building#hasConstruction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#hasConstruction> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a building element and its construction. For example a window has two construction individuals: The Lining and the glazing."@en .
-<http://bimerr.iot.linkeddata.es/def/building#hasConstruction> <http://www.w3.org/2000/01/rdf-schema#label> "has construction" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#hasMaterial
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation between a construction component (Layer, profile, constituent) and the materials that define them."@en .
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "has material" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#hasMaterialConstituent
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterialConstituent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterialConstituent> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a constituent set and the specific material constituents."@en .
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterialConstituent> <http://www.w3.org/2000/01/rdf-schema#label> "has material constituent" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#hasMaterialLayer
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterialLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterialLayer> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a layer set and the specific material layers."@en .
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterialLayer> <http://www.w3.org/2000/01/rdf-schema#label> "has material layer" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#hasMaterialProfile
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterialProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterialProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "A relation between a profile set and the specific material profiles."@en .
-<http://bimerr.iot.linkeddata.es/def/building#hasMaterialProfile> <http://www.w3.org/2000/01/rdf-schema#label> "has material profile" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#includesElement
 <http://bimerr.iot.linkeddata.es/def/building#includesElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -142,18 +117,6 @@
 <http://bimerr.iot.linkeddata.es/def/building#minOccupants> <http://www.w3.org/2000/01/rdf-schema#comment> "Minimum number of occupants inside a building."@en .
 <http://bimerr.iot.linkeddata.es/def/building#minOccupants> <http://www.w3.org/2000/01/rdf-schema#label> "min occupants" .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#position
-<http://bimerr.iot.linkeddata.es/def/building#position> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#position> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#integer> .
-<http://bimerr.iot.linkeddata.es/def/building#position> <http://www.w3.org/2000/01/rdf-schema#comment> "Position of a layer with respect to its construction (MaterialLayerSet). The first layer is the one facing the outdoors."@en .
-<http://bimerr.iot.linkeddata.es/def/building#position> <http://www.w3.org/2000/01/rdf-schema#label> "position" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#thickness
-<http://bimerr.iot.linkeddata.es/def/building#thickness> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#thickness> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#float> .
-<http://bimerr.iot.linkeddata.es/def/building#thickness> <http://www.w3.org/2000/01/rdf-schema#comment> "Thickness of a layer."@en .
-<http://bimerr.iot.linkeddata.es/def/building#thickness> <http://www.w3.org/2000/01/rdf-schema#label> "thickness" .
-# 
 # http://www.w3.org/2003/01/geo/wgs84_pos#alt
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> <http://www.w3.org/2000/01/rdf-schema#comment> "Altitude geo location coordinate."@en .
@@ -202,15 +165,8 @@ _:genid2 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 # 
 # http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler
 <http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Boiler> .
+<http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#Boiler> .
 <http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Biomass Boiler" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#Boiler
-<http://bimerr.iot.linkeddata.es/def/building#Boiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Boiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice> .
-<http://bimerr.iot.linkeddata.es/def/building#Boiler> <http://www.w3.org/2000/01/rdf-schema#comment> "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications."@en .
-<http://bimerr.iot.linkeddata.es/def/building#Boiler> <http://www.w3.org/2000/01/rdf-schema#label> "Boiler" .
-<http://bimerr.iot.linkeddata.es/def/building#Boiler> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBoiler"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Building
 <http://bimerr.iot.linkeddata.es/def/building#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -241,20 +197,6 @@ _:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 <http://bimerr.iot.linkeddata.es/def/building#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "System that aggregates cooling devices."@en .
 <http://bimerr.iot.linkeddata.es/def/building#CoolingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Cooling System" .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#DistributionElement
-<http://bimerr.iot.linkeddata.es/def/building#DistributionElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#DistributionElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
-<http://bimerr.iot.linkeddata.es/def/building#DistributionElement> <http://www.w3.org/2000/01/rdf-schema#comment> "A generalization of all elements that participate in a distribution system."@en .
-<http://bimerr.iot.linkeddata.es/def/building#DistributionElement> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution Element" .
-<http://bimerr.iot.linkeddata.es/def/building#DistributionElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionElement"@en .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement
-<http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#DistributionElement> .
-<http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power."@en .
-<http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution Flow Element" .
-<http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionFlowElement" .
-# 
 # http://bimerr.iot.linkeddata.es/def/building#Door
 <http://bimerr.iot.linkeddata.es/def/building#Door> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Door> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#BuildingElement> .
@@ -274,50 +216,21 @@ _:genid4 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XML
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid5 .
 _:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasConstruction> .
-_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid9 .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/building#MaterialConstituentSet> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/building#MaterialLayerSet> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://bimerr.iot.linkeddata.es/def/building#MaterialProfileSet> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasSubElement> .
-_:genid10 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Element> .
-<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
-_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem> .
-_:genid11 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid11 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#System> .
-<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
-_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
-_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasSubElement> .
+_:genid5 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid6 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#isPartOfSystem> .
+_:genid6 <http://www.w3.org/2002/07/owl#maxQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#System> .
+<http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid7 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid7 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "An element is a generalization of all components that make up an AEC product."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element" .
 <http://bimerr.iot.linkeddata.es/def/building#Element> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcElement" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice
-<http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> .
-<http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system."@en .
-<http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Conversion Device" .
-<http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcEnergyConversionDevice" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#Fan
-<http://bimerr.iot.linkeddata.es/def/building#Fan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Fan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice> .
-<http://bimerr.iot.linkeddata.es/def/building#Fan> <http://www.w3.org/2000/01/rdf-schema#comment> "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system."@en .
-<http://bimerr.iot.linkeddata.es/def/building#Fan> <http://www.w3.org/2000/01/rdf-schema#label> "Fan" .
-<http://bimerr.iot.linkeddata.es/def/building#Fan> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFan" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem
 <http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -325,127 +238,23 @@ _:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XM
 <http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "System that aggregates fenestration elements."@en .
 <http://bimerr.iot.linkeddata.es/def/building#FenestrationSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Fenestration System" .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#FlowController
-<http://bimerr.iot.linkeddata.es/def/building#FlowController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#FlowController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> .
-<http://bimerr.iot.linkeddata.es/def/building#FlowController> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays."@en .
-<http://bimerr.iot.linkeddata.es/def/building#FlowController> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Controller" .
-<http://bimerr.iot.linkeddata.es/def/building#FlowController> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowController" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice
-<http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> .
-<http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system."@en .
-<http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Moving Device" .
-<http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowMovingDevice" .
-# 
 # http://bimerr.iot.linkeddata.es/def/building#FlowSegment
 <http://bimerr.iot.linkeddata.es/def/building#FlowSegment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#FlowSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> .
+<http://bimerr.iot.linkeddata.es/def/building#FlowSegment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#DistributionFlowDevice> .
 <http://bimerr.iot.linkeddata.es/def/building#FlowSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of a segment of a flow distribution system."@en .
 <http://bimerr.iot.linkeddata.es/def/building#FlowSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Segment" .
 <http://bimerr.iot.linkeddata.es/def/building#FlowSegment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowSegment" .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#FlowStorageDevice
-<http://bimerr.iot.linkeddata.es/def/building#FlowStorageDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#FlowStorageDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> .
-<http://bimerr.iot.linkeddata.es/def/building#FlowStorageDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank)."@en .
-<http://bimerr.iot.linkeddata.es/def/building#FlowStorageDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Storage Device" .
-<http://bimerr.iot.linkeddata.es/def/building#FlowStorageDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowStorageDevice" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#FlowTerminal
-<http://bimerr.iot.linkeddata.es/def/building#FlowTerminal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#DistributionFlowElement> .
-<http://bimerr.iot.linkeddata.es/def/building#FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment."@en .
-<http://bimerr.iot.linkeddata.es/def/building#FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Terminal" .
-<http://bimerr.iot.linkeddata.es/def/building#FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowTerminal" .
-# 
 # http://bimerr.iot.linkeddata.es/def/building#FossilBoiler
 <http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Boiler> .
+<http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#Boiler> .
 <http://bimerr.iot.linkeddata.es/def/building#FossilBoiler> <http://www.w3.org/2000/01/rdf-schema#label> "Fossil Boiler" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#HeatExchanger
-<http://bimerr.iot.linkeddata.es/def/building#HeatExchanger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice> .
-<http://bimerr.iot.linkeddata.es/def/building#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#comment> "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers."@en .
-<http://bimerr.iot.linkeddata.es/def/building#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Heat Exchanger" .
-<http://bimerr.iot.linkeddata.es/def/building#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcHeatExchanger"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#HeatingSystem
 <http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#System> .
 <http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/2000/01/rdf-schema#comment> "System that aggregates heating devices."@en .
 <http://bimerr.iot.linkeddata.es/def/building#HeatingSystem> <http://www.w3.org/2000/01/rdf-schema#label> "Heating System" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#MaterialConstituent
-<http://bimerr.iot.linkeddata.es/def/building#MaterialConstituent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialConstituent> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
-_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasMaterial> .
-_:genid13 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/material-properties#Material> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialConstituent> <http://www.w3.org/2000/01/rdf-schema#comment> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialConstituent"@en .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialConstituent> <http://www.w3.org/2000/01/rdf-schema#label> "Material Constituent" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#MaterialConstituentSet
-<http://bimerr.iot.linkeddata.es/def/building#MaterialConstituentSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialConstituentSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid14 .
-_:genid14 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid14 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasMaterialConstituent> .
-_:genid14 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid14 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#MaterialConstituent> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialConstituentSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A single and identifiable part of an element which is constructed of a number of layers (one or more)."@en .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialConstituentSet> <http://www.w3.org/2000/01/rdf-schema#label> "Material Constituent Set" .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialConstituentSet> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialConstituentSet" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#MaterialLayer
-<http://bimerr.iot.linkeddata.es/def/building#MaterialLayer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialLayer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid15 .
-_:genid15 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid15 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasMaterial> .
-_:genid15 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/material-properties#Material> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialLayer> <http://www.w3.org/2000/01/rdf-schema#comment> "A single and identifiable part of an element which is constructed of a number of layers (one or more)."@en .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialLayer> <http://www.w3.org/2000/01/rdf-schema#label> "Material Layer" .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialLayer> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayer" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#MaterialLayerSet
-<http://bimerr.iot.linkeddata.es/def/building#MaterialLayerSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialLayerSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid16 .
-_:genid16 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid16 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasMaterialLayer> .
-_:genid16 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid16 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#MaterialLayer> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialLayerSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A designation by which materials of an element constructed of a number of material layers is known and through which the relative positioning of individual layers can be expressed."@en .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialLayerSet> <http://www.w3.org/2000/01/rdf-schema#label> "Material Layer Set" .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialLayerSet> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialLayerSet" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#MaterialProfile
-<http://bimerr.iot.linkeddata.es/def/building#MaterialProfile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialProfile> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid17 .
-_:genid17 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid17 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasMaterial> .
-_:genid17 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/material-properties#Material> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialProfile> <http://www.w3.org/2000/01/rdf-schema#comment> "A single and identifiable cross section of an element which is constructed of a number of profiles (one or more)."@en .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialProfile> <http://www.w3.org/2000/01/rdf-schema#label> "Material Profile" .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialProfile> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialProfile" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#MaterialProfileSet
-<http://bimerr.iot.linkeddata.es/def/building#MaterialProfileSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialProfileSet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid18 .
-_:genid18 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid18 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasMaterialProfile> .
-_:genid18 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#MaterialProfile> .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialProfileSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A designation by which individual material(s) of a prismatic element (for example, beam or column) constructed of a single or multiple material profiles is known."@en .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialProfileSet> <http://www.w3.org/2000/01/rdf-schema#label> "Material Profile Set" .
-<http://bimerr.iot.linkeddata.es/def/building#MaterialProfileSet> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterialProfileSet" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#Outlet
-<http://bimerr.iot.linkeddata.es/def/building#Outlet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Outlet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#FlowTerminal> .
-<http://bimerr.iot.linkeddata.es/def/building#Outlet> <http://www.w3.org/2000/01/rdf-schema#comment> "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications."@en .
-<http://bimerr.iot.linkeddata.es/def/building#Outlet> <http://www.w3.org/2000/01/rdf-schema#label> "Outlet" .
-<http://bimerr.iot.linkeddata.es/def/building#Outlet> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcOutlet" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem
 <http://bimerr.iot.linkeddata.es/def/building#PhotovoltaicSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -459,13 +268,6 @@ _:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.
 <http://bimerr.iot.linkeddata.es/def/building#PipeSegment> <http://www.w3.org/2000/01/rdf-schema#comment> "A pipe segment is used to typically join two sections of a piping network."@en .
 <http://bimerr.iot.linkeddata.es/def/building#PipeSegment> <http://www.w3.org/2000/01/rdf-schema#label> "Pipe Segment" .
 <http://bimerr.iot.linkeddata.es/def/building#PipeSegment> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPipeSegment" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#Pump
-<http://bimerr.iot.linkeddata.es/def/building#Pump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Pump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#FlowMovingDevice> .
-<http://bimerr.iot.linkeddata.es/def/building#Pump> <http://www.w3.org/2000/01/rdf-schema#comment> "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."@en .
-<http://bimerr.iot.linkeddata.es/def/building#Pump> <http://www.w3.org/2000/01/rdf-schema#label> "Pump" .
-<http://bimerr.iot.linkeddata.es/def/building#Pump> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPump" .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#Roof
 <http://bimerr.iot.linkeddata.es/def/building#Roof> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -481,13 +283,6 @@ _:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.
 <http://bimerr.iot.linkeddata.es/def/building#Slab> <http://www.w3.org/2000/01/rdf-schema#label> "Slab" .
 <http://bimerr.iot.linkeddata.es/def/building#Slab> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSlab" .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#SolarDevice
-<http://bimerr.iot.linkeddata.es/def/building#SolarDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#SolarDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice> .
-<http://bimerr.iot.linkeddata.es/def/building#SolarDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A solar device converts solar radiation into other energy such as electric current or thermal energy."@en .
-<http://bimerr.iot.linkeddata.es/def/building#SolarDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Solar Device" .
-<http://bimerr.iot.linkeddata.es/def/building#SolarDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSolarDevice"@en .
-# 
 # http://bimerr.iot.linkeddata.es/def/building#SolarSystem
 <http://bimerr.iot.linkeddata.es/def/building#SolarSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#SolarSystem> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#System> .
@@ -497,75 +292,47 @@ _:genid18 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.
 # http://bimerr.iot.linkeddata.es/def/building#Space
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Space> .
-<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid19 .
-_:genid19 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid19 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasElement> .
-_:genid19 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Element> .
-<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid20 .
-_:genid20 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid20 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
-_:genid20 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid20 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasElement> .
+_:genid8 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid9 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid9 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#comment> "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#label> "Space" .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpace" .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#SpaceHeater
-<http://bimerr.iot.linkeddata.es/def/building#SpaceHeater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#SpaceHeater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#FlowTerminal> .
-<http://bimerr.iot.linkeddata.es/def/building#SpaceHeater> <http://www.w3.org/2000/01/rdf-schema#comment> "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters."@en .
-<http://bimerr.iot.linkeddata.es/def/building#SpaceHeater> <http://www.w3.org/2000/01/rdf-schema#label> "Space Heater" .
-<http://bimerr.iot.linkeddata.es/def/building#SpaceHeater> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpaceHeater" .
-# 
 # http://bimerr.iot.linkeddata.es/def/building#Storey
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/bot#Storey> .
-<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid21 .
-_:genid21 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid21 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#containsZone> .
-_:genid21 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Apartment> .
-<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid22 .
-_:genid22 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid22 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasApartment> .
-_:genid22 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Apartment> .
-<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid23 .
-_:genid23 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid23 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
-_:genid23 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid23 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#containsZone> .
+_:genid10 <http://www.w3.org/2002/07/owl#someValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Apartment> .
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid11 .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid11 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasApartment> .
+_:genid11 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Apartment> .
+<http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid12 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid12 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .
+_:genid12 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid12 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#comment> "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound."@en .
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#label> "Storey" .
 <http://bimerr.iot.linkeddata.es/def/building#Storey> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingStorey" .
 # 
-# http://bimerr.iot.linkeddata.es/def/building#SwitchingDevice
-<http://bimerr.iot.linkeddata.es/def/building#SwitchingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#SwitchingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#FlowController> .
-<http://bimerr.iot.linkeddata.es/def/building#SwitchingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity."@en .
-<http://bimerr.iot.linkeddata.es/def/building#SwitchingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Switching Device" .
-<http://bimerr.iot.linkeddata.es/def/building#SwitchingDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSwitchingDevice"@en .
-# 
 # http://bimerr.iot.linkeddata.es/def/building#System
 <http://bimerr.iot.linkeddata.es/def/building#System> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid24 .
-_:genid24 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid24 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#includesElement> .
-_:genid24 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid24 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<http://bimerr.iot.linkeddata.es/def/building#System> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid13 .
+_:genid13 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid13 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#includesElement> .
+_:genid13 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid13 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.es/def/building#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#System> <http://www.w3.org/2000/01/rdf-schema#label> "System" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#Tank
-<http://bimerr.iot.linkeddata.es/def/building#Tank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#Tank> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#FlowStorageDevice> .
-<http://bimerr.iot.linkeddata.es/def/building#Tank> <http://www.w3.org/2000/01/rdf-schema#comment> "A tank is a vessel or container in which a fluid or gas is stored for later use."@en .
-<http://bimerr.iot.linkeddata.es/def/building#Tank> <http://www.w3.org/2000/01/rdf-schema#label> "Tank" .
-<http://bimerr.iot.linkeddata.es/def/building#Tank> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTank" .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#TubeBundle
-<http://bimerr.iot.linkeddata.es/def/building#TubeBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/building#TubeBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#EnergyConversionDevice> .
-<http://bimerr.iot.linkeddata.es/def/building#TubeBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil."@en .
-<http://bimerr.iot.linkeddata.es/def/building#TubeBundle> <http://www.w3.org/2000/01/rdf-schema#label> "Tube Bundle" .
-<http://bimerr.iot.linkeddata.es/def/building#TubeBundle> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTubeBundle"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#VentilationSystem
 <http://bimerr.iot.linkeddata.es/def/building#VentilationSystem> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -587,12 +354,6 @@ _:genid24 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.
 <http://bimerr.iot.linkeddata.es/def/building#Window> <http://www.w3.org/2000/01/rdf-schema#label> "Window" .
 <http://bimerr.iot.linkeddata.es/def/building#Window> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow" .
 # 
-# http://bimerr.iot.linkeddata.es/def/material-properties#Material
-<http://bimerr.iot.linkeddata.es/def/material-properties#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://bimerr.iot.linkeddata.es/def/material-properties#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "A homogeneous or inhomogeneous substance that can be used to form elements (physical products or their components)."@en .
-<http://bimerr.iot.linkeddata.es/def/material-properties#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material" .
-<http://bimerr.iot.linkeddata.es/def/material-properties#Material> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcMaterial" .
-# 
 # https://w3id.org/bot#Building
 <https://w3id.org/bot#Building> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/bot#Building> <http://www.w3.org/2000/01/rdf-schema#label> "Building" .
@@ -612,5 +373,124 @@ _:genid24 <http://www.w3.org/2002/07/owl#onClass> <http://bimerr.iot.linkeddata.
 # https://w3id.org/bot#Zone
 <https://w3id.org/bot#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/bot#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone" .
+# 
+# https://w3id.org/def/saref4bldg#Boiler
+<https://w3id.org/def/saref4bldg#Boiler> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#Boiler> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#EnergyConversionDevice> .
+<https://w3id.org/def/saref4bldg#Boiler> <http://www.w3.org/2000/01/rdf-schema#comment> "A boiler is a closed, pressure-rated vessel in which water or other fluid is heated using an energy source such as natural gas, heating oil, or electricity. The fluid in the vessel is then circulated out of the boiler for use in various processes or heating applications."@en .
+<https://w3id.org/def/saref4bldg#Boiler> <http://www.w3.org/2000/01/rdf-schema#label> "Boiler" .
+<https://w3id.org/def/saref4bldg#Boiler> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBoiler"@en .
+# 
+# https://w3id.org/def/saref4bldg#DistributionDevice
+<https://w3id.org/def/saref4bldg#DistributionDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#DistributionDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+<https://w3id.org/def/saref4bldg#DistributionDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A generalization of all elements that participate in a distribution system."@en .
+<https://w3id.org/def/saref4bldg#DistributionDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution Device"@en .
+<https://w3id.org/def/saref4bldg#DistributionDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionElement"@en .
+# 
+# https://w3id.org/def/saref4bldg#DistributionFlowDevice
+<https://w3id.org/def/saref4bldg#DistributionFlowDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#DistributionFlowDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#DistributionDevice> .
+<https://w3id.org/def/saref4bldg#DistributionFlowDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines occurrence elements of a distribution system that facilitate the distribution of energy or matter, such as air, water or power."@en .
+<https://w3id.org/def/saref4bldg#DistributionFlowDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Distribution Flow Device" .
+<https://w3id.org/def/saref4bldg#DistributionFlowDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcDistributionFlowElement" .
+# 
+# https://w3id.org/def/saref4bldg#EnergyConversionDevice
+<https://w3id.org/def/saref4bldg#EnergyConversionDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#DistributionFlowDevice> .
+<https://w3id.org/def/saref4bldg#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of a device used to perform energy conversion or heat transfer and typically participates in a flow distribution system."@en .
+<https://w3id.org/def/saref4bldg#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Energy Conversion Device" .
+<https://w3id.org/def/saref4bldg#EnergyConversionDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcEnergyConversionDevice" .
+# 
+# https://w3id.org/def/saref4bldg#Fan
+<https://w3id.org/def/saref4bldg#Fan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#Fan> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#FlowMovingDevice> .
+<https://w3id.org/def/saref4bldg#Fan> <http://www.w3.org/2000/01/rdf-schema#comment> "A fan is a device which imparts mechanical work on a gas. A typical usage of a fan is to induce airflow in a building services air distribution system."@en .
+<https://w3id.org/def/saref4bldg#Fan> <http://www.w3.org/2000/01/rdf-schema#label> "Fan" .
+<https://w3id.org/def/saref4bldg#Fan> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFan" .
+# 
+# https://w3id.org/def/saref4bldg#FlowController
+<https://w3id.org/def/saref4bldg#FlowController> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#FlowController> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#DistributionFlowDevice> .
+<https://w3id.org/def/saref4bldg#FlowController> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of elements of a distribution system that are used to regulate flow through a distribution system. Examples include dampers, valves, switches, and relays."@en .
+<https://w3id.org/def/saref4bldg#FlowController> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Controller" .
+<https://w3id.org/def/saref4bldg#FlowController> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowController" .
+# 
+# https://w3id.org/def/saref4bldg#FlowMovingDevice
+<https://w3id.org/def/saref4bldg#FlowMovingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#DistributionFlowDevice> .
+<https://w3id.org/def/saref4bldg#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of an apparatus used to distribute, circulate or perform conveyance of fluids, including liquids and gases (such as a pump or fan), and typically participates in a flow distribution system."@en .
+<https://w3id.org/def/saref4bldg#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Moving Device" .
+<https://w3id.org/def/saref4bldg#FlowMovingDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowMovingDevice" .
+# 
+# https://w3id.org/def/saref4bldg#FlowStorageDevice
+<https://w3id.org/def/saref4bldg#FlowStorageDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#FlowStorageDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#DistributionFlowDevice> .
+<https://w3id.org/def/saref4bldg#FlowStorageDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of a device that participates in a distribution system and is used for temporary storage (such as a tank)."@en .
+<https://w3id.org/def/saref4bldg#FlowStorageDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Storage Device" .
+<https://w3id.org/def/saref4bldg#FlowStorageDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowStorageDevice" .
+# 
+# https://w3id.org/def/saref4bldg#FlowTerminal
+<https://w3id.org/def/saref4bldg#FlowTerminal> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#DistributionFlowDevice> .
+<https://w3id.org/def/saref4bldg#FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the occurrence of a permanently attached element that acts as a terminus or beginning of a distribution system (such as an air outlet, drain, water closet, or sink). A terminal is typically a point at which a system interfaces with an external environment."@en .
+<https://w3id.org/def/saref4bldg#FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#label> "Flow Terminal" .
+<https://w3id.org/def/saref4bldg#FlowTerminal> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcFlowTerminal" .
+# 
+# https://w3id.org/def/saref4bldg#HeatExchanger
+<https://w3id.org/def/saref4bldg#HeatExchanger> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#EnergyConversionDevice> .
+<https://w3id.org/def/saref4bldg#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#comment> "A heat exchanger is a device used to provide heat transfer between non-mixing media such as plate and shell and tube heat exchangers."@en .
+<https://w3id.org/def/saref4bldg#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#label> "Heat Exchanger" .
+<https://w3id.org/def/saref4bldg#HeatExchanger> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcHeatExchanger"@en .
+# 
+# https://w3id.org/def/saref4bldg#Outlet
+<https://w3id.org/def/saref4bldg#Outlet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#Outlet> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#FlowTerminal> .
+<https://w3id.org/def/saref4bldg#Outlet> <http://www.w3.org/2000/01/rdf-schema#comment> "An outlet is a device installed at a point to receive one or more inserted plugs for electrical power or communications."@en .
+<https://w3id.org/def/saref4bldg#Outlet> <http://www.w3.org/2000/01/rdf-schema#label> "Outlet" .
+<https://w3id.org/def/saref4bldg#Outlet> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcOutlet" .
+# 
+# https://w3id.org/def/saref4bldg#Pump
+<https://w3id.org/def/saref4bldg#Pump> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#Pump> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#FlowMovingDevice> .
+<https://w3id.org/def/saref4bldg#Pump> <http://www.w3.org/2000/01/rdf-schema#comment> "A pump is a device which imparts mechanical work on fluids or slurries to move them through a channel or pipeline. A typical use of a pump is to circulate chilled water or heating hot water in a building services distribution system."@en .
+<https://w3id.org/def/saref4bldg#Pump> <http://www.w3.org/2000/01/rdf-schema#label> "Pump" .
+<https://w3id.org/def/saref4bldg#Pump> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPump" .
+# 
+# https://w3id.org/def/saref4bldg#SolarDevice
+<https://w3id.org/def/saref4bldg#SolarDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#SolarDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#EnergyConversionDevice> .
+<https://w3id.org/def/saref4bldg#SolarDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A solar device converts solar radiation into other energy such as electric current or thermal energy."@en .
+<https://w3id.org/def/saref4bldg#SolarDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Solar Device" .
+<https://w3id.org/def/saref4bldg#SolarDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSolarDevice"@en .
+# 
+# https://w3id.org/def/saref4bldg#SpaceHeater
+<https://w3id.org/def/saref4bldg#SpaceHeater> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#SpaceHeater> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#FlowTerminal> .
+<https://w3id.org/def/saref4bldg#SpaceHeater> <http://www.w3.org/2000/01/rdf-schema#comment> "Space heaters utilize a combination of radiation and/or natural convection using a heating source such as electricity, steam or hot water to heat a limited space or area. Examples of space heaters include radiators, convectors, baseboard and finned-tube heaters."@en .
+<https://w3id.org/def/saref4bldg#SpaceHeater> <http://www.w3.org/2000/01/rdf-schema#label> "Space Heater" .
+<https://w3id.org/def/saref4bldg#SpaceHeater> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpaceHeater" .
+# 
+# https://w3id.org/def/saref4bldg#SwitchingDevice
+<https://w3id.org/def/saref4bldg#SwitchingDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#SwitchingDevice> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#FlowController> .
+<https://w3id.org/def/saref4bldg#SwitchingDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "A switch is used in a cable distribution system (electrical circuit) to control or modulate the flow of electricity."@en .
+<https://w3id.org/def/saref4bldg#SwitchingDevice> <http://www.w3.org/2000/01/rdf-schema#label> "Switching Device" .
+<https://w3id.org/def/saref4bldg#SwitchingDevice> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSwitchingDevice"@en .
+# 
+# https://w3id.org/def/saref4bldg#Tank
+<https://w3id.org/def/saref4bldg#Tank> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#Tank> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#FlowStorageDevice> .
+<https://w3id.org/def/saref4bldg#Tank> <http://www.w3.org/2000/01/rdf-schema#comment> "A tank is a vessel or container in which a fluid or gas is stored for later use."@en .
+<https://w3id.org/def/saref4bldg#Tank> <http://www.w3.org/2000/01/rdf-schema#label> "Tank" .
+<https://w3id.org/def/saref4bldg#Tank> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTank" .
+# 
+# https://w3id.org/def/saref4bldg#TubeBundle
+<https://w3id.org/def/saref4bldg#TubeBundle> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/def/saref4bldg#TubeBundle> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/def/saref4bldg#EnergyConversionDevice> .
+<https://w3id.org/def/saref4bldg#TubeBundle> <http://www.w3.org/2000/01/rdf-schema#comment> "A tube bundle is a device consisting of tubes and bundles of tubes used for heat transfer and contained typically within other energy conversion devices, such as a chiller or coil."@en .
+<https://w3id.org/def/saref4bldg#TubeBundle> <http://www.w3.org/2000/01/rdf-schema#label> "Tube Bundle" .
+<https://w3id.org/def/saref4bldg#TubeBundle> <http://www.w3.org/2000/01/rdf-schema#seeAlso> "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcTubeBundle"@en .
 # 
 # Generated by the OWL API (version 5.1.11) https://github.com/owlcs/owlapi/
