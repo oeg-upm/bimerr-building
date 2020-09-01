@@ -151,7 +151,7 @@
 ###  https://w3id.org/bot#hasSimple3DModel
 <https://w3id.org/bot#hasSimple3DModel> rdf:type owl:DatatypeProperty ;
                                         rdfs:range xsd:string ;
-                                        rdfs:comment "Links any Zone or Element to a 3D Model encoded as a literal."@en ;
+                                        rdfs:comment "Location (path) of the 3D model file."@en ;
                                         rdfs:label "has simple 3d model" .
 
 
@@ -192,6 +192,10 @@
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <https://w3id.org/bot#hasElement> ;
                             owl:allValuesFrom <https://w3id.org/bot#Element>
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty <https://w3id.org/bot#hasSpace> ;
+                            owl:allValuesFrom <https://w3id.org/bot#Space>
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <https://w3id.org/bot#hasStorey> ;
@@ -327,6 +331,10 @@
                         [ rdf:type owl:Restriction ;
                           owl:onProperty <https://w3id.org/bot#hasElement> ;
                           owl:allValuesFrom <https://w3id.org/bot#Element>
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty <https://w3id.org/bot#hasSpace> ;
+                          owl:allValuesFrom <https://w3id.org/bot#Space>
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :ifcIdentifier ;

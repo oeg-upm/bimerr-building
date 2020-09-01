@@ -158,7 +158,7 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
 ###  https://w3id.org/bot#hasSimple3DModel
 bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
                      rdfs:range xsd:string ;
-                     rdfs:comment "Links any Zone or Element to a 3D Model encoded as a literal."@en ;
+                     rdfs:comment "Location (path) of the 3D model file."@en ;
                      rdfs:label "has simple 3d model" .
 
 
@@ -199,6 +199,10 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
                           [ rdf:type owl:Restriction ;
                             owl:onProperty bot:hasElement ;
                             owl:allValuesFrom bot:Element
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty bot:hasSpace ;
+                            owl:allValuesFrom bot:Space
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty bot:hasStorey ;
@@ -334,6 +338,10 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
                         [ rdf:type owl:Restriction ;
                           owl:onProperty bot:hasElement ;
                           owl:allValuesFrom bot:Element
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty bot:hasSpace ;
+                          owl:allValuesFrom bot:Space
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :ifcIdentifier ;

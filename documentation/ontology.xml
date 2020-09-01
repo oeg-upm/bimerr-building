@@ -260,7 +260,7 @@
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/bot#hasSimple3DModel">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <rdfs:comment xml:lang="en">Links any Zone or Element to a 3D Model encoded as a literal.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Location (path) of the 3D model file.</rdfs:comment>
         <rdfs:label>has simple 3d model</rdfs:label>
     </owl:DatatypeProperty>
     
@@ -328,6 +328,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/bot#hasElement"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/bot#Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/bot#hasSpace"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/bot#Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -529,6 +535,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/bot#hasElement"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/bot#Element"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://w3id.org/bot#hasSpace"/>
+                <owl:allValuesFrom rdf:resource="https://w3id.org/bot#Space"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
