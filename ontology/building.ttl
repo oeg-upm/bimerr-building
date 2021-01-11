@@ -18,10 +18,10 @@
                                                  dc:creator "María Poveda-Villalón" ,
                                                             "Serge Chávez-Feria" ,
                                                             "The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model."@en ;
-                                                 dc:publisher "http://purl.org/NET/rdflicense/cc-by4.0" ,
-                                                              "http://www.oeg-upm.net/" ;
+                                                 dc:license "http://purl.org/NET/rdflicense/cc-by4.0" ;
+                                                 dc:publisher "http://www.oeg-upm.net/" ;
                                                  dc:title "Building Ontology" ;
-                                                 owl:versionInfo "0.1.0" .
+                                                 owl:versionInfo "0.1.1" .
 
 #################################################################
 #    Annotation properties
@@ -57,36 +57,48 @@ dc:title rdf:type owl:AnnotationProperty .
 
 ###  http://bimerr.iot.linkeddata.es/def/building#hasApartment
 :hasApartment rdf:type owl:ObjectProperty ;
+              rdfs:domain :Storey ;
+              rdfs:range :Apartment ;
               rdfs:comment "Relation between a storey and the apartments it is composed of."@en ;
               rdfs:label "has apartment" .
 
 
 ###  https://w3id.org/bot#containsZone
 bot:containsZone rdf:type owl:ObjectProperty ;
+                 rdfs:domain bot:Zone ;
+                 rdfs:range bot:Zone ;
                  rdfs:comment "Relationship to the subzones of a major zone. A space zone could for instance be contained in a storey zone which is further contained in a building zone."@en ;
                  rdfs:label "contains zone" .
 
 
 ###  https://w3id.org/bot#hasElement
 bot:hasElement rdf:type owl:ObjectProperty ;
+               rdfs:domain bot:Zone ;
+               rdfs:range bot:Element ;
                rdfs:comment "Links a Zone to an Element that is contained in, or adjacent to, the Zone."@en ;
                rdfs:label "has element" .
 
 
 ###  https://w3id.org/bot#hasSpace
 bot:hasSpace rdf:type owl:ObjectProperty ;
+             rdfs:domain bot:Zone ;
+             rdfs:range bot:Space ;
              rdfs:comment "Relation to spaces contained in a zone."@en ;
              rdfs:label "has space" .
 
 
 ###  https://w3id.org/bot#hasStorey
 bot:hasStorey rdf:type owl:ObjectProperty ;
+              rdfs:domain bot:Zone ;
+              rdfs:range bot:Storey ;
               rdfs:comment "Relation to storeys contained in a zone."@en ;
               rdfs:label "has storey" .
 
 
 ###  https://w3id.org/bot#hasSubElement
 bot:hasSubElement rdf:type owl:ObjectProperty ;
+                  rdfs:domain bot:Element ;
+                  rdfs:range bot:Element ;
                   rdfs:comment "Relationship to indicate the subcomponents of elements"@en ;
                   rdfs:label "has sub element" .
 
@@ -106,12 +118,14 @@ bot:hasSubElement rdf:type owl:ObjectProperty ;
 ###  http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile
 :hasObXMLFile rdf:type owl:DatatypeProperty ;
               rdfs:domain :Space ;
+              rdfs:range xsd:string ;
               rdfs:comment "Relationship to indicate the path of the obXML file for an specific space."@en ;
               rdfs:label "has obXML file"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase
 :identifierInDatabase rdf:type owl:DatatypeProperty ;
+                      rdfs:range xsd:string ;
                       rdfs:comment "Indicates the ID of the building element in the BIMERR materials and component database."@en ;
                       rdfs:label "identifier in database"@en .
 
@@ -178,14 +192,13 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
                              owl:allValuesFrom :Space
                            ] ,
                            [ rdf:type owl:Restriction ;
+                             owl:onProperty bot:hasSimple3DModel ;
+                             owl:allValuesFrom xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty :ifcIdentifier ;
                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onDataRange xsd:string
-                           ] ,
-                           [
-                             rdf:type owl:Restriction ;
-                             owl:onProperty bot:hasSimple3DModel ;
-                             owl:allValuesFrom xsd:string
                            ] ;
            rdfs:comment "An apartment is a group of spaces, partial spaces or other zones."@en ;
            rdfs:label "Apartment" ;
@@ -195,6 +208,7 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
 ###  http://bimerr.iot.linkeddata.es/def/building#BiomassBoiler
 :BiomassBoiler rdf:type owl:Class ;
                rdfs:subClassOf s4bldg:Boiler ;
+               rdfs:comment "Boiler for the combustion of biomass fuels."@en ;
                rdfs:label "Biomass Boiler" .
 
 
@@ -214,31 +228,26 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
                             owl:allValuesFrom :Storey
                           ] ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty bot:hasSimple3DModel ;
+                            owl:allValuesFrom xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :ifcIdentifier ;
                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onDataRange xsd:string
                           ] ,
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty bot:hasSimple3DModel ;
-                            owl:allValuesFrom xsd:string ;
-                            owl:onDataRange xsd:string
-                          ] ,
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty wgs84_pos:long ;
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty wgs84_pos:alt ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
-                          [
-                            rdf:type owl:Restriction ;
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty wgs84_pos:lat ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty wgs84_pos:alt ;
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty wgs84_pos:long ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                          ];
+                          ] ;
           rdfs:comment "A building represents a structure that provides shelter for its occupants or contents and stands in one place. The building is also used to provide a basic element within the spatial structure hierarchy for the components of a building project (together with site, storey, and space)."@en ;
           rdfs:label "Building" ;
           rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuilding" .
@@ -276,6 +285,10 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
                            owl:allValuesFrom :Element
                          ] ,
                          [ rdf:type owl:Restriction ;
+                           owl:onProperty bot:hasSimple3DModel ;
+                           owl:allValuesFrom xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
                            owl:onProperty :ifcIdentifier ;
                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                            owl:onDataRange xsd:string
@@ -284,12 +297,7 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
                            owl:onProperty :identifierInDatabase ;
                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                            owl:onDataRange xsd:string
-                         ] ,
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty bot:hasSimple3DModel ;
-                            owl:allValuesFrom xsd:string
-                          ] ;
+                         ] ;
          rdfs:comment "An element is a generalization of all components that make up an AEC product."@en ;
          rdfs:label "Element" ;
          rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcElement" .
@@ -306,6 +314,7 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
 ###  http://bimerr.iot.linkeddata.es/def/building#FossilBoiler
 :FossilBoiler rdf:type owl:Class ;
               rdfs:subClassOf s4bldg:Boiler ;
+              rdfs:comment "Boiler for the combustion of fossil fuels."@en ;
               rdfs:label "Fossil Boiler" .
 
 
@@ -342,18 +351,17 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasObXMLFile ;
-                         owl:allValuesFrom xsd:string ;
+                         owl:allValuesFrom xsd:string
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty bot:hasSimple3DModel ;
+                         owl:allValuesFrom xsd:string
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :ifcIdentifier ;
                          owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onDataRange xsd:string
                        ] ,
-                      [
-                        rdf:type owl:Restriction ;
-                        owl:onProperty bot:hasSimple3DModel ;
-                        owl:allValuesFrom xsd:string
-                      ]  ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :maxOccupants ;
                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -389,14 +397,13 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
                           owl:allValuesFrom bot:Space
                         ] ,
                         [ rdf:type owl:Restriction ;
+                          owl:onProperty bot:hasSimple3DModel ;
+                          owl:allValuesFrom xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :ifcIdentifier ;
                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                           owl:onDataRange xsd:string
-                        ] ,
-                        [
-                          rdf:type owl:Restriction ;
-                          owl:onProperty bot:hasSimple3DModel ;
-                          owl:allValuesFrom xsd:string
                         ] ;
         rdfs:comment "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound."@en ;
         rdfs:label "Storey" ;
@@ -421,26 +428,31 @@ bot:hasSimple3DModel rdf:type owl:DatatypeProperty ;
 
 ###  https://w3id.org/bot#Building
 bot:Building rdf:type owl:Class ;
+             rdfs:comment "An independent unit of the built environment with a characteristic spatial structure. Concept from the BOT ontology."@en ;
              rdfs:label "Building" .
 
 
 ###  https://w3id.org/bot#Element
 bot:Element rdf:type owl:Class ;
+            rdfs:comment "Constituent of a construction entity with a characteristic technical function, form or position. Concept from the BOT ontology."@en ;
             rdfs:label "Element" .
 
 
 ###  https://w3id.org/bot#Space
 bot:Space rdf:type owl:Class ;
+          rdfs:comment "A limited three-dimensional extent defined physically or notionally. Concept from the BOT ontology."@en ;
           rdfs:label "Space" .
 
 
 ###  https://w3id.org/bot#Storey
 bot:Storey rdf:type owl:Class ;
+           rdfs:comment "A level part of a building. Concept from the BOT ontology."@en ;
            rdfs:label "Storey" .
 
 
 ###  https://w3id.org/bot#Zone
 bot:Zone rdf:type owl:Class ;
+         rdfs:comment "A part of the physical world or a virtual world that is inherently both located in this world and having a 3D spatial extent. Concept from the BOT ontology."@en ;
          rdfs:label "Zone" .
 
 
