@@ -108,6 +108,13 @@
                  rdfs:label "building address" .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#description
+:description rdf:type owl:DatatypeProperty ;
+             rdfs:range xsd:string ;
+             rdfs:comment "Description of the element in the ifc file."@en ;
+             rdfs:label "description"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile
 :hasObXMLFile rdf:type owl:DatatypeProperty ;
               rdfs:domain :Space ;
@@ -142,6 +149,13 @@
               rdfs:range xsd:integer ;
               rdfs:comment "Minimum number of occupants inside a building."@en ;
               rdfs:label "min occupants" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Name of the element in the ifc file."@en ;
+      rdfs:label "name"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
@@ -192,6 +206,14 @@
                              owl:onProperty :ifcIdentifier ;
                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :description ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :name ;
+                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                            ] ;
            rdfs:comment "An apartment is a group of spaces, partial spaces or other zones."@en ;
            rdfs:label "Apartment" ;
@@ -228,6 +250,14 @@
                             owl:onProperty :ifcIdentifier ;
                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :description ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :name ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty <http://www.w3.org/2003/01/geo/wgs84_pos#alt> ;
@@ -287,9 +317,17 @@
                            owl:onDataRange xsd:string
                          ] ,
                          [ rdf:type owl:Restriction ;
+                           owl:onProperty :description ;
+                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
                            owl:onProperty :identifierInDatabase ;
                            owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                            owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :name ;
+                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
                          ] ;
          rdfs:comment "An element is a generalization of all components that make up an AEC product."@en ;
          rdfs:label "Element" ;
@@ -356,6 +394,10 @@
                          owl:onDataRange xsd:string
                        ] ,
                        [ rdf:type owl:Restriction ;
+                         owl:onProperty :description ;
+                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :maxOccupants ;
                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onDataRange xsd:integer
@@ -364,6 +406,10 @@
                          owl:onProperty :minOccupants ;
                          owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                          owl:onDataRange xsd:integer
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :name ;
+                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
        rdfs:comment "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building."@en ;
        rdfs:label "Space" ;
@@ -397,6 +443,14 @@
                           owl:onProperty :ifcIdentifier ;
                           owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                           owl:onDataRange xsd:string
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :description ;
+                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :name ;
+                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
                         ] ;
         rdfs:comment "The building storey has an elevation and typically represents a (nearly) horizontal aggregation of spaces that are vertically bound."@en ;
         rdfs:label "Storey" ;
