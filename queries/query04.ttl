@@ -1,0 +1,11 @@
+# Get all building elements for apartment 01
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX building: <http://bimerr.iot.linkeddata.es/def/building#>
+PREFIX bot: <https://w3id.org/bot#>
+PREFIX data: <http://bimerr.iot.linkeddata.es/def/building/data#>
+select ?element where { 
+	data:Apartment01 bot:hasSpace ?space .
+    ?space building:name ?name .
+    ?space bot:hasElement ?element .
+}

@@ -1,0 +1,319 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix building: <http://bimerr.iot.linkeddata.es/def/building#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix data: <http://bimerr.iot.linkeddata.es/def/building/data#> .
+@prefix s4bldg: <https://saref.etsi.org/saref4bldg/> .
+
+
+data:Building01 rdf:type building:Building ;
+				building:ifcIdentifier "2cZtnlll9DugwKjW2uDsyk"^^xsd:string ;
+                wgs84_pos:lat "41.730330"^^xsd:float ;
+                wgs84_pos:long "-2.441711"^^xsd:float ;
+				bot:hasSimple3DModel "Building01.ifc"^^xsd:string ;
+				bot:hasStorey data:Storey01 ;
+				bot:hasStorey data:Storey02 .
+
+
+data:Storey01 rdf:type building:Storey ;
+                building:ifcIdentifier "2cZtnlll9DugwKjW17o96y"^^xsd:string ;
+                bot:hasSimple3DModel "Storey01.obj" ;
+                building:hasApartment data:Apartment01 ;
+                building:hasApartment data:Apartment02 .
+
+
+data:Storey02 rdf:type building:Storey ;
+                building:ifcIdentifier "2cZtnlll9DugwKjW17o9hm"^^xsd:string ;
+                bot:hasSimple3DModel "Storey02.obj" ;
+                building:hasApartment data:Apartment03 .
+
+
+
+# First Apartment
+
+data:Apartment01 rdf:type building:Apartment ;
+                bot:hasSpace data:Space01_Apartment01 ;
+                bot:hasSpace data:Space02_Apartment01 ;
+                bot:hasSpace data:Space03_Apartment01 ;
+                bot:hasSpace data:Space04_Apartment01 ;
+                bot:hasElement data:Slab01_Apartment01 ;
+                bot:hasElement data:Door01_Apartment01 ;
+                bot:hasElement data:Window01_Apartment01 .
+
+
+data:Space01_Apartment01 rdf:type building:Space ;
+                building:ifcIdentifier "31gUPiJjz4Qvpt6sZCOGVM"^^xsd:string ;
+                building:hasObXmlFile "Space01_Apartment01_obXML.xml" ;
+                building:name "Kitchen" ;
+                bot:hasElement data:Door01_Space01_Apartment01;
+                bot:hasElement data:Wall01_Space01_Apartment01;
+                bot:hasElement data:Wall02_Space01_Apartment01;
+                bot:hasElement data:Wall03_Space01_Apartment01;
+                bot:hasElement data:Wall04_Space01_Apartment01;
+                bot:hasElement data:Window01_Space01_Apartment01 .
+
+data:Space02_Apartment01 rdf:type building:Space ;
+                building:ifcIdentifier "31gUPiJjz4Qvpt6sZCOGVk"^^xsd:string ;
+                building:hasObXmlFile "Space02_Apartment01_obXML.xml" ;
+                building:name "Bedroom" ;
+                bot:hasElement data:Door01_Space02_Apartment01;
+                bot:hasElement data:Wall01_Space02_Apartment01;
+                bot:hasElement data:Wall02_Space02_Apartment01;
+                bot:hasElement data:Wall03_Space02_Apartment01;
+                bot:hasElement data:Wall04_Space02_Apartment01;
+                bot:hasElement data:Window01_Space02_Apartment01 .
+
+data:Space03_Apartment01 rdf:type building:Space ;
+                building:ifcIdentifier "31gUPiJjz4Qvpt6sZCOGVe"^^xsd:string ;
+                building:hasObXmlFile "Space03_Apartment01_obXML.xml" ;
+                building:name "Bathroom" ;
+                bot:hasElement data:Door01_Space03_Apartment01;
+                bot:hasElement data:Wall01_Space03_Apartment01;
+                bot:hasElement data:Wall02_Space03_Apartment01;
+                bot:hasElement data:Wall03_Space03_Apartment01;
+                bot:hasElement data:Wall04_Space03_Apartment01;
+                bot:hasElement data:Window01_Space03_Apartment01 .
+
+data:Space04_Apartment01 rdf:type building:Space ;
+                building:ifcIdentifier "31gUPiJjz4Qvpt6sZCOGVi"^^xsd:string ;
+                building:hasObXmlFile "Space04_Apartment01_obXML.xml" ;
+                building:name "Living room" ;
+                bot:hasElement data:Door01_Space04_Apartment01;
+                bot:hasElement data:Wall01_Space04_Apartment01;
+                bot:hasElement data:Wall02_Space04_Apartment01;
+                bot:hasElement data:Wall03_Space04_Apartment01;
+                bot:hasElement data:Wall04_Space04_Apartment01;
+                bot:hasElement data:Window01_Space04_Apartment01 .
+
+
+# Second Apartment
+
+data:Apartment02 rdf:type building:Apartment ;
+                bot:hasSpace data:Space01_Apartment02 ;
+                bot:hasSpace data:Space02_Apartment02 ;
+                bot:hasSpace data:Space03_Apartment02 ;
+                bot:hasSpace data:Space04_Apartment02 ;
+                bot:hasElement data:Slab01_Apartment02 ;
+                bot:hasElement data:Door01_Apartment02 ;
+                bot:hasElement data:Window01_Apartment02 .
+
+
+data:Space01_Apartment02 rdf:type building:Space ;
+                building:ifcIdentifier "31gUPiJjz4Qv556sZCOGVM"^^xsd:string ;
+                building:hasObXmlFile "Space01_Apartment02_obXML.xml" ;
+                building:name "Kitchen" ;
+                bot:hasElement data:Door01_Space01_Apartment02;
+                bot:hasElement data:Wall01_Space01_Apartment02;
+                bot:hasElement data:Wall02_Space01_Apartment02;
+                bot:hasElement data:Wall03_Space01_Apartment02;
+                bot:hasElement data:Wall04_Space01_Apartment02;
+                bot:hasElement data:Window01_Space01_Apartment02 .
+
+data:Space02_Apartment02 rdf:type building:Space ;
+                building:ifcIdentifier "31gUPiJjz4Qv666sZCOGVk"^^xsd:string ;
+                building:hasObXmlFile "Space02_Apartment02_obXML.xml" ;
+                building:name "Bedroom" ;
+                bot:hasElement data:Door01_Space02_Apartment02;
+                bot:hasElement data:Wall01_Space02_Apartment02;
+                bot:hasElement data:Wall02_Space02_Apartment02;
+                bot:hasElement data:Wall03_Space02_Apartment02;
+                bot:hasElement data:Wall04_Space02_Apartment02;
+                bot:hasElement data:Window01_Space02_Apartment02 .
+
+data:Space03_Apartment02 rdf:type building:Space ;
+                building:ifcIdentifier "31gUPiJjz22vpt6sZCOGVe"^^xsd:string ;
+                building:hasObXmlFile "Space03_Apartment02_obXML.xml" ;
+                building:name "Bathroom" ;
+                bot:hasElement data:Door01_Space03_Apartment02;
+                bot:hasElement data:Wall01_Space03_Apartment02;
+                bot:hasElement data:Wall02_Space03_Apartment02;
+                bot:hasElement data:Wall03_Space03_Apartment02;
+                bot:hasElement data:Wall04_Space03_Apartment02;
+                bot:hasElement data:Window01_Space03_Apartment02 .
+
+data:Space04_Apartment02 rdf:type building:Space ;
+                building:ifcIdentifier "3111PiJjz4Qvpt6sZCOGVi"^^xsd:string ;
+                building:hasObXmlFile "Space04_Apartment02_obXML.xml" ;
+                building:name "Living room" ;
+                bot:hasElement data:Door01_Space04_Apartment02;
+                bot:hasElement data:Wall01_Space04_Apartment02;
+                bot:hasElement data:Wall02_Space04_Apartment02;
+                bot:hasElement data:Wall03_Space04_Apartment02;
+                bot:hasElement data:Wall04_Space04_Apartment02;
+                bot:hasElement data:Window01_Space04_Apartment02 .
+
+
+# Third Apartment
+
+data:Apartment03 rdf:type building:Apartment ;
+                bot:hasSpace data:Space01_Apartment03 ;
+                bot:hasSpace data:Space02_Apartment03 ;
+                bot:hasSpace data:Space03_Apartment03 ;
+                bot:hasSpace data:Space04_Apartment03 ;
+                bot:hasElement data:Slab01_Apartment03 ;
+                bot:hasElement data:Door01_Apartment03 ;
+                bot:hasElement data:Window01_Apartment03 ;
+                bot:hasElement data:Roof01_Apartment03 .
+
+
+data:Space01_Apartment03 rdf:type building:Space ;
+                building:ifcIdentifier "31gUPiJjz4Qv556sZCOGVM"^^xsd:string ;
+                building:hasObXmlFile "Space01_Apartment03_obXML.xml" ;
+                building:name "Kitchen" ;
+                bot:hasElement data:Door01_Space01_Apartment03;
+                bot:hasElement data:Wall01_Space01_Apartment03;
+                bot:hasElement data:Wall02_Space01_Apartment03;
+                bot:hasElement data:Wall03_Space01_Apartment03;
+                bot:hasElement data:Wall04_Space01_Apartment03;
+                bot:hasElement data:Window01_Space01_Apartment03 .
+
+data:Space02_Apartment03 rdf:type building:Space ;
+                building:ifcIdentifier "31gUPiJjz4Qv666sZCOGVk"^^xsd:string ;
+                building:hasObXmlFile "Space02_Apartment03_obXML.xml" ;
+                building:name "Bedroom" ;
+                bot:hasElement data:Door01_Space02_Apartment03;
+                bot:hasElement data:Wall01_Space02_Apartment03;
+                bot:hasElement data:Wall02_Space02_Apartment03;
+                bot:hasElement data:Wall03_Space02_Apartment03;
+                bot:hasElement data:Wall04_Space02_Apartment03;
+                bot:hasElement data:Window01_Space02_Apartment03 .
+
+data:Space03_Apartment03 rdf:type building:Space ;
+                building:ifcIdentifier "31gUPiJjz22vpt6sZCOGVe"^^xsd:string ;
+                building:hasObXmlFile "Space03_Apartment03_obXML.xml" ;
+                building:name "Bathroom" ;
+                bot:hasElement data:Door01_Space03_Apartment03;
+                bot:hasElement data:Wall01_Space03_Apartment03;
+                bot:hasElement data:Wall02_Space03_Apartment03;
+                bot:hasElement data:Wall03_Space03_Apartment03;
+                bot:hasElement data:Wall04_Space03_Apartment03;
+                bot:hasElement data:Window01_Space03_Apartment03 .
+
+data:Space04_Apartment03 rdf:type building:Space ;
+                building:ifcIdentifier "3111PiJjz4Qvpt6sZCOGVi"^^xsd:string ;
+                building:hasObXmlFile "Space04_Apartment03_obXML.xml" ;
+                building:name "Living room" ;
+                bot:hasElement data:Door01_Space04_Apartment03;
+                bot:hasElement data:Wall01_Space04_Apartment03;
+                bot:hasElement data:Wall02_Space04_Apartment03;
+                bot:hasElement data:Wall03_Space04_Apartment03;
+                bot:hasElement data:Wall04_Space04_Apartment03;
+                bot:hasElement data:Window01_Space04_Apartment03 .
+
+
+########## Building Elements ################
+
+# Apartment 1
+
+data:Slab01_Apartment01 rdf:type building:Slab .
+
+data:Door01_Apartment01 rdf:type building:Door .
+
+data:Window01_Apartment01 rdf:type building:Window .
+
+data:Door01_Space01_Apartment01 rdf:type building:Door .
+data:Wall01_Space01_Apartment01 rdf:type building:Wall .
+data:Wall02_Space01_Apartment01 rdf:type building:Wall .
+data:Wall03_Space01_Apartment01 rdf:type building:Wall .
+data:Wall04_Space01_Apartment01 rdf:type building:Wall .
+data:Window01_Space01_Apartment01 rdf:type building:Window .
+
+data:Door01_Space02_Apartment01 rdf:type building:Door .
+data:Wall01_Space02_Apartment01 rdf:type building:Wall .
+data:Wall02_Space02_Apartment01 rdf:type building:Wall .
+data:Wall03_Space02_Apartment01 rdf:type building:Wall .
+data:Wall04_Space02_Apartment01 rdf:type building:Wall .
+data:Window01_Space02_Apartment01 rdf:type building:Window .
+
+data:Door01_Space03_Apartment01 rdf:type building:Door .
+data:Wall01_Space03_Apartment01 rdf:type building:Wall .
+data:Wall02_Space03_Apartment01 rdf:type building:Wall .
+data:Wall03_Space03_Apartment01 rdf:type building:Wall .
+data:Wall04_Space03_Apartment01 rdf:type building:Wall .
+data:Window01_Space03_Apartment01 rdf:type building:Window .
+
+data:Door01_Space04_Apartment01 rdf:type building:Door .
+data:Wall01_Space04_Apartment01 rdf:type building:Wall .
+data:Wall02_Space04_Apartment01 rdf:type building:Wall .
+data:Wall03_Space04_Apartment01 rdf:type building:Wall .
+data:Wall04_Space04_Apartment01 rdf:type building:Wall .
+data:Window01_Space04_Apartment01 rdf:type building:Window .
+
+# Apartment 2
+
+data:Slab01_Apartment02 rdf:type building:Slab .
+
+data:Door01_Apartment02 rdf:type building:Door .
+
+data:Window01_Apartment02 rdf:type building:Window .
+
+data:Door01_Space01_Apartment02 rdf:type building:Door .
+data:Wall01_Space01_Apartment02 rdf:type building:Wall .
+data:Wall02_Space01_Apartment02 rdf:type building:Wall .
+data:Wall03_Space01_Apartment02 rdf:type building:Wall .
+data:Wall04_Space01_Apartment02 rdf:type building:Wall .
+data:Window01_Space01_Apartment02 rdf:type building:Window .
+
+data:Door01_Space02_Apartment02 rdf:type building:Door .
+data:Wall01_Space02_Apartment02 rdf:type building:Wall .
+data:Wall02_Space02_Apartment02 rdf:type building:Wall .
+data:Wall03_Space02_Apartment02 rdf:type building:Wall .
+data:Wall04_Space02_Apartment02 rdf:type building:Wall .
+data:Window01_Space02_Apartment02 rdf:type building:Window .
+
+data:Door01_Space03_Apartment02 rdf:type building:Door .
+data:Wall01_Space03_Apartment02 rdf:type building:Wall .
+data:Wall02_Space03_Apartment02 rdf:type building:Wall .
+data:Wall03_Space03_Apartment02 rdf:type building:Wall .
+data:Wall04_Space03_Apartment02 rdf:type building:Wall .
+data:Window01_Space03_Apartment02 rdf:type building:Window .
+
+data:Door01_Space04_Apartment02 rdf:type building:Door .
+data:Wall01_Space04_Apartment02 rdf:type building:Wall .
+data:Wall02_Space04_Apartment02 rdf:type building:Wall .
+data:Wall03_Space04_Apartment02 rdf:type building:Wall .
+data:Wall04_Space04_Apartment02 rdf:type building:Wall .
+data:Window01_Space04_Apartment02 rdf:type building:Window .
+
+# Apartment 3
+
+data:Slab01_Apartment03 rdf:type building:Slab .
+
+data:Door01_Apartment03 rdf:type building:Door .
+
+data:Window01_Apartment03 rdf:type building:Window .
+
+data:Roof01_Apartment03 rdf:type building:Roof .
+
+data:Door01_Space01_Apartment03 rdf:type building:Door .
+data:Wall01_Space01_Apartment03 rdf:type building:Wall .
+data:Wall02_Space01_Apartment03 rdf:type building:Wall .
+data:Wall03_Space01_Apartment03 rdf:type building:Wall .
+data:Wall04_Space01_Apartment03 rdf:type building:Wall .
+data:Window01_Space01_Apartment03 rdf:type building:Window .
+
+data:Door01_Space02_Apartment03 rdf:type building:Door .
+data:Wall01_Space02_Apartment03 rdf:type building:Wall .
+data:Wall02_Space02_Apartment03 rdf:type building:Wall .
+data:Wall03_Space02_Apartment03 rdf:type building:Wall .
+data:Wall04_Space02_Apartment03 rdf:type building:Wall .
+data:Window01_Space02_Apartment03 rdf:type building:Window .
+
+data:Door01_Space03_Apartment03 rdf:type building:Door .
+data:Wall01_Space03_Apartment03 rdf:type building:Wall .
+data:Wall02_Space03_Apartment03 rdf:type building:Wall .
+data:Wall03_Space03_Apartment03 rdf:type building:Wall .
+data:Wall04_Space03_Apartment03 rdf:type building:Wall .
+data:Window01_Space03_Apartment03 rdf:type building:Window .
+
+data:Door01_Space04_Apartment03 rdf:type building:Door .
+data:Wall01_Space04_Apartment03 rdf:type building:Wall .
+data:Wall02_Space04_Apartment03 rdf:type building:Wall .
+data:Wall03_Space04_Apartment03 rdf:type building:Wall .
+data:Wall04_Space04_Apartment03 rdf:type building:Wall .
+data:Window01_Space04_Apartment03 rdf:type building:Window .

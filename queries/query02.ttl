@@ -1,0 +1,10 @@
+# Get the stories and their IFC identifiers in the building
+
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX building: <http://bimerr.iot.linkeddata.es/def/building#>
+PREFIX bot: <https://w3id.org/bot#>
+select ?storey ?id where { 
+	?s rdf:type building:Building .
+    ?s bot:hasStorey ?storey .
+    ?storey building:ifcIdentifier ?id
+}
