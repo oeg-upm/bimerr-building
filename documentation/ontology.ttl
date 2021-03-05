@@ -56,6 +56,28 @@
               rdfs:label "has apartment" .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#relatedDocumentation
+:relatedDocumentation rdf:type owl:ObjectProperty ;
+                      rdfs:range <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> ;
+                      rdfs:comment "Property to link an entity to additional documentation (files)."@en ;
+                      rdfs:label "related documentation"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#relatedIFCFile
+:relatedIFCFile rdf:type owl:ObjectProperty ;
+                rdfs:range <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> ;
+                rdfs:comment "Property to link to an IFC file."@en ;
+                rdfs:label "related IFC file"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#relatedProject
+:relatedProject rdf:type owl:ObjectProperty ;
+                rdfs:domain <https://w3id.org/bot#Building> ;
+                rdfs:range :Project ;
+                rdfs:comment "Link a building to several projects."@en ;
+                rdfs:label "related project"@en .
+
+
 ###  https://w3id.org/bot#containsZone
 <https://w3id.org/bot#containsZone> rdf:type owl:ObjectProperty ;
                                     rdfs:domain <https://w3id.org/bot#Zone> ;
@@ -105,7 +127,14 @@
                  rdfs:domain :Building ;
                  rdfs:range xsd:string ;
                  rdfs:comment "The postal address of the building"@en ;
-                 rdfs:label "building address" .
+                 rdfs:label "building address"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#datatype
+:datatype rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> ;
+          rdfs:range xsd:base64Binary ;
+          rdfs:label "datatype"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#description
@@ -137,6 +166,13 @@
                rdfs:label "ifc identifier" .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#location
+:location rdf:type owl:DatatypeProperty ;
+          rdfs:domain <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> ;
+          rdfs:range xsd:anyURI ;
+          rdfs:label "location"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/building#maxOccupants
 :maxOccupants rdf:type owl:DatatypeProperty ;
               rdfs:range xsd:integer ;
@@ -158,29 +194,47 @@
       rdfs:label "name"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#type
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:domain <https://w3id.org/bot#Element> ;
+      rdfs:range xsd:string ;
+      rdfs:comment "Type of building element."@en ;
+      rdfs:label "type"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#version
+:version rdf:type owl:DatatypeProperty ;
+         rdfs:domain <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> ;
+         rdfs:range xsd:string ;
+         rdfs:label "version"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier
+<http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> rdf:type owl:DatatypeProperty ;
+                                                                           rdfs:range xsd:string ;
+                                                                           rdfs:comment "Identifier of the entity."@en ;
+                                                                           rdfs:label "identifier"@en .
+
+
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
 <http://www.w3.org/2003/01/geo/wgs84_pos#alt> rdf:type owl:DatatypeProperty ;
+                                              rdfs:range xsd:float ;
                                               rdfs:comment "Altitude geo location coordinate."@en ;
                                               rdfs:label "altitude"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
 <http://www.w3.org/2003/01/geo/wgs84_pos#lat> rdf:type owl:DatatypeProperty ;
+                                              rdfs:range xsd:float ;
                                               rdfs:comment "Latitude geo location coordinate."@en ;
                                               rdfs:label "latitude"@en .
 
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
 <http://www.w3.org/2003/01/geo/wgs84_pos#long> rdf:type owl:DatatypeProperty ;
+                                               rdfs:range xsd:float ;
                                                rdfs:comment "Longitude geo location coordinate."@en ;
                                                rdfs:label "longitude"@en .
-
-
-###  https://w3id.org/bot#hasSimple3DModel
-<https://w3id.org/bot#hasSimple3DModel> rdf:type owl:DatatypeProperty ;
-                                        rdfs:range xsd:string ;
-                                        rdfs:comment "Location (path) of the 3D model file."@en ;
-                                        rdfs:label "has simple 3d model" .
 
 
 #################################################################
@@ -191,16 +245,20 @@
 :Apartment rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/bot#Zone> ,
                            [ rdf:type owl:Restriction ;
+                             owl:onProperty :relatedDocumentation ;
+                             owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :relatedIFCFile ;
+                             owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
+                           ] ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty <https://w3id.org/bot#hasElement> ;
                              owl:allValuesFrom <https://w3id.org/bot#Element>
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty <https://w3id.org/bot#hasSpace> ;
                              owl:allValuesFrom :Space
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty <https://w3id.org/bot#hasSimple3DModel> ;
-                             owl:allValuesFrom xsd:string
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :ifcIdentifier ;
@@ -243,8 +301,16 @@
                             owl:allValuesFrom :Storey
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty <https://w3id.org/bot#hasSimple3DModel> ;
-                            owl:allValuesFrom xsd:string
+                            owl:onProperty :relatedDocumentation ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :relatedIFCFile ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :relatedProject ;
+                            owl:minCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :ifcIdentifier ;
@@ -304,17 +370,25 @@
 :Element rdf:type owl:Class ;
          rdfs:subClassOf <https://w3id.org/bot#Element> ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty <https://w3id.org/bot#hasSubElement> ;
-                           owl:allValuesFrom :Element
+                           owl:onProperty :relatedDocumentation ;
+                           owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
                          ] ,
                          [ rdf:type owl:Restriction ;
-                           owl:onProperty <https://w3id.org/bot#hasSimple3DModel> ;
-                           owl:allValuesFrom xsd:string
+                           owl:onProperty :relatedIFCFile ;
+                           owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty <https://w3id.org/bot#hasSubElement> ;
+                           owl:allValuesFrom :Element
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :ifcIdentifier ;
                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                            owl:onDataRange xsd:string
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :type ;
+                           owl:minCardinality "1"^^xsd:nonNegativeInteger
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :description ;
@@ -357,6 +431,16 @@
              rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcPipeSegment" .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#Project
+:Project rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> ;
+                           owl:cardinality "1"^^xsd:nonNegativeInteger
+                         ] ;
+         rdfs:comment "A project is a temporary endeavor undertaken to achieve defined objectives (definition taken from DBpedia)."@en ;
+         rdfs:label "Project"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/building#Roof
 :Roof rdf:type owl:Class ;
       rdfs:subClassOf :BuildingElement ;
@@ -377,15 +461,19 @@
 :Space rdf:type owl:Class ;
        rdfs:subClassOf <https://w3id.org/bot#Space> ,
                        [ rdf:type owl:Restriction ;
+                         owl:onProperty :relatedDocumentation ;
+                         owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :relatedIFCFile ;
+                         owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty <https://w3id.org/bot#hasElement> ;
                          owl:allValuesFrom :Element
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :hasObXMLFile ;
-                         owl:allValuesFrom xsd:string
-                       ] ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty <https://w3id.org/bot#hasSimple3DModel> ;
                          owl:allValuesFrom xsd:string
                        ] ,
                        [ rdf:type owl:Restriction ;
@@ -428,16 +516,20 @@
                           owl:allValuesFrom :Apartment
                         ] ,
                         [ rdf:type owl:Restriction ;
+                          owl:onProperty :relatedDocumentation ;
+                          owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
+                        ] ,
+                        [ rdf:type owl:Restriction ;
+                          owl:onProperty :relatedIFCFile ;
+                          owl:allValuesFrom <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject>
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty <https://w3id.org/bot#hasElement> ;
                           owl:allValuesFrom <https://w3id.org/bot#Element>
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty <https://w3id.org/bot#hasSpace> ;
                           owl:allValuesFrom <https://w3id.org/bot#Space>
-                        ] ,
-                        [ rdf:type owl:Restriction ;
-                          owl:onProperty <https://w3id.org/bot#hasSimple3DModel> ;
-                          owl:allValuesFrom xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
                           owl:onProperty :ifcIdentifier ;
@@ -471,6 +563,28 @@
         rdfs:comment "The window is a building element that is predominately used to provide natural light and fresh air. It includes vertical opening but also horizontal opening such as skylights or light domes. It includes constructions with swinging, pivoting, sliding, or revolving panels and fixed panels. A window consists of a lining and one or several panels."@en ;
         rdfs:label "Window" ;
         rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcWindow" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject
+<http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> rdf:type owl:Class ;
+                                                                            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty :datatype ;
+                                                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty :location ;
+                                                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty :version ;
+                                                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                            ] ,
+                                                                                            [ rdf:type owl:Restriction ;
+                                                                                              owl:onProperty <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier> ;
+                                                                                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                                                                                            ] ;
+                                                                            rdfs:comment "Represents any kind of file."@en ;
+                                                                            rdfs:label "Information object"@en .
 
 
 ###  https://w3id.org/bot#Building

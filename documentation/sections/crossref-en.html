@@ -81,11 +81,19 @@ This section provides details for each class and property defined by Building On
          <a href="#https://w3id.org/def/saref4bldg#HeatExchanger" title="https://w3id.org/def/saref4bldg#HeatExchanger">Heat Exchanger</a>
       </li>
       <li>
+         <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">Information object</a>
+      </li>
+      <li>
          <a href="#https://w3id.org/def/saref4bldg#Outlet" title="https://w3id.org/def/saref4bldg#Outlet">Outlet</a>
       </li>
       <li>
          <a href="#PipeSegment"
             title="http://bimerr.iot.linkeddata.es/def/building#PipeSegment">Pipe Segment</a>
+      </li>
+      <li>
+         <a href="#Project"
+            title="http://bimerr.iot.linkeddata.es/def/building#Project">Project</a>
       </li>
       <li>
          <a href="#https://w3id.org/def/saref4bldg#Pump" title="https://w3id.org/def/saref4bldg#Pump">Pump</a>
@@ -248,6 +256,12 @@ This section provides details for each class and property defined by Building On
             <a href="#Building"
                title="http://bimerr.iot.linkeddata.es/def/building#Building">Building</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#relatedProject"
+               title="http://bimerr.iot.linkeddata.es/def/building#relatedProject">related project</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -426,7 +440,9 @@ This section provides details for each class and property defined by Building On
          <dt>is in domain of</dt>
          <dd>
             <a href="#https://w3id.org/bot#hasSubElement" title="https://w3id.org/bot#hasSubElement">has sub element</a>
-            <sup class="type-op" title="object property">op</sup>
+            <sup class="type-op" title="object property">op</sup>, <a href="#type"
+               title="http://bimerr.iot.linkeddata.es/def/building#type">type</a>
+            <sup class="type-dp" title="data property">dp</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -644,6 +660,39 @@ This section provides details for each class and property defined by Building On
          </dd>
       </dl>
    </div>
+   <div class="entity" id="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">
+      <h3>Information object<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject</p>
+      <div class="comment">
+         <span class="markdown">Represents any kind of file.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#datatype"
+               title="http://bimerr.iot.linkeddata.es/def/building#datatype">datatype</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#location"
+               title="http://bimerr.iot.linkeddata.es/def/building#location">location</a>
+            <sup class="type-dp" title="data property">dp</sup>, <a href="#version"
+               title="http://bimerr.iot.linkeddata.es/def/building#version">version</a>
+            <sup class="type-dp" title="data property">dp</sup>
+         </dd>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#relatedIFCFile"
+               title="http://bimerr.iot.linkeddata.es/def/building#relatedIFCFile">related IFC file</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#relatedDocumentation"
+               title="http://bimerr.iot.linkeddata.es/def/building#relatedDocumentation">related documentation</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="https://w3id.org/def/saref4bldg#Outlet">
       <h3>Outlet<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -678,6 +727,27 @@ This section provides details for each class and property defined by Building On
             <a href="#FlowSegment"
                title="http://bimerr.iot.linkeddata.es/def/building#FlowSegment">Flow Segment</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
+   <div class="entity" id="Project">
+      <h3>Project<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#Project</p>
+      <div class="comment">
+         <span class="markdown">A project is a temporary endeavor undertaken to achieve defined objectives (definition taken from DBpedia).</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd/>
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#relatedProject"
+               title="http://bimerr.iot.linkeddata.es/def/building#relatedProject">related project</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
       </dl>
    </div>
@@ -1019,6 +1089,18 @@ This section provides details for each class and property defined by Building On
       <li>
          <a href="#https://w3id.org/bot#hasSubElement" title="https://w3id.org/bot#hasSubElement">has sub element</a>
       </li>
+      <li>
+         <a href="#relatedDocumentation"
+            title="http://bimerr.iot.linkeddata.es/def/building#relatedDocumentation">related documentation</a>
+      </li>
+      <li>
+         <a href="#relatedIFCFile"
+            title="http://bimerr.iot.linkeddata.es/def/building#relatedIFCFile">related IFC file</a>
+      </li>
+      <li>
+         <a href="#relatedProject"
+            title="http://bimerr.iot.linkeddata.es/def/building#relatedProject">related project</a>
+      </li>
    </ul>
    <div class="entity" id="https://w3id.org/bot#containsZone">
       <h3>contains zone<sup class="type-op" title="object property">op</sup>
@@ -1172,6 +1254,74 @@ This section provides details for each class and property defined by Building On
          </dl>
       </div>
    </div>
+   <div class="entity" id="relatedDocumentation">
+      <h3>related documentation<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#relatedDocumentation</p>
+      <div class="comment">
+         <span class="markdown">Property to link an entity to additional documentation (files).</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">Information object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="relatedIFCFile">
+      <h3>related IFC file<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#relatedIFCFile</p>
+      <div class="comment">
+         <span class="markdown">Property to link to an IFC file.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">Information object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="relatedProject">
+      <h3>related project<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#relatedProject</p>
+      <div class="comment">
+         <span class="markdown">Link a building to several projects.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Building" title="https://w3id.org/bot#Building">Building</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#Project"
+                  title="http://bimerr.iot.linkeddata.es/def/building#Project">Project</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
@@ -1183,6 +1333,10 @@ This section provides details for each class and property defined by Building On
             title="http://bimerr.iot.linkeddata.es/def/building#buildingAddress">building address</a>
       </li>
       <li>
+         <a href="#datatype"
+            title="http://bimerr.iot.linkeddata.es/def/building#datatype">datatype</a>
+      </li>
+      <li>
          <a href="#description"
             title="http://bimerr.iot.linkeddata.es/def/building#description">description</a>
       </li>
@@ -1191,7 +1345,8 @@ This section provides details for each class and property defined by Building On
             title="http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile">has obXML file</a>
       </li>
       <li>
-         <a href="#https://w3id.org/bot#hasSimple3DModel" title="https://w3id.org/bot#hasSimple3DModel">has simple 3d model</a>
+         <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier"
+            title="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier">identifier</a>
       </li>
       <li>
          <a href="#identifierInDatabase"
@@ -1203,6 +1358,10 @@ This section provides details for each class and property defined by Building On
       </li>
       <li>
          <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#lat" title="http://www.w3.org/2003/01/geo/wgs84_pos#lat">latitude</a>
+      </li>
+      <li>
+         <a href="#location"
+            title="http://bimerr.iot.linkeddata.es/def/building#location">location</a>
       </li>
       <li>
          <a href="#http://www.w3.org/2003/01/geo/wgs84_pos#long" title="http://www.w3.org/2003/01/geo/wgs84_pos#long">longitude</a>
@@ -1219,6 +1378,14 @@ This section provides details for each class and property defined by Building On
          <a href="#name"
             title="http://bimerr.iot.linkeddata.es/def/building#name">name</a>
       </li>
+      <li>
+         <a href="#type"
+            title="http://bimerr.iot.linkeddata.es/def/building#type">type</a>
+      </li>
+      <li>
+         <a href="#version"
+            title="http://bimerr.iot.linkeddata.es/def/building#version">version</a>
+      </li>
    </ul>
    <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#alt">
       <h3>altitude<sup class="type-dp" title="data property">dp</sup>
@@ -1229,6 +1396,14 @@ This section provides details for each class and property defined by Building On
          <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#alt</p>
       <div class="comment">
          <span class="markdown">Altitude geo location coordinate.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="buildingAddress">
@@ -1252,6 +1427,28 @@ This section provides details for each class and property defined by Building On
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="datatype">
+      <h3>datatype<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#datatype</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">Information object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#base64Binary">base64 binary</span>
             </dd>
          </dl>
       </div>
@@ -1300,15 +1497,15 @@ This section provides details for each class and property defined by Building On
          </dl>
       </div>
    </div>
-   <div class="entity" id="https://w3id.org/bot#hasSimple3DModel">
-      <h3>has simple 3d model<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier">
+      <h3>identifier<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/bot#hasSimple3DModel</p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier</p>
       <div class="comment">
-         <span class="markdown">Location (path) of the 3D model file.</span>
+         <span class="markdown">Identifier of the entity.</span>
       </div>
       <div class="description">
          <dl>
@@ -1367,6 +1564,36 @@ This section provides details for each class and property defined by Building On
       <div class="comment">
          <span class="markdown">Latitude geo location coordinate.</span>
       </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="location">
+      <h3>location<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#location</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">Information object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#anyURI">any u r i</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#long">
       <h3>longitude<sup class="type-dp" title="data property">dp</sup>
@@ -1377,6 +1604,14 @@ This section provides details for each class and property defined by Building On
          <strong>IRI:</strong> http://www.w3.org/2003/01/geo/wgs84_pos#long</p>
       <div class="comment">
          <span class="markdown">Longitude geo location coordinate.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#float">float</span>
+            </dd>
+         </dl>
       </div>
    </div>
    <div class="entity" id="maxOccupants">
@@ -1429,6 +1664,52 @@ This section provides details for each class and property defined by Building On
       </div>
       <div class="description">
          <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="type">
+      <h3>type<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#type</p>
+      <div class="comment">
+         <span class="markdown">Type of building element.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Element" title="https://w3id.org/bot#Element">Element</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="version">
+      <h3>version<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#version</p>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">Information object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
