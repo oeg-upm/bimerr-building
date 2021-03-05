@@ -318,6 +318,10 @@
                             owl:onDataRange xsd:string
                           ] ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :buildingAddress ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :description ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
