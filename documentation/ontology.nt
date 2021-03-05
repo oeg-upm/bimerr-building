@@ -69,6 +69,13 @@
 <http://bimerr.iot.linkeddata.es/def/building#relatedProject> <http://www.w3.org/2000/01/rdf-schema#comment> "Link a building to several projects."@en .
 <http://bimerr.iot.linkeddata.es/def/building#relatedProject> <http://www.w3.org/2000/01/rdf-schema#label> "related project"@en .
 # 
+# http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile
+<http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Space> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile> <http://www.w3.org/2000/01/rdf-schema#range> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
+<http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Property to link a space with an obxml file for energy calculations."@en .
+<http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile> <http://www.w3.org/2000/01/rdf-schema#label> "related ObXML file"@en .
+# 
 # https://w3id.org/bot#containsZone
 <https://w3id.org/bot#containsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/bot#containsZone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/bot#Zone> .
@@ -131,13 +138,6 @@
 <http://bimerr.iot.linkeddata.es/def/building#description> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <http://bimerr.iot.linkeddata.es/def/building#description> <http://www.w3.org/2000/01/rdf-schema#comment> "Description of the element in the ifc file."@en .
 <http://bimerr.iot.linkeddata.es/def/building#description> <http://www.w3.org/2000/01/rdf-schema#label> "description"@en .
-# 
-# http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile
-<http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://bimerr.iot.linkeddata.es/def/building#Space> .
-<http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#comment> "Relationship to indicate the path of the obXML file for an specific space."@en .
-<http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> <http://www.w3.org/2000/01/rdf-schema#label> "has obXML file"@en .
 # 
 # http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase
 <http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -441,12 +441,12 @@ _:genid31 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkedda
 _:genid31 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid32 .
 _:genid32 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasElement> .
-_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Element> .
+_:genid32 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile> .
+_:genid32 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject> .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid33 .
 _:genid33 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile> .
-_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid33 <http://www.w3.org/2002/07/owl#onProperty> <https://w3id.org/bot#hasElement> .
+_:genid33 <http://www.w3.org/2002/07/owl#allValuesFrom> <http://bimerr.iot.linkeddata.es/def/building#Element> .
 <http://bimerr.iot.linkeddata.es/def/building#Space> <http://www.w3.org/2000/01/rdf-schema#subClassOf> _:genid34 .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 _:genid34 <http://www.w3.org/2002/07/owl#onProperty> <http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier> .

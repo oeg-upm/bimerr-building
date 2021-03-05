@@ -87,6 +87,14 @@ dc:title rdf:type owl:AnnotationProperty .
                 rdfs:label "related project"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile
+io:relatedObXMLFile rdf:type owl:ObjectProperty ;
+                    rdfs:domain bot:Space ;
+                    rdfs:range io:InformationObject ;
+                    rdfs:comment "Property to link a space with an obxml file for energy calculations."@en ;
+                    rdfs:label "related ObXML file"@en .
+
+
 ###  https://w3id.org/bot#containsZone
 bot:containsZone rdf:type owl:ObjectProperty ;
                  rdfs:domain bot:Zone ;
@@ -151,14 +159,6 @@ bot:hasSubElement rdf:type owl:ObjectProperty ;
              rdfs:range xsd:string ;
              rdfs:comment "Description of the element in the ifc file."@en ;
              rdfs:label "description"@en .
-
-
-###  http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile
-:hasObXMLFile rdf:type owl:DatatypeProperty ;
-              rdfs:domain :Space ;
-              rdfs:range xsd:string ;
-              rdfs:comment "Relationship to indicate the path of the obXML file for an specific space."@en ;
-              rdfs:label "has obXML file"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase
@@ -482,12 +482,12 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
                          owl:allValuesFrom io:InformationObject
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty bot:hasElement ;
-                         owl:allValuesFrom :Element
+                         owl:onProperty io:relatedObXMLFile ;
+                         owl:allValuesFrom io:InformationObject
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :hasObXMLFile ;
-                         owl:allValuesFrom xsd:string
+                         owl:onProperty bot:hasElement ;
+                         owl:allValuesFrom :Element
                        ] ,
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :ifcIdentifier ;

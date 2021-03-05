@@ -687,6 +687,8 @@ This section provides details for each class and property defined by Building On
          <dd>
             <a href="#relatedIFCFile"
                title="http://bimerr.iot.linkeddata.es/def/building#relatedIFCFile">related IFC file</a>
+            <sup class="type-op" title="object property">op</sup>, <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile"
+               title="http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile">related ObXML file</a>
             <sup class="type-op" title="object property">op</sup>, <a href="#relatedDocumentation"
                title="http://bimerr.iot.linkeddata.es/def/building#relatedDocumentation">related documentation</a>
             <sup class="type-op" title="object property">op</sup>
@@ -843,12 +845,6 @@ This section provides details for each class and property defined by Building On
             <a href="#https://w3id.org/bot#Space" title="https://w3id.org/bot#Space">Space</a>
             <sup class="type-c" title="class">c</sup>
          </dd>
-         <dt>is in domain of</dt>
-         <dd>
-            <a href="#hasObXMLFile"
-               title="http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile">has obXML file</a>
-            <sup class="type-dp" title="data property">dp</sup>
-         </dd>
       </dl>
    </div>
    <div class="entity" id="https://w3id.org/bot#Space">
@@ -867,6 +863,12 @@ This section provides details for each class and property defined by Building On
             <a href="#Space"
                title="http://bimerr.iot.linkeddata.es/def/building#Space">Space</a>
             <sup class="type-c" title="class">c</sup>
+         </dd>
+         <dt>is in domain of</dt>
+         <dd>
+            <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile"
+               title="http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile">related ObXML file</a>
+            <sup class="type-op" title="object property">op</sup>
          </dd>
          <dt>is in range of</dt>
          <dd>
@@ -1098,6 +1100,10 @@ This section provides details for each class and property defined by Building On
             title="http://bimerr.iot.linkeddata.es/def/building#relatedIFCFile">related IFC file</a>
       </li>
       <li>
+         <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile"
+            title="http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile">related ObXML file</a>
+      </li>
+      <li>
          <a href="#relatedProject"
             title="http://bimerr.iot.linkeddata.es/def/building#relatedProject">related project</a>
       </li>
@@ -1296,6 +1302,32 @@ This section provides details for each class and property defined by Building On
          </dl>
       </div>
    </div>
+   <div class="entity" id="http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile">
+      <h3>related ObXML file<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile</p>
+      <div class="comment">
+         <span class="markdown">Property to link a space with an obxml file for energy calculations.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has domain</dt>
+            <dd>
+               <a href="#https://w3id.org/bot#Space" title="https://w3id.org/bot#Space">Space</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+            <dt>has range</dt>
+            <dd>
+               <a href="#http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
+                  title="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject">Information object</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="relatedProject">
       <h3>related project<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -1339,10 +1371,6 @@ This section provides details for each class and property defined by Building On
       <li>
          <a href="#description"
             title="http://bimerr.iot.linkeddata.es/def/building#description">description</a>
-      </li>
-      <li>
-         <a href="#hasObXMLFile"
-            title="http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile">has obXML file</a>
       </li>
       <li>
          <a href="#http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier"
@@ -1465,31 +1493,6 @@ This section provides details for each class and property defined by Building On
       </div>
       <div class="description">
          <dl>
-            <dt>has range</dt>
-            <dd>
-               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="hasObXMLFile">
-      <h3>has obXML file<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile</p>
-      <div class="comment">
-         <span class="markdown">Relationship to indicate the path of the obXML file for an specific space.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has domain</dt>
-            <dd>
-               <a href="#Space"
-                  title="http://bimerr.iot.linkeddata.es/def/building#Space">Space</a>
-               <sup class="type-c" title="class">c</sup>
-            </dd>
             <dt>has range</dt>
             <dd>
                <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>

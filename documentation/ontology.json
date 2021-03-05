@@ -252,19 +252,19 @@
   "@id" : "_:genid32",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://w3id.org/bot#hasElement"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile"
   } ]
 }, {
   "@id" : "_:genid33",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#allValuesFrom" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Element"
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile"
+    "@id" : "https://w3id.org/bot#hasElement"
   } ]
 }, {
   "@id" : "_:genid34",
@@ -955,23 +955,6 @@
     "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment"
   } ]
 }, {
-  "@id" : "http://bimerr.iot.linkeddata.es/def/building#hasObXMLFile",
-  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Relationship to indicate the path of the obXML file for an specific space."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://bimerr.iot.linkeddata.es/def/building#Space"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "has obXML file"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ]
-}, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1148,6 +1131,23 @@
     "@id" : "_:genid50"
   }, {
     "@id" : "_:genid51"
+  } ]
+}, {
+  "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#relatedObXMLFile",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Property to link a space with an obxml file for energy calculations."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/bot#Space"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "related ObXML file"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/key-performance-indicator#identifier",
