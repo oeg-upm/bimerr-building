@@ -536,7 +536,7 @@
     "@value" : "Building Ontology"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.1.1"
+    "@value" : "0.1.3"
   } ]
 }, {
   "@id" : "http://bimerr.iot.linkeddata.es/def/building#Apartment",

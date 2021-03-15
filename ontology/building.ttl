@@ -23,7 +23,7 @@
                                                  dc:license "http://purl.org/NET/rdflicense/cc-by4.0" ;
                                                  dc:publisher "http://www.oeg-upm.net/" ;
                                                  dc:title "Building Ontology" ;
-                                                 owl:versionInfo "0.1.1" .
+                                                 owl:versionInfo "0.1.3" .
 
 #################################################################
 #    Annotation properties
