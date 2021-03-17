@@ -147,18 +147,18 @@ bot:hasSubElement rdf:type owl:ObjectProperty ;
                  rdfs:label "building address"@en .
 
 
-###  http://bimerr.iot.linkeddata.es/def/building#datatype
-:datatype rdf:type owl:DatatypeProperty ;
-          rdfs:domain io:InformationObject ;
-          rdfs:range xsd:base64Binary ;
-          rdfs:label "datatype"@en .
-
-
 ###  http://bimerr.iot.linkeddata.es/def/building#description
 :description rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:string ;
              rdfs:comment "Description of the element in the ifc file."@en ;
              rdfs:label "description"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#format
+:format rdf:type owl:DatatypeProperty ;
+        rdfs:domain io:InformationObject ;
+        rdfs:range xsd:base64Binary ;
+        rdfs:label "format"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase
@@ -173,6 +173,11 @@ bot:hasSubElement rdf:type owl:ObjectProperty ;
                rdfs:range xsd:string ;
                rdfs:comment "Identifier used in the IFC model (Global Unique ID)."@en ;
                rdfs:label "ifc identifier" .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#ifcVersion
+:ifcVersion rdf:type owl:DatatypeProperty ;
+            rdfs:label "ifc version" .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/building#location
@@ -275,6 +280,10 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
                              owl:onDataRange xsd:string
                            ] ,
                            [ rdf:type owl:Restriction ;
+                             owl:onProperty :ifcVersion ;
+                             owl:cardinality "1"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty :description ;
                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
                            ] ,
@@ -325,6 +334,10 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
                             owl:onProperty :ifcIdentifier ;
                             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                             owl:onDataRange xsd:string
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :ifcVersion ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :buildingAddress ;
@@ -402,6 +415,10 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :type ;
                            owl:minCardinality "1"^^xsd:nonNegativeInteger
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty :ifcVersion ;
+                           owl:cardinality "1"^^xsd:nonNegativeInteger
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :description ;
@@ -495,6 +512,10 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
                          owl:onDataRange xsd:string
                        ] ,
                        [ rdf:type owl:Restriction ;
+                         owl:onProperty :ifcVersion ;
+                         owl:cardinality "1"^^xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
                          owl:onProperty :description ;
                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
                        ] ,
@@ -550,6 +571,10 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
                           owl:onDataRange xsd:string
                         ] ,
                         [ rdf:type owl:Restriction ;
+                          owl:onProperty :ifcVersion ;
+                          owl:cardinality "1"^^xsd:nonNegativeInteger
+                        ] ,
+                        [ rdf:type owl:Restriction ;
                           owl:onProperty :description ;
                           owl:maxCardinality "1"^^xsd:nonNegativeInteger
                         ] ,
@@ -581,7 +606,7 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
 ###  http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject
 io:InformationObject rdf:type owl:Class ;
                      rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                       owl:onProperty :datatype ;
+                                       owl:onProperty :format ;
                                        owl:cardinality "1"^^xsd:nonNegativeInteger
                                      ] ,
                                      [ rdf:type owl:Restriction ;
