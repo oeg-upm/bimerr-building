@@ -4,6 +4,10 @@ This section provides details for each class and property defined by Building On
    <h3 id="classes-headline" class="list">Classes</h3>
    <ul class="hlist">
       <li>
+         <a href="#AirConditioningUnit"
+            title="http://bimerr.iot.linkeddata.es/def/building#AirConditioningUnit">Air conditioning unit</a>
+      </li>
+      <li>
          <a href="#Apartment"
             title="http://bimerr.iot.linkeddata.es/def/building#Apartment">Apartment</a>
       </li>
@@ -147,6 +151,25 @@ This section provides details for each class and property defined by Building On
          <a href="#https://w3id.org/bot#Zone" title="https://w3id.org/bot#Zone">Zone</a>
       </li>
    </ul>
+   <div class="entity" id="AirConditioningUnit">
+      <h3>Air conditioning unit<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#AirConditioningUnit</p>
+      <div class="comment">
+         <span class="markdown">Residential air conditioning unit.</span>
+      </div>
+      <dl class="description">
+         <dt>has super-classes</dt>
+         <dd>
+            <a href="#https://w3id.org/def/saref4bldg#EnergyConversionDevice"
+               title="https://w3id.org/def/saref4bldg#EnergyConversionDevice">Energy Conversion Device</a>
+            <sup class="type-c" title="class">c</sup>
+         </dd>
+      </dl>
+   </div>
    <div class="entity" id="Apartment">
       <h3>Apartment<sup class="type-c" title="class">c</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
@@ -471,7 +494,9 @@ This section provides details for each class and property defined by Building On
          </dd>
          <dt>has sub-classes</dt>
          <dd>
-            <a href="#https://w3id.org/def/saref4bldg#Boiler" title="https://w3id.org/def/saref4bldg#Boiler">Boiler</a>
+            <a href="#AirConditioningUnit"
+               title="http://bimerr.iot.linkeddata.es/def/building#AirConditioningUnit">Air conditioning unit</a>
+            <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4bldg#Boiler" title="https://w3id.org/def/saref4bldg#Boiler">Boiler</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4bldg#HeatExchanger" title="https://w3id.org/def/saref4bldg#HeatExchanger">Heat Exchanger</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4bldg#SolarDevice" title="https://w3id.org/def/saref4bldg#SolarDevice">Solar Device</a>
             <sup class="type-c" title="class">c</sup>, <a href="#https://w3id.org/def/saref4bldg#TubeBundle" title="https://w3id.org/def/saref4bldg#TubeBundle">Tube Bundle</a>
@@ -1568,6 +1593,14 @@ This section provides details for each class and property defined by Building On
       </h3>
       <p>
          <strong>IRI:</strong> http://bimerr.iot.linkeddata.es/def/building#ifcVersion</p>
+      <div class="description">
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <span class="dotted" title="http://www.w3.org/2001/XMLSchema#string">string</span>
+            </dd>
+         </dl>
+      </div>
    </div>
    <div class="entity" id="http://www.w3.org/2003/01/geo/wgs84_pos#lat">
       <h3>latitude<sup class="type-dp" title="data property">dp</sup>
