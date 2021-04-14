@@ -3,13 +3,14 @@
 @prefix io: <http://bimerr.iot.linkeddata.es/def/information-objects#> .
 @prefix bot: <https://w3id.org/bot#> .
 @prefix kpi: <http://bimerr.iot.linkeddata.es/def/key-performance-indicator#> .
+@prefix mat: <http://bimerr.iot.linkeddata.es/def/material-properties#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
-@prefix props: <http://bimerr.iot.linkeddata.es/def/material-properties#> .
+@prefix saref: <https://saref.etsi.org/core/> .
 @prefix s4bldg: <https://w3id.org/def/saref4bldg#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix wgs84_pos: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
@@ -23,7 +24,7 @@
                                                  dc:license "http://purl.org/NET/rdflicense/cc-by4.0" ;
                                                  dc:publisher "http://www.oeg-upm.net/" ;
                                                  dc:title "Building Ontology" ;
-                                                 owl:versionInfo "0.1.4" .
+                                                 owl:versionInfo "0.1.5" .
 
 #################################################################
 #    Annotation properties
@@ -93,6 +94,30 @@ io:relatedObXMLFile rdf:type owl:ObjectProperty ;
                     rdfs:range io:InformationObject ;
                     rdfs:comment "Property to link a space with an obxml file for energy calculations."@en ;
                     rdfs:label "related ObXML file"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#hasProperty
+mat:hasProperty rdf:type owl:ObjectProperty ;
+                rdfs:comment "A relationship between a feature of interest and a property of that feature."@en ;
+                rdfs:label "has property"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#hasPropertySet
+mat:hasPropertySet rdf:type owl:ObjectProperty ;
+                   rdfs:comment "Relates a building element or device to specific property sets."@en ;
+                   rdfs:label "has property set"@en .
+
+
+###  https://saref.etsi.org/core/isMeasuredIn
+saref:isMeasuredIn rdf:type owl:ObjectProperty ;
+                   rdfs:comment "A relationship identifying the unit of measure used for a certain entity."@en ;
+                   rdfs:label "is measured in"@en .
+
+
+###  https://saref.etsi.org/core/relatesToMeasurement
+saref:relatesToMeasurement rdf:type owl:ObjectProperty ;
+                           rdfs:comment "A relationship between a property and the measurements it relates to."@en ;
+                           rdfs:label "relates to measurement"@en .
 
 
 ###  https://w3id.org/bot#containsZone
@@ -211,7 +236,6 @@ bot:hasSubElement rdf:type owl:ObjectProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#type
 :type rdf:type owl:DatatypeProperty ;
-      rdfs:domain bot:Element ;
       rdfs:range xsd:string ;
       rdfs:comment "Type of building element."@en ;
       rdfs:label "type"@en .
@@ -250,6 +274,11 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
                rdfs:range xsd:float ;
                rdfs:comment "Longitude geo location coordinate."@en ;
                rdfs:label "longitude"@en .
+
+
+###  https://saref.etsi.org/core/hasValue
+saref:hasValue rdf:type owl:DatatypeProperty ;
+               rdfs:label "has value"@en .
 
 
 #################################################################
@@ -316,6 +345,10 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
 :Building rdf:type owl:Class ;
           rdfs:subClassOf bot:Building ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :hasApartment ;
+                            owl:allValuesFrom :Apartment
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty bot:hasElement ;
                             owl:allValuesFrom bot:Element
                           ] ,
@@ -358,6 +391,10 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :name ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :type ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
@@ -411,6 +448,10 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
                          [ rdf:type owl:Restriction ;
                            owl:onProperty :relatedIFCFile ;
                            owl:allValuesFrom io:InformationObject
+                         ] ,
+                         [ rdf:type owl:Restriction ;
+                           owl:onProperty mat:hasPropertySet ;
+                           owl:allValuesFrom mat:PropertySet
                          ] ,
                          [ rdf:type owl:Restriction ;
                            owl:onProperty bot:hasSubElement ;
@@ -541,6 +582,10 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
                        [ rdf:type owl:Restriction ;
                          owl:onProperty :name ;
                          owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :type ;
+                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
                        ] ;
        rdfs:comment "A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building."@en ;
        rdfs:label "Space" ;
@@ -632,6 +677,70 @@ io:InformationObject rdf:type owl:Class ;
                                      ] ;
                      rdfs:comment "Represents any kind of file."@en ;
                      rdfs:label "Information object"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Measurement
+mat:Measurement rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty saref:isMeasuredIn ;
+                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty saref:hasValue ;
+                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                ] ;
+                rdfs:comment "Measurements related to the properties."@en ;
+                rdfs:label "Measurement"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#Property
+mat:Property rdf:type owl:Class ;
+             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                               owl:onProperty saref:relatesToMeasurement ;
+                               owl:allValuesFrom mat:Measurement
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :description ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ,
+                             [ rdf:type owl:Restriction ;
+                               owl:onProperty :name ;
+                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                             ] ;
+             rdfs:comment "Properties of materials."@en ;
+             rdfs:label "Property"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/material-properties#PropertySet
+mat:PropertySet rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty mat:hasProperty ;
+                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :description ;
+                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :ifcIdentifier ;
+                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty :name ;
+                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                ] ;
+                rdfs:comment "Class to unite specific properties related to building elements or materials."@en ;
+                rdfs:label "Property set"@en .
+
+
+###  https://saref.etsi.org/core/UnitOfMeasure
+saref:UnitOfMeasure rdf:type owl:Class ;
+                    rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                      owl:onProperty :name ;
+                                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                                    ] ;
+                    rdfs:comment "The unit of measure is a standard for measurement of a quantity, such as a Property"@en ;
+                    rdfs:label "Unit of measure"@en .
 
 
 ###  https://w3id.org/bot#Building

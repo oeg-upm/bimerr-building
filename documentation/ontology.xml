@@ -16,7 +16,7 @@
         <dc:license>http://purl.org/NET/rdflicense/cc-by4.0</dc:license>
         <dc:publisher>http://www.oeg-upm.net/</dc:publisher>
         <dc:title>Building Ontology</dc:title>
-        <owl:versionInfo>0.1.4</owl:versionInfo>
+        <owl:versionInfo>0.1.5</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -141,6 +141,46 @@
         <rdfs:range rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"/>
         <rdfs:comment xml:lang="en">Property to link a space with an obxml file for energy calculations.</rdfs:comment>
         <rdfs:label xml:lang="en">related ObXML file</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#hasProperty -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#hasProperty">
+        <rdfs:comment xml:lang="en">A relationship between a feature of interest and a property of that feature.</rdfs:comment>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#hasPropertySet -->
+
+
+    <owl:ObjectProperty rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#hasPropertySet">
+        <rdfs:comment xml:lang="en">Relates a building element or device to specific property sets.</rdfs:comment>
+        <rdfs:label xml:lang="en">has property set</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/isMeasuredIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/isMeasuredIn">
+        <rdfs:comment xml:lang="en">A relationship identifying the unit of measure used for a certain entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">is measured in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/relatesToMeasurement -->
+
+
+    <owl:ObjectProperty rdf:about="https://saref.etsi.org/core/relatesToMeasurement">
+        <rdfs:comment xml:lang="en">A relationship between a property and the measurements it relates to.</rdfs:comment>
+        <rdfs:label xml:lang="en">relates to measurement</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -331,7 +371,6 @@
 
 
     <owl:DatatypeProperty rdf:about="http://bimerr.iot.linkeddata.es/def/building#type">
-        <rdfs:domain rdf:resource="https://w3id.org/bot#Element"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Type of building element.</rdfs:comment>
         <rdfs:label xml:lang="en">type</rdfs:label>
@@ -390,6 +429,15 @@
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
         <rdfs:comment xml:lang="en">Longitude geo location coordinate.</rdfs:comment>
         <rdfs:label xml:lang="en">longitude</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://saref.etsi.org/core/hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://saref.etsi.org/core/hasValue">
+        <rdfs:label xml:lang="en">has value</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -497,6 +545,12 @@
         <rdfs:subClassOf rdf:resource="https://w3id.org/bot#Building"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#hasApartment"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/building#Apartment"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="https://w3id.org/bot#hasElement"/>
                 <owl:allValuesFrom rdf:resource="https://w3id.org/bot#Element"/>
             </owl:Restriction>
@@ -559,6 +613,12 @@
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#type"/>
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -638,6 +698,12 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#relatedIFCFile"/>
                 <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/information-objects#InformationObject"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#hasPropertySet"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#PropertySet"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
@@ -834,6 +900,12 @@
                 <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#type"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A space represents an area or volume bounded actually or theoretically. Spaces are areas or volumes that provide for certain functions within a building.</rdfs:comment>
         <rdfs:label>Space</rdfs:label>
         <rdfs:seeAlso>http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcSpace</rdfs:seeAlso>
@@ -968,6 +1040,106 @@
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Represents any kind of file.</rdfs:comment>
         <rdfs:label xml:lang="en">Information object</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#Measurement -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Measurement">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/isMeasuredIn"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/hasValue"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Measurements related to the properties.</rdfs:comment>
+        <rdfs:label xml:lang="en">Measurement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#Property -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#Property">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="https://saref.etsi.org/core/relatesToMeasurement"/>
+                <owl:allValuesFrom rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#Measurement"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#description"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Properties of materials.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://bimerr.iot.linkeddata.es/def/material-properties#PropertySet -->
+
+
+    <owl:Class rdf:about="http://bimerr.iot.linkeddata.es/def/material-properties#PropertySet">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/material-properties#hasProperty"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#description"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#ifcIdentifier"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#name"/>
+                <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">Class to unite specific properties related to building elements or materials.</rdfs:comment>
+        <rdfs:label xml:lang="en">Property set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://saref.etsi.org/core/UnitOfMeasure -->
+
+
+    <owl:Class rdf:about="https://saref.etsi.org/core/UnitOfMeasure">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://bimerr.iot.linkeddata.es/def/building#name"/>
+                <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">The unit of measure is a standard for measurement of a quantity, such as a Property</rdfs:comment>
+        <rdfs:label xml:lang="en">Unit of measure</rdfs:label>
     </owl:Class>
     
 
