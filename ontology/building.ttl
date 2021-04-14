@@ -278,6 +278,7 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
 
 ###  https://saref.etsi.org/core/hasValue
 saref:hasValue rdf:type owl:DatatypeProperty ;
+               rdfs:range xsd:float ;
                rdfs:label "has value"@en .
 
 
@@ -683,7 +684,12 @@ io:InformationObject rdf:type owl:Class ;
 mat:Measurement rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty saref:isMeasuredIn ;
-                                  owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  owl:allValuesFrom saref:UnitOfMeasure
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty saref:isMeasuredIn ;
+                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass saref:UnitOfMeasure
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty saref:hasValue ;
@@ -715,7 +721,12 @@ mat:Property rdf:type owl:Class ;
 mat:PropertySet rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty mat:hasProperty ;
-                                  owl:minCardinality "1"^^xsd:nonNegativeInteger
+                                  owl:allValuesFrom mat:Property
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty mat:hasProperty ;
+                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                  owl:onClass mat:Property
                                 ] ,
                                 [ rdf:type owl:Restriction ;
                                   owl:onProperty :description ;
