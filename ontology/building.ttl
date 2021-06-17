@@ -21,9 +21,9 @@
                                                  dc:creator "María Poveda-Villalón" ,
                                                             "Serge Chávez-Feria" ,
                                                             "The Building ontology has been developed to perform as the core module of the BIMERR project, containing information related to buidling topology, components, materials, and geometry. The geometry information is managed as information objects whitout entering in the details of the BIM model."@en ;
-                                                 dc:license "http://purl.org/NET/rdflicense/cc-by4.0" ;
                                                  dc:publisher "http://www.oeg-upm.net/" ;
                                                  dc:title "Building Ontology" ;
+                                                 dcterms:license "http://purl.org/NET/rdflicense/cc-by4.0" ;
                                                  owl:versionInfo "0.1.5" .
 
 #################################################################
@@ -42,16 +42,16 @@ dc:creator rdf:type owl:AnnotationProperty .
 dc:description rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/license
-dc:license rdf:type owl:AnnotationProperty .
-
-
 ###  http://purl.org/dc/elements/1.1/publisher
 dc:publisher rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/elements/1.1/title
 dc:title rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+dcterms:license rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -68,6 +68,8 @@ dc:title rdf:type owl:AnnotationProperty .
 
 ###  http://bimerr.iot.linkeddata.es/def/building#isMeasurementOfElement
 :isMeasurementOfElement rdf:type owl:ObjectProperty ;
+                        rdfs:domain :Measurement ;
+                        rdfs:range :Element ;
                         rdfs:comment "Relates a measurement with an element of the building."@en ;
                         rdfs:label "is measurement of element"@en .
 
@@ -104,24 +106,31 @@ io:relatedObXMLFile rdf:type owl:ObjectProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#hasProperty
 mat:hasProperty rdf:type owl:ObjectProperty ;
+                rdfs:domain :PropertySet ;
+                rdfs:range :Property ;
                 rdfs:comment "A relationship between a feature of interest and a property of that feature."@en ;
                 rdfs:label "has property"@en .
 
 
 ###  http://bimerr.iot.linkeddata.es/def/material-properties#hasPropertySet
 mat:hasPropertySet rdf:type owl:ObjectProperty ;
+                   rdfs:range :PropertySet ;
                    rdfs:comment "Relates a building element or device to specific property sets."@en ;
                    rdfs:label "has property set"@en .
 
 
 ###  https://saref.etsi.org/core/isMeasuredIn
 saref:isMeasuredIn rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Measurement ;
+                   rdfs:range :UnitOfMeasure ;
                    rdfs:comment "A relationship identifying the unit of measure used for a certain entity."@en ;
                    rdfs:label "is measured in"@en .
 
 
 ###  https://saref.etsi.org/core/relatesToMeasurement
 saref:relatesToMeasurement rdf:type owl:ObjectProperty ;
+                           rdfs:domain :Property ;
+                           rdfs:range :Measurement ;
                            rdfs:comment "A relationship between a property and the measurements it relates to."@en ;
                            rdfs:label "relates to measurement"@en .
 
@@ -194,6 +203,7 @@ bot:hasSubElement rdf:type owl:ObjectProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#identifierInDatabase
 :identifierInDatabase rdf:type owl:DatatypeProperty ;
+                      rdfs:domain :Element ;
                       rdfs:range xsd:string ;
                       rdfs:comment "Indicates the ID of the building element in the BIMERR materials and component database."@en ;
                       rdfs:label "identifier in database"@en .
@@ -221,6 +231,7 @@ bot:hasSubElement rdf:type owl:ObjectProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#maxOccupants
 :maxOccupants rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Space ;
               rdfs:range xsd:integer ;
               rdfs:comment "Maximum number of occupants inside a building."@en ;
               rdfs:label "max occupants" .
@@ -228,6 +239,7 @@ bot:hasSubElement rdf:type owl:ObjectProperty ;
 
 ###  http://bimerr.iot.linkeddata.es/def/building#minOccupants
 :minOccupants rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Space ;
               rdfs:range xsd:integer ;
               rdfs:comment "Minimum number of occupants inside a building."@en ;
               rdfs:label "min occupants" .
@@ -263,6 +275,7 @@ kpi:identifier rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#alt
 wgs84_pos:alt rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Building ;
               rdfs:range xsd:float ;
               rdfs:comment "Altitude geo location coordinate."@en ;
               rdfs:label "altitude"@en .
@@ -270,6 +283,7 @@ wgs84_pos:alt rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#lat
 wgs84_pos:lat rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Building ;
               rdfs:range xsd:float ;
               rdfs:comment "Latitude geo location coordinate."@en ;
               rdfs:label "latitude"@en .
@@ -277,6 +291,7 @@ wgs84_pos:lat rdf:type owl:DatatypeProperty ;
 
 ###  http://www.w3.org/2003/01/geo/wgs84_pos#long
 wgs84_pos:long rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Building ;
                rdfs:range xsd:float ;
                rdfs:comment "Longitude geo location coordinate."@en ;
                rdfs:label "longitude"@en .
@@ -284,6 +299,7 @@ wgs84_pos:long rdf:type owl:DatatypeProperty ;
 
 ###  https://saref.etsi.org/core/hasValue
 saref:hasValue rdf:type owl:DatatypeProperty ;
+               rdfs:domain :Measurement ;
                rdfs:range xsd:float ;
                rdfs:label "has value"@en .
 
@@ -424,6 +440,7 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
 ###  http://bimerr.iot.linkeddata.es/def/building#BuildingElement
 :BuildingElement rdf:type owl:Class ;
                  rdfs:subClassOf :Element ;
+                 owl:disjointWith s4bldg:DistributionDevice ;
                  rdfs:comment "The building element comprises all elements that are primarily part of the construction of a building, i.e., its structural and space separating system. Building elements are all physically existent and tangible things."@en ;
                  rdfs:label "Building Element" ;
                  rdfs:seeAlso "http://standards.buildingsmart.org/IFC/DEV/IFC4_1/OWL#IfcBuildingElement" .

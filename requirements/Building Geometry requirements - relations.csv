@@ -1,0 +1,34 @@
+Concept ID,Concept,Relation,Description,"Target object (should appear in the ""Concept list"")",Max Cardinality,Ordering Needed (applicable for concepts with Max cardinality over 1),"Other characteristics: symmetric, transitive, has some special behaviour or meaning?",Needed by,Standards
+IfcRelSpaceBoundary1stLevel,InnerBoundaries,"Reference to the inner boundaries of the space boundary. Inner boundaries are defined by the space boundaries of openings, doors and windows.",IfcRelSpaceBoundary1stLevel,[0:?],,,,IFC4,IFC4
+IfcRelSpaceBoundary2ndLevel,InnerBoundaries,"Reference to the inner boundaries of the space boundary. Inner boundaries are defined by the space boundaries of openings, doors and windows.",IfcRelSpaceBoundary1stLevel,[0:?],,,,IFC4,IFC4
+,Corresponds,Reference to the other space boundary of the pair of two space boundaries on either side of a space separating thermal boundary element.,IfcRelSpaceBoundary2ndLevel,[0:1],,,,IFC4,IFC4
+,Description,Description provided for exchanging informative comments.,IfcText,[0:1],,,,,IFC4
+,RelatingSpace,Reference to one spaces that is delimited by this boundary.,IfcSpaceBoundarySelect,[1:1],,,,,IFC4
+ifcStructuralMember,ifcStructuralConnection,An IfcStructuralConnection represents a structural connection object,ifcStructuralMember,?,,"node connection, edge connection, or surface connection",,IFC4x1 (applies to the whole table),
+,ifcStructuralCurveConnection,,,,,,,,
+,ifcStructuralPointConnection,,,,,,,,
+,ifcStructuralSurfaceConnection,,,,,,,,
+ifcObject,IfcRelAssignsToProduct,"Reference to the IfcRelAssignsToProduct relationship, by which other products, processes, controls, resources or actors (as subtypes of IfcObjectDefinition) can be related to this product.",ifcProduct,S[0:?],,,,,
+,IfcRelAssigns,"Reference to the relationship objects, that assign (by an association relationship) other subtypes of IfcObject to this object instance. Examples are the association to products, processes, controls, resources or groups.",ifcObject,S[0:?],,,,,
+,IfcRelNests,References to the decomposition relationship being a nesting. It determines that this object definition is a part within an ordered whole/part decomposition relationship. An object occurrence or type can only be part of a single decomposition (to allow hierarchical strutures only).,ifcObject,S[0:1],,,,,
+,IfcRelNests,References to the decomposition relationship being a nesting. It determines that this object definition is the whole within an ordered whole/part decomposition relationship. An object or object type can be nested by several other objects (occurrences or types).,ifcObject,S[0:?],,,,,
+,IfcRelDeclares,References to the context providing context information such as project unit or representation context. It should only be asserted for the uppermost non-spatial object.,ifcObject,,,,,,
+,IfcRelAggregates,References to the decomposition relationship being an aggregation. It determines that this object definition is whole within an unordered whole/part decomposition relationship. An object definitions can be aggregated by several other objects (occurrences or parts).,ifcObject,S[0:?],,,,,
+,IfcRelAggregates,References to the decomposition relationship being an aggregation. It determines that this object definition is a part within an unordered whole/part decomposition relationship. An object definitions can only be part of a single decomposition (to allow hierarchical strutures only).,ifcObject,S[0:1],,,,,
+,IfcRelAssociates,"Reference to the relationship objects, that associates external references or other resource definitions to the object.. Examples are the association to library, documentation or classification.",ifcObject,S[0:?],,,,,
+,IfcRelDefinesByObject,"Link to the relationship object pointing to the declaring object that provides the object definitions for this object occurrence. The declaring object has to be part of an object type decomposition. The associated IfcObject, or its subtypes, contains the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring IfcObject, or its subtypes.",ifcObject,S[0:1],,,,,
+,IfcRelDefinesByObject,"Link to the relationship object pointing to the reflected object(s) that receives the object definitions. The reflected object has to be part of an object occurrence decomposition. The associated IfcObject, or its subtypes, provides the specific information (as part of a type, or style, definition), that is common to all reflected instances of the declaring IfcObject, or its subtypes.",ifcObject,S[0:?],,,,,
+,IfcRelDefinesByType,"Set of relationships to the object type that provides the type definitions for this object occurrence. The then associated IfcTypeObject, or its subtypes, contains the specific information (or type, or style), that is common to all instances of IfcObject, or its subtypes, referring to the same type.",ifcObject,S[0:1],,,,,
+,IfcRelDefinesByProperties,Set of relationships to property set definitions attached to this object. Those statically or dynamically defined properties contain alphanumeric information content that further defines the object.,ifcObject,S[0:?],,,,,
+ifcObjectPlacement,PlacesObject,"The IfcObjectPlacement shall be used to provide a placement and an object coordinate system for instances of IfcProduct.
+
+ If an IfcObjectPlacement is shared by many instances of IfcProduct it does not apply a semantic meaning of being a shared placement that needs to be maintained. The same instance of IfcObjectPlacement could simply be used to reduce exchange file size.
+
+ IFC2x3 CHANGE New inverse attribute.
+
+ IFC4 CHANGE The cardinality has changed to 0..n to allow reuse of instances of IfcObjectPlacement as placement object in one to many products. It takes also into account that it can act as a placement for IfcStructuralAnalysisModel.",ifcProduct,S[0:?],,,,,
+,ReferencedByPlacements,Placements that are given relative to this placement of an object.,ifcLocalPlacement,S[0:?],,,,,
+IfcMaterialSelect,ifcRelAssociatesMaterial,IfcRelAssociatesMaterial is an objectified relationship between a material definition and elements or element types to which this material definition applies.,ifcObject,,,,,,
+ifcSpatialElement,ifcRelContainedInSpatialStructure,"Set of spatial containment relationships, that holds those elements, which are contained within this element of the project spatial structure.",@Relatingstructure,S[0:?],,,,,
+,ifcRelServicesBuildlings,"Set of relationships to systems, that provides a certain service to the spatial element for which it is defined. The relationship is handled by the objectified relationship IfcRelServicesBuildings.",@RelatedBuildings,S[0:?],,,,,
+,ifcRelReferencedInSpatialStructure,"Set of spatial reference relationships, that holds those elements, which are referenced, but not contained, within this element of the project spatial structure.",@Relatingstructure,S[0:?],,,,,

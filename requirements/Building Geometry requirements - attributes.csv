@@ -1,0 +1,291 @@
+Concept ID,Attribute,Description,"Value Type Expected (interger, boolean, float, list of values)",Max Cardinality,Ordering Needed (applicable for concepts with Max cardinality over 1),"Unit of measure (applicable only for ""measure"" data types)","Sensitive data (if applicable, e.g. personal data that need to be anonymized)",Timezone (applicable only for datetime data types),Related standards (if applicable)
+IfcRelSpaceBoundary,GlobalId,Globally unique identifier within the entire software world.,ifcGloballyUniqueId,[1:1],,,,,IFC4
+,OwnerHistory,"Information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object.",IfcOwnerHistory,[0:1],,,,,IFC4
+,Name,Name for use by the participating software systems or users.,IfcLabel,[0:1],,,,,IFC4
+,Description,Description provided for exchanging informative comments.,IfcText,[0:1],,,,,IFC4
+,RelatingSpace,Reference to one spaces that is delimited by this boundary.,IfcSpaceBoundarySelect,[1:1],,,,,IFC4
+,RelatedBuildingElement,"Reference to Element, that defines the Space Boundaries.",IfcElement,[1:1],,,,,IFC4
+,ConnectionGeometry,Physical representation of the space boundary. Provided as a curve or surface given within the LCS of the space.,IfcConnectionGeometry,[0:1],,,,,IFC4
+,PhysicalOrVirtualBoundary,Defines whether the Space Boundary is physical or virtual.,IfcPhysicalOrVirtualEnum,[1:1],,,,,IFC4
+,InternalOrExternalBoundary,Defines whether the Space Boundary is internal or external.,IfcInternalOrExternalEnum,[1:1],,,,,IFC4
+IfcRelSpaceBoundary1stLevel,GlobalId,Globally unique identifier within the entire software world.,ifcGloballyUniqueId,[1:1],,,,,IFC4
+,OwnerHistory,"Information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object.",IfcOwnerHistory,[0:1],,,,,IFC4
+,Name,Name for use by the participating software systems or users.,IfcLabel,[0:1],,,,,IFC4
+,Description,Description provided for exchanging informative comments.,IfcText,[0:1],,,,,IFC4
+,RelatingSpace,Reference to one spaces that is delimited by this boundary.,IfcSpaceBoundarySelect,[1:1],,,,,IFC4
+,RelatedBuildingElement,"Reference to Element, that defines the Space Boundaries.",IfcElement,[1:1],,,,,IFC4
+,ConnectionGeometry,Physical representation of the space boundary. Provided as a curve or surface given within the LCS of the space.,IfcConnectionGeometry,[0:1],,,,,IFC4
+,PhysicalOrVirtualBoundary,Defines whether the Space Boundary is physical or virtual.,IfcPhysicalOrVirtualEnum,[1:1],,,,,IFC4
+,InternalOrExternalBoundary,Defines whether the Space Boundary is internal or external.,IfcInternalOrExternalEnum,[1:1],,,,,IFC4
+,ParentBoundary,"Reference to the host or parent, space boundary within which this inner boundary is defined.",IfcRelSpaceBoundary1stLevel,[0:1],,,,,IFC4
+IfcRelSpaceBoundary2ndLevel,GlobalId,Globally unique identifier within the entire software world.,ifcGloballyUniqueId,[1:1],,,,,IFC4
+,OwnerHistory,"Information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object.",IfcOwnerHistory,[0:1],,,,,IFC4
+,Name,Name for use by the participating software systems or users.,IfcLabel,[0:1],,,,,IFC4
+,Description,Description provided for exchanging informative comments.,IfcText,[0:1],,,,,IFC4
+,RelatingSpace,Reference to one spaces that is delimited by this boundary.,IfcSpaceBoundarySelect,[1:1],,,,,IFC4
+,RelatedBuildingElement,"Reference to Element, that defines the Space Boundaries.",IfcElement,[1:1],,,,,IFC4
+,ConnectionGeometry,Physical representation of the space boundary. Provided as a curve or surface given within the LCS of the space.,IfcConnectionGeometry,[0:1],,,,,IFC4
+,PhysicalOrVirtualBoundary,Defines whether the Space Boundary is physical or virtual.,IfcPhysicalOrVirtualEnum,[1:1],,,,,IFC4
+,InternalOrExternalBoundary,Defines whether the Space Boundary is internal or external.,IfcInternalOrExternalEnum,[1:1],,,,,IFC4
+,ParentBoundary,"Reference to the host or parent, space boundary within which this inner boundary is defined.",IfcRelSpaceBoundary1stLevel,[0:1],,,,,IFC4
+,CorrespondingBoundary,Reference to the other space boundary of the pair of two space boundaries on either side of a space separating thermal boundary element.,IfcRelSpaceBoundary2ndLevel,[0:1],,,,,IFC4
+ifcObject,,,,,,,,,
+,GlobalId,Assignment of a globally unique identifier within the entire software world.,IfcGloballyUniqueId,,,,,,IFC4x1 (applies to the whole table)
+,OwnerHistory,"Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,",IfcOwnerHistory,,?,,,,
+,Name,Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.,IfcLabel,,?,,,,
+,Description,"Optional description, provided for exchanging informative comments.",IfcText,,?,,,,
+,ObjectType,"The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute PredefinedType is set to USERDEFINED.",IfcLabel,,?,,,,
+ifcProduct,,,,,,,,,
+,GlobalId,Assignment of a globally unique identifier within the entire software world.,IfcGloballyUniqueId,,,,,,
+,OwnerHistory,"Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,",IfcOwnerHistory,,?,,,,
+,Name,Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.,IfcLabel,,?,,,,
+,Description,"Optional description, provided for exchanging informative comments.",IfcText,,?,,,,
+,ObjectType,"The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute PredefinedType is set to USERDEFINED.",IfcLabel,,?,,,,
+,ObjectPlacement,"Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the transformation for the object coordinate system.",IfcObjectPlacement,,?,,,,
+,Representation,"Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.",IfcProductRepresentation,,?,,,,
+IfcProductRepresentation,,,,,,,,,
+,Name,The word or group of words by which the product representation is known.,IfcLabel,,?,,,,
+,Description,The word or group of words that characterize the product representation. It can be used to add additional meaning to the name of the product representation.,IfcText,,?,,,,
+,Representation,Contained list of representations (including shape representations). Each member defines a valid representation of a particular type within a particular representation context.,IfcRepresentation,,L[1:?],,,,
+,ObjectPlacement,"Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the transformation for the object coordinate system.",IfcObjectPlacement,,?,,,,
+ifcLocalPlacement,,,,,,,,,
+,PlacementRelTo,"Reference to Object that provides the relative placement by its local coordinate system. If it is omitted, then the local placement is given to the WCS, established by the geometric representation context.",IfcObjectPlacement,,?,,,,
+,RelativePlacement,"Geometric placement that defines the transformation from the related coordinate system into the relating. The placement can be either 2D or 3D, depending on the dimension count of the coordinate system.",IfcAxis2Placement,,,,,,
+ifcAxis2Placement2D,,,,,,,,,
+,Location,"The geometric position of a reference point, such as the center of a circle, of the item to be located.",IfcCartesianPoint,,,,,,
+,Dim :=Location.Dim,"The space dimensionality of this class, derived from the dimensionality of the location.",IfcDimensionCount,,,,,,
+,"P
+:=IfcBuild2Axes(RefDirection)","P[1]: The normalized direction of the placement X Axis. This is [1.0,0.0] if RefDirection is omitted.
+P[2]: The normalized direction of the placement Y Axis. This is a derived attribute and is orthogonal to P[1]. If RefDirection is omitted, it defaults to [0.0,1.0]",IfcDirection,,L[2:2],,,,
+ifcDirection,,,,,,,,,
+,DirectionRatios,"The components in the direction of X axis (DirectionRatios[1]), of Y axis (DirectionRatios[2]), and of Z axis (DirectionRatios[3])",IfcReal,,L[2:3],,,,
+,"Dim
+:=HIINDEX(DirectionRatios)","The space dimensionality of this class, defined by the number of real in the list of DirectionRatios.",IfcDimensionCount,,,,,,
+ifcAxis2Placement3D,,,,,,,,,
+,Location,"The geometric position of a reference point, such as the center of a circle, of the item to be located.",ifcCartesianPoint,,,,,,
+,Dim :=Location.Dim,"The space dimensionality of this class, derived from the dimensionality of the location.",IfcDimensionCount,,,,,,
+,Axis,The exact direction of the local Z Axis.,IfcDirection,,?,,,,
+,RefDirection,"The direction used to determine the direction of the local X Axis. If necessary an adjustment is made to maintain orthogonality to the Axis direction. If Axis and/or RefDirection is omitted, these directions are taken from the geometric coordinate system.",IfcDirection,,?,,,,
+,"P
+:=IfcBuildAxes(Axis, RefDirection)",The normalized directions of the placement X Axis (P[1]) and the placement Y Axis (P[2]) and the placement Z Axis (P[3]).,IfcDirection,,L[3:3],,,,
+ifcCartesianPoint,,,,,,,,,
+,Coordinates,"The first, second, and third coordinate of the point location. If placed in a two or three dimensional rectangular Cartesian coordinate system, Coordinates[1] is the X coordinate, Coordinates[2] is the Y coordinate, and Coordinates[3] is the Z coordinate.",IfcLengthMeasure,,L[1:3],,,,
+,"Dim
+:=HIINDEX(Coordinates)","The space dimensionality of this class, determined by the number of coordinates in the List of Coordinates.",IfcDimensionCount,,,,,,
+ifcPlacement,,,,,,,,,
+,Location,"The geometric position of a reference point, such as the center of a circle, of the item to be located.",IfcCartesianPoint,,,,,,
+,Dim :=Location.Dim,"The space dimensionality of this class, derived from the dimensionality of the location.",IfcDimensionCount,,,,,,
+ifcRepresentationItem,,,,,,,,,
+ifcSIUnit,,,,,,,,,
+,Prefix,The SI Prefix for defining decimal multiples and submultiples of the unit.,IfcSIPrefix,,,,,,
+,Name,"The word, or group of words, by which the SI unit is referred to.
+
+ NOTE Even though the SI system's base unit for mass is kilogram, the IfcSIUnit for mass is gram if no Prefix is asserted.",IfcSIUnitName,,,,,,
+,"Dimensions
+:=IfcDimensionsForSiUnit (SELF.Name)",The dimensional exponents of SI units are derived by function IfcDimensionsForSiUnit.,IfcDimensionalExponents,,,,,,
+IfcGeometricRepresentationContext,,,,,,,,,
+,ContextIdentifier,The optional identifier of the representation context as used within a project.,IfcLabel,,?,,,,
+,ContextType,The description of the type of a representation context. The supported values for context type are to be specified by implementers agreements.,IfcLabel,,?,,,,
+,CoordinateSpaceDimension,The integer dimension count of the coordinate space modeled in a geometric representation context.,IfcDimensionCount,,,,,,
+,Precision,"Value of the model precision for geometric models. It is a double value (REAL), typically in 1E-5 to 1E-8 range, that indicates the tolerance under which two given points are still assumed to be identical. The value can be used e.g. to sets the maximum distance from an edge curve to the underlying face surface in brep models.",IfcReal,,,,,,
+,WorldCoordinateSystem,"Establishment of the engineering coordinate system (often referred to as the world coordinate system in CAD) for all representation contexts used by the project.
+
+ NOTE It can be used to provide better numeric stability if the placement of the building(s) is far away from the origin. In most cases however it would be set to origin: (0.,0.,0.) and directions x(1.,0.,0.), y(0.,1.,0.), z(0.,0.,1.).
+
+If an geographic placement is provided using IfcMapConversion then the WorldCoordinateSystem atttibute is used to define the offset between the zero point of the local engineering coordinate system and the geographic reference point to which the IfcMapConversion offset relates. In preferred practise both points (also called ""project base point"" and ""survey point"") should be coincidental. However it is possible to offset the geographic reference point from the local zero point.",IfcAxis2Placement,,,,,,
+,TrueNorth,"Direction of the true north, or geographic northing direction, relative to the underlying project coordinate system. It is given by a 2 dimensional direction within the xy-plane of the project coordinate system. If not present, it defaults to 0. 1., meaning that the positive Y axis of the project coordinate system equals the geographic northing direction.
+
+ NOTE If a geographic placement is provided using IfcMapConversion then the true north is for information only. In case of inconsistency, the value provided with IfcMapConversion shall take precedence.",IfcDirection,,,,,,
+IfcGeometricRepresentationSubContext,,,,,,,,,
+,ContextIdentifier,The optional identifier of the representation context as used within a project.,IfcLabel,,?,,,,
+,ContextType,The description of the type of a representation context. The supported values for context type are to be specified by implementers agreements.,IfcLabel,,?,,,,
+,ParentContext,"Parent context from which the sub context derives its world coordinate system, precision, space coordinate dimension and true north.",IfcGeometricRepresentationContext,,,,,,
+,TargetScale,"The target plot scale of the representation to which this representation context applies.
+
+ NOTE Scale indicates the target plot scale for the representation sub context, all annotation styles are given in plot dimensions according to this target plot scale.
+ If multiple instances of IfcGeometricRepresentationSubContext are given having the same TargetView value, the target plot scale applies up to the next smaller scale, or up to unlimited small scale.
+
+ NOTE Scale 1:100 (given as 0.01 within TargetScale) is bigger then 1:200 (given as 0.005 within TargetScale).",IfcPositiveRatioMeasure,,?,,,,
+,TargetView,Target view of the representation to which this representation context applies.,IfcGeometricProjectionEnum,,,,,,
+,UserDefinedTargetView,"User defined target view, this attribute value shall be given, if the TargetView attribute is set to USERDEFINED.",IfcLabel,,?,,,,
+IfcRelContainedInSpatialStructure,,,,,,,,,
+,GlobalId,Assignment of a globally unique identifier within the entire software world.,IfcGloballyUniqueId,,,,,,
+,OwnerHistory,"Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,",IfcOwnerHistory,,?,,,,
+,Name,Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.,IfcLabel,,?,,,,
+,Description,"Optional description, provided for exchanging informative comments.",IfcText,,?,,,,
+,RelatedElements,"Set of products, which are contained within this level of the spatial structure hierarchy.",IfcProduct,,S[1:?],,,,
+,RelatingStructure,"Spatial structure element, within which the element is contained. Any element can only be contained within one element of the project spatial structure.",IfcSpatialElement,,,,,,
+ifcPolyline,,,,,,,,,
+,Points,The points defining the polyline.,IfcCartesianPoint,,L[2:?],,,,
+ifcShapeRepresentation,,,,,,,,,
+,ContextOfItems,Definition of the representation context for which the different subtypes of representation are valid.,IfcRepresentationContext,,,,,,
+,RepresentationIdentifier,The optional identifier of the representation as used within a project.,IfcLabel,,?,,,,
+,RepresentationType,The description of the type of a representation context. The representation type defines the type of geometry or topology used for representing the product representation. More information is given at the subtypes IfcShapeRepresentation and IfcTopologyRepresentation. The supported values for context type are to be specified by implementers agreements.,IfcLabel,,?,,,,
+,Items,Set of geometric representation items that are defined for this representation.,IfcRepresentationItem,,S[1:?],,,,
+IfcRectangleProfileDef,,,,,,,,,
+,ProfileType,"Defines the type of geometry into which this profile definition shall be resolved, either a curve or a surface area. In case of curve the profile should be referenced by a swept surface, in case of area the profile should be referenced by a swept area solid.",IfcProfileTypeEnum,,,,,,
+,ProfileName,"Human-readable name of the profile, for example according to a standard profile table. As noted above, machine-readable standardized profile designations should be provided in IfcExternalReference.ItemReference.",IfcLabel,,?,,,,
+,Position,"Position coordinate system of the parameterized profile definition. If unspecified, no translation and no rotation is applied.",IfcAxis2Placement2D,,?,,,,
+,XDim,The extent of the rectangle in the direction of the x-axis.,IfcPositiveLengthMeasure,,,,,,
+,YDim,The extent of the rectangle in the direction of the y-axis.,IfcPositiveLengthMeasure,,,,,,
+IfcExtrudedAreaSolid,,,,,,,,,
+,SweptArea,The surface defining the area to be swept. It is given as a profile definition within the xy plane of the position coordinate system.,IfcProfileDef,,,,,,
+,Position,"Position coordinate system for the resulting swept solid of the sweeping operation. The position coordinate system allows for re-positioning of the swept solid. If not provided, the swept solid remains within the position as determined by the cross section or by the directrix used for the sweeping operation.",IfcAxis2Placement3D,,?,,,,
+,ExtrudedDirection,"The direction in which the surface, provided by SweptArea is to be swept.",IfcDirection,,,,,,
+,Depth,The distance the surface is to be swept along the ExtrudedDirection.,IfcPositiveLengthMeasure,,,,,,
+ifcEdgeCurve,,,,,,,,,
+,EdgeStart,Start point (vertex) of the edge.,IfcVertex,,,,,,
+,EdgeEnd,End point (vertex) of the edge. The same vertex can be used for both EdgeStart and EdgeEnd.,IfcVertex,,,,,,
+,EdgeGeometry,The curve which defines the shape and spatial location of the edge. This curve may be unbounded and is implicitly trimmed by the vertices of the edge; this defines the edge domain. Multiple edges can reference the same curve.,IfcCurve,,,,,,
+,SameSense,"This logical flag indicates whether (TRUE), or not (FALSE) the senses of the edge and the curve defining the edge geometry are the same. The sense of an edge is from the edge start vertex to the edge end vertex; the sense of a curve is in the direction of increasing parameter.",IfcBoolean,,,,,,
+ifcCurve,"Dim
+:=IfcCurveDim(SELF)","The space dimensionality of this abstract class, defined differently for all subtypes, i.e. for IfcLine, IfcConic and IfcBoundedCurve.",IfcDimensionCount,,,,,,
+ifcVector,,,,,,,,,
+,Orientation,The direction of the vector.,IfcDirection,,,,,,
+,Magnitude,The magnitude of the vector. All vectors of Magnitude 0.0 are regarded as equal in value regardless of the orientation attribute.,IfcLengthMeasure,,,,,,
+,Dim:=Orientation.Dim,"The space dimensionality of this class, it is derived from Orientation",IfcDimensionCount,,,,,,
+ifcLine,,,,,,,,,
+,Pnt,The location of the IfcLine.,IfcCartesianPoint,,,,,,
+,Dir,"The direction of the IfcLine, the magnitude and units of Dir affect the parameterization of the line.",IfcVector,,,,,,
+ifcPlane,,,,,,,,,
+,Position,The position and orientation of the surface. This attribute is used in the definition of the parameterization of the surface.,IfcAxis2Placement3D,,,,,,
+ifcClosedShell,,,,,,,,,
+,CfsFaces,The set of faces arcwise connected along common edges or vertices.,IfcFace,,S[1:?],,,,
+ifcFace,,,,,,,,,
+,Bounds,Boundaries of the face.,IfcFaceBound,,S[1:?],,,,
+ifcFaceBound,,,,,,,,,
+,Bound,The loop which will be used as a face boundary.,IfcLoop,,,,,,
+,Orientation,This indicated whether (TRUE) or not (FALSE) the loop has the same sense when used to bound the face as when first defined. If sense is FALSE the senses of all its component oriented edges are implicitly reversed when used in the face.,IfcBoolean,,,,,,
+ifcAdvancedBrep,,,,,,,,,
+,Outer,A closed shell defining the exterior boundary of the solid. The shell normal shall point away from the interior of the solid.,IfcClosedShell,,,,,,
+ifcPropertySingleValue,,,,,,,,,
+,Name,Name for this property. This label is the significant name string that defines the semantic meaning for the property.,IfcIdentifier,,,,,,
+,Description,Informative text to explain the property.,IfcText,,?,,,,
+,NominalValue,Value and measure type of this property.,ifcValue,,?,,,,
+,Unit,"Unit for the nominal value, if not given, the default value for the measure type (given by the TYPE of nominal value) is used as defined by the global unit assignment at IfcProject.",ifcUnit,,?,,,,
+ifcMaterial,,,,,,,,,
+,Name,Name of the material,ifcLabel,,,,,,
+,Description,Definition of the material in more descriptive terms than given by attributes Name or Category.,ifcText,,?,,,,
+,Category,"Definition of the category (group or type) of material, in more general terms than given by attribute Name.",ifcLabel,,?,,,,
+ifcMaterialConstituent,,,,,,,,,
+,Name,The name by which the material constituent is known.,IfcLabel,,?,,,,
+,Description,Definition of the material constituent in descriptive terms.,IfcText,,?,,,,
+,Material,Reference to the material from which the constituent is constructed.,IfcMaterial,,,,,,
+,Fraction,Optional provision of a fraction of the total amount (volume or weight) that applies to the IfcMaterialConstituentSet that is contributed by this IfcMaterialConstituent.,IfcNormalisedRatioMeasure,,?,,,,
+,Category,"Category of the material constituent, e.g. the role it has in the constituent set it belongs to.",IfcLabel,,?,,,,
+IfcMaterialLayer,,,,,,,,,
+,Material,"Optional reference to the material from which the layer is constructed. Note that if this value is not given, it does not denote a layer with no material (an air gap), it only means that the material is not specified at that point.",IfcMaterial,,?,,,,
+,LayerThickness,"The thickness of the material layer. The meaning of ""thickness"" depends on its usage. In case of building elements elements utilizing IfcMaterialLayerSetUsage, the dimension is measured along the positive LayerSetDirection as specified in IfcMaterialLayerSetUsage.",ifcNonNegativeLengthMeasure,,,,,,
+,isVentilated,Indication of whether the material layer represents an air layer (or cavity).,ifcLogical,,?,,,,
+,Name,The name by which the material layer is known.,ifcLabel,,?,,,,
+,Description,Definition of the material layer in more descriptive terms than given by attributes Name or Category.,ifcText,,?,,,,
+,Category,"Category of the material layer, e.g. the role it has in the layer set it belongs to (such as 'load bearing', 'thermal insulation' etc.). The list of keywords might be extended by model view definitions, however the following keywords shall apply in general:",ifcLabel,,?,,,,
+,Priority,"The relative priority of the layer, expressed as normalised integer range [0..100]. Controls how layers intersect in connections and corners of building elements: a layer from one element protrudes into (i.e. displaces) a layer from another element in a joint of these elements if the former element's layer has higher priority than the latter. The priority value for a material layer in an element has to be set and maintained by software applications in relation to the material layers in connected elements.",ifcInteger,,?,,,,
+ifcCovering,,,,,,,,,
+,GlobalId,Assignment of a globally unique identifier within the entire software world.,IfcGloballyUniqueId,,,,,,
+,OwnerHistory,"Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,",IfcOwnerHistory,,?,,,,
+,Name,Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.,IfcLabel,,?,,,,
+,Description,"Optional description, provided for exchanging informative comments.",IfcText,,?,,,,
+,ObjectType,"The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute PredefinedType is set to USERDEFINED.",IfcLabel,,?,,,,
+,ObjectPlacement,"Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the transformation for the object coordinate system.",IfcObjectPlacement,,?,,,,
+,Representation,"Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.",IfcProductRepresentation,,?,,,,
+,Tag,"The tag (or label) identifier at the particular instance of a product, e.g. the serial number, or the position number. It is the identifier at the occurrence level.",IfcIdentifier,,?,,,,
+,PredefinedType,Predefined types to define the particular type of the covering. There may be property set definitions available for each predefined type.,IfcCoveringTypeEnum,,?,,,,
+ifcProductDefinitionShape,,,,,,,,,
+,Name,The word or group of words by which the product representation is known.,IfcLabel,,?,,,,
+,Description,The word or group of words that characterize the product representation. It can be used to add additional meaning to the name of the product representation.,IfcText,,?,,,,
+,Representations,Contained list of representations (including shape representations). Each member defines a valid representation of a particular type within a particular representation context.,IfcRepresentation,,L[1:?],,,,
+ifcBeam,,,,,,,,,
+,PredefinedType,"Predefined generic type for a beam that is specified in an enumeration. There may be a property set given specificly for the predefined types.
+
+ NOTE The PredefinedType shall only be used, if no IfcBeamType is assigned, providing its own IfcBeamType.PredefinedType",IfcBeamTypeEnum,,?,,,,
+ifcColumn,,,,,,,,,
+,PredefinedType,"Predefined generic type for a column that is specified in an enumeration. There may be a property set given specificly for the predefined types.
+
+ NOTE The PredefinedType shall only be used, if no IfcColumnType is assigned, providing its own IfcColumnType.PredefinedType",IfcColumnTypeEnum,,?,,,,
+ifcCurtainWall,,,,,,,,,
+,PredefinedType,"Predefined generic type for a curtain wall that is specified in an enumeration. There may be a property set given specificly for the predefined types.
+
+ NOTE The PredefinedType shall only be used, if no IfcCurtainWallType is assigned, providing its own IfcCurtainWallType.PredefinedType.",IfcCurtainWallTypeEnum,,?,,,,
+ifcDoor,,,,,,,,,
+,OverallHeight,"Overall measure of the height, it reflects the Z Dimension of a bounding box, enclosing the body of the door opening. If omitted, the OverallHeight should be taken from the geometric representation of the IfcOpening in which the door is inserted.
+
+ NOTE The body of the door might be taller then the door opening (e.g. in cases where the door lining includes a casing). In these cases the OverallHeight shall still be given as the door opening height, and not as the total height of the door lining.",IfcPositiveLengthMeasure,,?,,,,
+,OverallWidth,"Overall measure of the width, it reflects the X Dimension of a bounding box, enclosing the body of the door opening. If omitted, the OverallWidth should be taken from the geometric representation of the IfcOpening in which the door is inserted.
+
+ NOTE The body of the door might be wider then the door opening (e.g. in cases where the door lining includes a casing). In these cases the OverallWidth shall still be given as the door opening width, and not as the total width of the door lining.",IfcPositiveLengthMeasure,,?,,,,
+,PredefinedType,"Predefined generic type for a door that is specified in an enumeration. There may be a property set given specificly for the predefined types.
+
+ NOTE The PredefinedType shall only be used, if no IfcDoorType is assigned, providing its own IfcDoorType.PredefinedType.",IfcDoorTypeEnum,,?,,,,
+,OperationType,"Type defining the general layout and operation of the door type in terms of the partitioning of panels and panel operations.
+
+ NOTE The OperationType shall only be used, if no type object IfcDoorType is assigned, providing its own IfcDoorType.OperationType.",IfcDoorTypeOperationEnum,,?,,,,
+,UserDefinedOperationType,"Designator for the user defined operation type, shall only be provided, if the value of OperationType is set to USERDEFINED.",IfcLabel,,?,,,,
+ifcRoof,,,,,,,,,
+,PredefinedType,"Predefined generic types for a roof that are specified in an enumeration. There may be a property set given for the predefined types.
+
+ NOTE The PredefinedType shall only be used, if no IfcRoofType is assigned, providing its own IfcRoofType.PredefinedType.",IfcRoofTypeEnum,,?,,,,
+ifcSlab,,,,,,,,,
+,GlobalId,Assignment of a globally unique identifier within the entire software world.,IfcGloballyUniqueId,,,,,,
+,OwnerHistory,"Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,",IfcOwnerHistory,,?,,,,
+,Name,Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.,IfcLabel,,?,,,,
+,Description,"Optional description, provided for exchanging informative comments.",IfcText,,?,,,,
+,ObjectType,"The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute PredefinedType is set to USERDEFINED.",IfcLabel,,?,,,,
+,ObjectPlacement,"Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the transformation for the object coordinate system.",IfcObjectPlacement,,?,,,,
+,Representation,"Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.",IfcProductRepresentation,,?,,,,
+,Tag,"The tag (or label) identifier at the particular instance of a product, e.g. the serial number, or the position number. It is the identifier at the occurrence level.",IfcIdentifier,,?,,,,
+,PredefinedType,Predefined generic type for a slab that is specified in an enumeration. There may be a property set given specifically for the predefined types.,IfcSlabTypeEnum,,?,,,,
+,PredefinedType,"Predefined generic type for a slab that is specified in an enumeration. There may be a property set given specifically for the predefined types.
+
+ NOTE The PredefinedType shall only be used, if no IfcSlabType is assigned, providing its own IfcSlabType.PredefinedType.",IfcSlabTypeEnum,,?,,,,
+ifcStair,,,,,,,,,
+,PredefinedType,"Predefined generic type for a stair that is specified in an enumeration. There may be a property set given specifically for the predefined types.
+
+ NOTE The PredefinedType shall only be used, if no IfcStairType is assigned, providing its own IfcStairType.PredefinedType.",IfcStairTypeEnum,,?,,,,
+ifcWall,,,,,,,,,
+,PredefinedType,"Predefined generic type for a wall that is specified in an enumeration. There may be a property set given specifically for the predefined types.
+
+ NOTE The PredefinedType shall only be used, if no IfcWallType is assigned, providing its own IfcWallType.PredefinedType.",IfcWallTypeEnum,,?,,,,
+ifcWindow,,,,,,,,,
+,OverallHeight,"Overall measure of the height, it reflects the Z Dimension of a bounding box, enclosing the window opening. If omitted, the OverallHeight should be taken from the geometric representation of the IfcOpening in which the window is inserted.
+
+ NOTE The body of the window might be taller then the window opening (for example in cases where the window lining includes a casing). In these cases the OverallHeight shall still be given as the window opening height, and not as the total height of the window lining.",IfcPositiveLengthMeasure,,?,,,,
+,OverallWidth,"Overall measure of the width, it reflects the X Dimension of a bounding box, enclosing the window opening. If omitted, the OverallWidth should be taken from the geometric representation of the IfcOpening in which the window is inserted.
+
+ NOTE The body of the window might be wider then the window opening (for example in cases where the window lining includes a casing). In these cases the OverallWidth shall still be given as the window opening width, and not as the total width of the window lining.",IfcPositiveLengthMeasure,,?,,,,
+,PredefinedType,"Predefined generic type for a window that is specified in an enumeration. There may be a property set given specificly for the predefined types.
+
+ NOTE The PredefinedType shall only be used, if no IfcWindowType is assigned, providing its own IfcWindowType.PredefinedType.",IfcWindowTypeEnum,,?,,,,
+,PartitioningType,"Type defining the general layout of the window in terms of the partitioning of panels.
+
+ NOTE The PartitioningType shall only be used, if no type object IfcWindowType is assigned, providing its own IfcWindowType.PartitioningType.",IfcWindowTypePartitioningEnum,,?,,,,
+,UserDefinedPartitioningType,"Designator for the user defined partitioning type, shall only be provided, if the value of PartitioningType is set to USERDEFINED.",IfcLabel,,?,,,,
+ifcBoiler,,,,,,,,,
+,PredefinedType,,IfcBoilerTypeEnum,,?,,,,
+ifcBurner,,,,,,,,,
+,PredefinedType,,IfcBurnerTypeEnum,,?,,,,
+ifcChiller,,,,,,,,,
+,PredefinedType,,IfcChillerTypeEnum,,?,,,,
+ifcAirTerminal,,,,,,,,,
+,PredefinedType,,IfcAirTerminalTypeEnum,,?,,,,
+ifcLamp,,,,,,,,,
+,PredefinedType,,IfcLampTypeEnum,,?,,,,
+ifcElectricAppliance,,,,,,,,,
+,PredefinedType,,IfcElectricApplianceTypeEnum,,?,,,,
+ifcSpaceHeater,,,,,,,,,
+,PredefinedType,,IfcSpaceHeaterTypeEnum,,?,,,,
+ifcSite,,,,,,,,,
+,GlobalID,Assignment of a globally unique identifier within the entire software world.,IfcGloballyUniqueId,,,,,,
+,OwnerHistory,"Assignment of the information about the current ownership of that object, including owning actor, application, local identification and information captured about the recent changes of the object,",IfcOwnerHistory,,?,,,,
+,Name,Optional name for use by the participating software systems or users. For some subtypes of IfcRoot the insertion of the Name attribute may be required. This would be enforced by a where rule.,IfcLabel,,?,,,,
+,Description,"Optional description, provided for exchanging informative comments.",IfcText,,?,,,,
+,ObjectType,"The type denotes a particular type that indicates the object further. The use has to be established at the level of instantiable subtypes. In particular it holds the user defined type, if the enumeration of the attribute PredefinedType is set to USERDEFINED.",IfcLabel,,?,,,,
+,ObjectPlacement,"Placement of the product in space, the placement can either be absolute (relative to the world coordinate system), relative (relative to the object placement of another product), or constraint (e.g. relative to grid axes). It is determined by the various subtypes of IfcObjectPlacement, which includes the axis placement information to determine the transformation for the object coordinate system.",IfcObjectPlacement,,?,,,,
+,Representation,"Reference to the representations of the product, being either a representation (IfcProductRepresentation) or as a special case a shape representations (IfcProductDefinitionShape). The product definition shape provides for multiple geometric representations of the shape property of the object within the same object coordinate system, defined by the object placement.",IfcProductRepresentation,,?,,,,
+,LongName,"Long name for a spatial structure element, used for informal purposes. It should be used, if available, in conjunction with the inherited Name attribute.",ifcLabel,,?,,,,
+,CompositionType,"Denotes, whether the predefined spatial structure element represents itself, or an aggregate (complex) or a part (part). The interpretation is given separately for each subtype of spatial structure element. If no CompositionType is asserted, the dafault value 'ELEMENT' applies.",IfcElementCompositionEnum,,?,,,,
+,RefLatitude,"World Latitude at reference point (most likely defined in legal description). Defined as integer values for degrees, minutes, seconds, and, optionally, millionths of seconds with respect to the world geodetic system WGS84.",IfcCompoundPlaneAngleMeasure,,?,,,,
+,RefLongitude,"World Longitude at reference point (most likely defined in legal description). Defined as integer values for degrees, minutes, seconds, and, optionally, millionths of seconds with respect to the world geodetic system WGS84.",IfcCompoundPlaneAngleMeasure,,?,,,,
+,RefElevation,Datum elevation relative to sea level.,IfcLengthMeasure,,?,,,,
+,LandTitleNumber,The land title number (designation of the site within a regional system).,IfcLabel,,?,,,,
+,SiteAddress,Address given to the site for postal purposes.,IfcPostalAddress,,?,,,,
