@@ -187,6 +187,18 @@ bot:hasSubElement rdf:type owl:ObjectProperty ;
                  rdfs:label "building address"@en .
 
 
+###  http://bimerr.iot.linkeddata.es/def/building#creationAuthor
+:creationAuthor rdf:type owl:DatatypeProperty ;
+                rdfs:range xsd:string ;
+                rdfs:label "creation author"@en .
+
+
+###  http://bimerr.iot.linkeddata.es/def/building#creationDate
+:creationDate rdf:type owl:DatatypeProperty ;
+              rdfs:range xsd:dateTime ;
+              rdfs:label "creation date"@en .
+
+
 ###  http://bimerr.iot.linkeddata.es/def/building#description
 :description rdf:type owl:DatatypeProperty ;
              rdfs:range xsd:string ;
@@ -409,6 +421,14 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
+                            owl:onProperty :creationAuthor ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :creationDate ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
                             owl:onProperty :description ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
@@ -418,6 +438,10 @@ saref:hasValue rdf:type owl:DatatypeProperty ;
                           ] ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :type ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ] ,
+                          [ rdf:type owl:Restriction ;
+                            owl:onProperty :version ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ] ,
                           [ rdf:type owl:Restriction ;
